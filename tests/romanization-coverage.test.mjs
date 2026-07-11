@@ -21,6 +21,8 @@ function extractLiteral(name) {
 }
 
 const phraseRules = extractLiteral("phraseRules");
+const hongKongPhraseNormalizations = extractLiteral("hongKongPhraseNormalizations");
+const hongKongCharacterMap = extractLiteral("hongKongCharacterMap");
 const phraseReadings = pronunciationData.phrases;
 const characterReadings = pronunciationData.characters;
 const phraseKeys = Object.keys(phraseReadings).sort((a, b) => b.length - a.length);
@@ -31,17 +33,37 @@ function applyRules(text, rules) {
     .reduce((next, [from, to]) => next.split(from).join(to), text);
 }
 
+function cleanInputText(text) {
+  return text.trim().replace(/[；;]/g, "，").replace(/\s+/g, "");
+}
+
+function normalizeHongKongText(text) {
+  const phraseNormalized = applyRules(text, hongKongPhraseNormalizations);
+  return Array.from(phraseNormalized)
+    .map((character) => hongKongCharacterMap[character] || character)
+    .join("");
+}
+
+function compileRules(rules) {
+  const normalizedRules = rules.map(([from, to]) => [
+    normalizeHongKongText(from),
+    normalizeHongKongText(to),
+  ]);
+  return [...rules, ...normalizedRules];
+}
+
+const conversionRules = compileRules(phraseRules);
+
 function tidyCantonese(text) {
-  let result = text.trim();
-  result = result.replace(/[；;]/g, "，").replace(/\s+/g, "");
-  result = applyRules(result, phraseRules);
+  let result = normalizeHongKongText(cleanInputText(text));
+  result = applyRules(result, conversionRules);
   result = result
     .replace(/的/g, "嘅")
-    .replace(/不(?!过)/g, "唔")
-    .replace(/没/g, "冇");
+    .replace(/不(?![过過])/g, "唔")
+    .replace(/[没沒]/g, "冇");
   result = result.replace(/([？?])$/g, "？");
   result = result.replace(/([。!！])$/g, "。");
-  return result;
+  return normalizeHongKongText(result);
 }
 
 function splitPronunciation(text) {
@@ -101,11 +123,24 @@ test("coverage dataset has no missing Cantonese romanization", () => {
   assert.deepEqual(failures, []);
 });
 
+test("simplified and variant input is normalized to Hong Kong forms before conversion", () => {
+  assert.equal(
+    normalizeHongKongText("你们现在在哪里说广东话？"),
+    "你們現在在哪裏說廣東話？",
+  );
+  assert.equal(tidyCantonese("你们现在在哪里说广东话？"), "你哋而家喺邊度講廣東話？");
+
+  const missing = splitPronunciation(tidyCantonese("你们现在在哪里说广东话？"))
+    .filter((unit) => !unit.readings?.jyutping?.[0])
+    .map((unit) => unit.text);
+  assert.deepEqual(missing, []);
+});
+
 test("reported sentence includes romanization for 香港人讲广东话", () => {
   const cantonese = tidyCantonese("香港人讲广东话");
   const units = splitPronunciation(cantonese);
 
-  assert.equal(cantonese, "香港人讲广东话");
+  assert.equal(cantonese, "香港人講廣東話");
   assert.ok(
     units.some(
       (unit) =>
@@ -116,7 +151,7 @@ test("reported sentence includes romanization for 香港人讲广东话", () => 
   assert.ok(
     units.some(
       (unit) =>
-        unit.text === "广东话" &&
+        unit.text === "廣東話" &&
         unit.readings.jyutping[0] === "gwong2 dung1 waa2",
     ),
   );

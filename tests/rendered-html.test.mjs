@@ -36,11 +36,12 @@ test("server-renders the Cantonese conversion tool", async () => {
   assert.match(html, /自然版/);
   assert.match(html, /表达风格/);
   assert.match(html, /标准/);
+  assert.match(html, /香港字形/);
   assert.match(html, /粤拼方案/);
   assert.match(html, /Jyutping/);
   assert.match(html, /教材：广州话拼音/);
   assert.match(html, /Yale 数字式/);
   assert.match(html, /教院拼音/);
-  assert.match(html, /我今日唔想返工，可唔可以听日再讲？/);
+  assert.match(html, /我今日唔想返工，可唔可以聽日再講？/);
   assert.doesNotMatch(html, /react-loading-skeleton|codex-preview|SkeletonPreview/);
 });

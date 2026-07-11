@@ -203,6 +203,34 @@ textarea:focus {
   box-shadow: 0 0 0 4px rgba(0, 109, 119, 0.14);
 }
 
+.standardization-preview {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: baseline;
+  margin: 12px 24px 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(0, 109, 119, 0.18);
+  border-radius: 8px;
+  background: rgba(0, 109, 119, 0.06);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.standardization-preview span {
+  color: var(--teal);
+  font-weight: 800;
+}
+
+.standardization-preview b {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--ink);
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .control-group {
   padding: 18px 24px 0;
 }
@@ -395,6 +423,10 @@ textarea:focus {
   .ghost-button,
   .speak-button {
     width: 100%;
+  }
+
+  .standardization-preview {
+    grid-template-columns: 1fr;
   }
 
   .cantonese-output {

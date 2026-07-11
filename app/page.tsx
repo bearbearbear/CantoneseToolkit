@@ -145,18 +145,121 @@ const engineNotes: Record<ConversionEngine, string> = {
 };
 
 const naturalPolishRules: Array<[RegExp, string]> = [
-  [/好靓，不过有啲贵/g, "几靓，不过有少少贵"],
+  [/好靓，不过有啲[贵貴]/g, "几靓，不过有少少贵"],
   [/喺边度？/g, "喺边度呀？"],
   [/点行？/g, "点行呀？"],
   [/得唔得？/g, "得唔得呀？"],
   [/可唔可以([^，。！？]*)？/g, "可唔可以$1呀？"],
 ];
 
+const hongKongPhraseNormalizations: Array<[string, string]> = [
+  ["里面", "裏面"],
+  ["里边", "裏邊"],
+  ["这里", "這裏"],
+  ["那里", "那裏"],
+  ["哪里", "哪裏"],
+  ["广府话", "廣府話"],
+  ["广东话", "廣東話"],
+  ["普通话", "普通話"],
+  ["电话", "電話"],
+  ["地铁", "地鐵"],
+  ["互联网", "互聯網"],
+];
+
+const hongKongCharacterMap: Record<string, string> = {
+  们: "們",
+  为: "為",
+  么: "麼",
+  什: "甚",
+  样: "樣",
+  办: "辦",
+  钱: "錢",
+  现: "現",
+  在: "在",
+  哪: "哪",
+  里: "裏",
+  儿: "兒",
+  没: "沒",
+  会: "會",
+  听: "聽",
+  刚: "剛",
+  阵: "陣",
+  这: "這",
+  那: "那",
+  个: "個",
+  条: "條",
+  东: "東",
+  西: "西",
+  请: "請",
+  问: "問",
+  铁: "鐵",
+  点: "點",
+  觉: "覺",
+  欢: "歡",
+  钟: "鐘",
+  说: "說",
+  讲: "講",
+  饮: "飲",
+  买: "買",
+  给: "給",
+  来: "來",
+  吗: "嗎",
+  话: "話",
+  广: "廣",
+  国: "國",
+  语: "語",
+  电: "電",
+  车: "車",
+  站: "站",
+  靓: "靚",
+  贵: "貴",
+  边: "邊",
+  门: "門",
+  网: "網",
+  联: "聯",
+  后: "後",
+  着: "著",
+  与: "與",
+  对: "對",
+  发: "發",
+  头: "頭",
+  间: "間",
+  学: "學",
+  校: "校",
+  老: "老",
+  师: "師",
+  谢: "謝",
+  题: "題",
+  时: "時",
+};
+
 function applyRules(text: string, rules: Array<[string, string]>) {
   return [...rules]
     .sort(([left], [right]) => right.length - left.length)
     .reduce((next, [from, to]) => next.split(from).join(to), text);
 }
+
+function cleanInputText(text: string) {
+  return text.trim().replace(/[；;]/g, "，").replace(/\s+/g, "");
+}
+
+function normalizeHongKongText(text: string) {
+  const phraseNormalized = applyRules(text, hongKongPhraseNormalizations);
+  return Array.from(phraseNormalized)
+    .map((character) => hongKongCharacterMap[character] || character)
+    .join("");
+}
+
+function compileRules(rules: Array<[string, string]>) {
+  const normalizedRules = rules.map(([from, to]) => [
+    normalizeHongKongText(from),
+    normalizeHongKongText(to),
+  ]) as Array<[string, string]>;
+  return [...rules, ...normalizedRules];
+}
+
+const conversionRules = compileRules(phraseRules);
+const politenessRules = compileRules(politeRules);
 
 function applyNaturalPolish(text: string) {
   return naturalPolishRules.reduce(
@@ -166,13 +269,12 @@ function applyNaturalPolish(text: string) {
 }
 
 function tidyCantonese(text: string, engine: ConversionEngine, mode: StyleMode) {
-  let result = text.trim();
-  result = result.replace(/[；;]/g, "，").replace(/\s+/g, "");
-  result = applyRules(result, phraseRules);
+  let result = normalizeHongKongText(cleanInputText(text));
+  result = applyRules(result, conversionRules);
   result = result
     .replace(/的/g, "嘅")
-    .replace(/不(?!过)/g, "唔")
-    .replace(/没/g, "冇");
+    .replace(/不(?![过過])/g, "唔")
+    .replace(/[没沒]/g, "冇");
   result = result.replace(/([？?])$/g, "？");
   result = result.replace(/([。!！])$/g, "。");
 
@@ -185,13 +287,15 @@ function tidyCantonese(text: string, engine: ConversionEngine, mode: StyleMode) 
   }
 
   if (mode === "polite") {
-    result = applyRules(result, politeRules);
-    if (!result.startsWith("唔该") && /[？?]$/.test(result)) {
-      result = `唔该，${result}`;
+    result = applyRules(result, politenessRules);
+    if (!/^唔[该該]/.test(result) && /[？?]$/.test(result)) {
+      result = `唔該，${result}`;
     }
   }
 
-  return result || "喺左边输入中文，我会帮你转成粤语。";
+  result = normalizeHongKongText(result);
+
+  return result || "喺左邊輸入中文，我會幫你轉成粵語。";
 }
 
 function splitPronunciation(text: string): JyutpingUnit[] {
@@ -250,6 +354,10 @@ export default function Home() {
   const [engine, setEngine] = useState<ConversionEngine>("rule");
   const [mode, setMode] = useState<StyleMode>("standard");
   const [scheme, setScheme] = useState<RomanizationScheme>("jyutping");
+  const standardizedInput = useMemo(
+    () => normalizeHongKongText(cleanInputText(input)),
+    [input],
+  );
   const cantonese = useMemo(
     () => tidyCantonese(input, engine, mode),
     [engine, input, mode],
@@ -292,6 +400,12 @@ export default function Home() {
             onChange={(event) => setInput(event.target.value)}
             placeholder="例如：你们现在在哪里？我想去吃点东西。"
           />
+          {standardizedInput && standardizedInput !== cleanInputText(input) && (
+            <div className="standardization-preview" aria-live="polite">
+              <span>香港字形</span>
+              <b>{standardizedInput}</b>
+            </div>
+          )}
           <div className="control-group">
             <p className="control-label">转换引擎</p>
             <div className="engine-row" aria-label="转换引擎">
@@ -375,7 +489,7 @@ export default function Home() {
       <section className="notes" aria-label="说明">
         <div>
           <strong>当前引擎：{engineLabels[engine]}</strong>
-          <span>{engineNotes[engine]}</span>
+          <span>{engineNotes[engine]} 输入会先统一为香港繁体字形。</span>
         </div>
         <div>
           <strong>当前方案：{schemeNames[scheme]}</strong>
