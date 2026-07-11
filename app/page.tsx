@@ -3,10 +3,24 @@
 import { useMemo, useState } from "react";
 
 type StyleMode = "natural" | "casual" | "polite";
+type RomanizationScheme = "jyutping" | "textbook" | "yale";
 
 type JyutpingUnit = {
   text: string;
   jyutping: string;
+};
+
+const schemeNames: Record<RomanizationScheme, string> = {
+  jyutping: "Jyutping",
+  textbook: "教材：广州话拼音",
+  yale: "Yale 数字式",
+};
+
+const schemeNotes: Record<RomanizationScheme, string> = {
+  jyutping: "香港语言学学会粤语拼音方案，使用 1-6 数字声调。",
+  textbook:
+    "《粤语初级教程》采用的广州话拼音方案，页面按教材示例使用 j/q/x、gu/ku 和上标声调。",
+  yale: "常见英语学习者熟悉的 Yale 写法，这里保留数字声调方便对照。",
 };
 
 const samples = [
@@ -310,6 +324,148 @@ function splitJyutping(text: string): JyutpingUnit[] {
   return units;
 }
 
+const superscriptTone: Record<string, string> = {
+  "1": "¹",
+  "2": "²",
+  "3": "³",
+  "4": "⁴",
+  "5": "⁵",
+  "6": "⁶",
+};
+
+function splitSyllable(syllable: string) {
+  const match = syllable.match(/^([a-z]+)([1-6])$/i);
+  if (!match) {
+    return { body: syllable, tone: "" };
+  }
+
+  return { body: match[1].toLowerCase(), tone: match[2] };
+}
+
+function convertInitial(
+  body: string,
+  scheme: RomanizationScheme,
+): { initial: string; final: string } {
+  const initials = [
+    "ng",
+    "gw",
+    "kw",
+    "b",
+    "p",
+    "m",
+    "f",
+    "d",
+    "t",
+    "n",
+    "l",
+    "g",
+    "k",
+    "h",
+    "z",
+    "c",
+    "s",
+    "j",
+    "w",
+  ];
+  const initial = initials.find((item) => body.startsWith(item)) || "";
+  let nextInitial = initial;
+
+  if (scheme === "textbook") {
+    const map: Record<string, string> = {
+      z: "j",
+      c: "q",
+      s: "x",
+      j: "y",
+      gw: "gu",
+      kw: "ku",
+    };
+    nextInitial = map[initial] || initial;
+  }
+
+  if (scheme === "yale") {
+    const map: Record<string, string> = {
+      z: "j",
+      c: "ch",
+      j: "y",
+    };
+    nextInitial = map[initial] || initial;
+  }
+
+  return { initial: nextInitial, final: body.slice(initial.length) };
+}
+
+function convertFinal(final: string, scheme: RomanizationScheme) {
+  if (scheme === "textbook") {
+    const map: Record<string, string> = {
+      aa: "a",
+      aai: "ai",
+      aau: "ao",
+      aam: "am",
+      aan: "an",
+      aang: "ang",
+      aap: "ab",
+      aat: "ad",
+      aak: "ag",
+      ai: "ei",
+      au: "eo",
+      am: "em",
+      an: "en",
+      ang: "eng",
+      ap: "eb",
+      at: "ed",
+      ak: "eg",
+      eoi: "êu",
+      eon: "ên",
+      eot: "êd",
+      oeng: "êng",
+      oek: "êg",
+      oe: "ê",
+      yuet: "üed",
+      yun: "ün",
+      yut: "üd",
+      yu: "ü",
+      ik: "ig",
+      ek: "ég",
+      et: "éd",
+      ep: "éb",
+      e: "é",
+    };
+    return map[final] || final;
+  }
+
+  if (scheme === "yale") {
+    const map: Record<string, string> = {
+      aa: "a",
+      eoi: "eui",
+      eon: "eun",
+      eot: "eut",
+      oe: "eu",
+    };
+    return map[final] || final;
+  }
+
+  return final;
+}
+
+function convertSyllable(syllable: string, scheme: RomanizationScheme) {
+  if (scheme === "jyutping") {
+    return syllable;
+  }
+
+  const { body, tone } = splitSyllable(syllable);
+  const { initial, final } = convertInitial(body, scheme);
+  const converted = `${initial}${convertFinal(final, scheme)}`;
+  const toneMark = scheme === "textbook" ? superscriptTone[tone] : tone;
+  return `${converted}${toneMark || ""}`;
+}
+
+function convertRomanization(value: string, scheme: RomanizationScheme) {
+  return value
+    .split(" ")
+    .map((syllable) => convertSyllable(syllable, scheme))
+    .join(" ");
+}
+
 function speak(text: string) {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) {
     return;
@@ -331,6 +487,7 @@ function speak(text: string) {
 export default function Home() {
   const [input, setInput] = useState(samples[0]);
   const [mode, setMode] = useState<StyleMode>("natural");
+  const [scheme, setScheme] = useState<RomanizationScheme>("jyutping");
   const cantonese = useMemo(() => tidyCantonese(input, mode), [input, mode]);
   const jyutping = useMemo(() => splitJyutping(cantonese), [cantonese]);
 
@@ -341,7 +498,7 @@ export default function Home() {
           <p className="eyebrow">Mandarin to Cantonese</p>
           <h1>中文转地道粤语</h1>
           <p className="intro">
-            输入普通话中文，快速得到更像香港日常说法的粤语表达、标准粤拼标注，并可直接朗读。
+            输入普通话中文，快速得到更像香港日常说法的粤语表达、可切换的粤语拼音标注，并可直接朗读。
           </p>
         </div>
         <div className="hero-actions" aria-label="示例">
@@ -405,6 +562,18 @@ export default function Home() {
               发音
             </button>
           </div>
+          <div className="scheme-row" aria-label="粤拼方案">
+            {(Object.keys(schemeNames) as RomanizationScheme[]).map((item) => (
+              <button
+                key={item}
+                type="button"
+                className={scheme === item ? "active" : ""}
+                onClick={() => setScheme(item)}
+              >
+                {schemeNames[item]}
+              </button>
+            ))}
+          </div>
           <p className="cantonese-output">{cantonese}</p>
           <div className="jyutping-box" aria-label="粤拼标注">
             {jyutping.map((unit, index) => (
@@ -413,7 +582,9 @@ export default function Home() {
                 key={`${unit.text}-${index}`}
               >
                 <b>{unit.text}</b>
-                {unit.jyutping && <small>{unit.jyutping}</small>}
+                {unit.jyutping && (
+                  <small>{convertRomanization(unit.jyutping, scheme)}</small>
+                )}
               </span>
             ))}
           </div>
@@ -422,8 +593,8 @@ export default function Home() {
 
       <section className="notes" aria-label="说明">
         <div>
-          <strong>粤拼采用 Jyutping。</strong>
-          <span>未收录的字会显示问号，常用口语词已按短语优先标注。</span>
+          <strong>当前方案：{schemeNames[scheme]}</strong>
+          <span>{schemeNotes[scheme]}</span>
         </div>
         <div>
           <strong>发音取决于浏览器语音。</strong>
