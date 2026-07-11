@@ -31,6 +31,11 @@ test("server-renders the Cantonese conversion tool", async () => {
   assert.match(html, /<title>中文转粤语发音工具<\/title>/i);
   assert.match(html, /中文转地道粤语/);
   assert.match(html, /粤语表达/);
+  assert.match(html, /转换引擎/);
+  assert.match(html, /规则版/);
+  assert.match(html, /自然版/);
+  assert.match(html, /表达风格/);
+  assert.match(html, /标准/);
   assert.match(html, /粤拼方案/);
   assert.match(html, /Jyutping/);
   assert.match(html, /教材：广州话拼音/);

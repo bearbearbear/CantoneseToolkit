@@ -101,6 +101,7 @@ h1 {
 
 .hero-actions button,
 .ghost-button,
+.engine-row button,
 .mode-row button,
 .scheme-row button,
 .speak-button {
@@ -125,6 +126,7 @@ h1 {
 
 .hero-actions button:hover,
 .ghost-button:hover,
+.engine-row button:hover,
 .mode-row button:hover {
   border-color: var(--teal);
   background: var(--paper-strong);
@@ -201,11 +203,34 @@ textarea:focus {
   box-shadow: 0 0 0 4px rgba(0, 109, 119, 0.14);
 }
 
+.control-group {
+  padding: 18px 24px 0;
+}
+
+.control-group + .control-group {
+  padding-top: 14px;
+}
+
+.control-label {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.engine-row,
 .mode-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  padding: 18px 24px 24px;
+}
+
+.engine-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mode-row {
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 24px;
 }
 
 .scheme-row {
@@ -223,10 +248,12 @@ textarea:focus {
   font-weight: 800;
 }
 
+.engine-row button,
 .mode-row button {
   font-weight: 800;
 }
 
+.engine-row .active,
 .mode-row .active,
 .scheme-row .active {
   border-color: var(--red);
@@ -299,7 +326,7 @@ textarea:focus {
 
 .notes {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin-top: 18px;
   color: var(--muted);
@@ -351,6 +378,7 @@ textarea:focus {
 
 @media (max-width: 520px) {
   .hero-actions,
+  .engine-row,
   .mode-row {
     grid-template-columns: 1fr;
   }

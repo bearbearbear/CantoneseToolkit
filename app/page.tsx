@@ -3,7 +3,8 @@
 import { useMemo, useState } from "react";
 import pronunciationData from "./data/cantonese-pronunciation-table.json";
 
-type StyleMode = "natural" | "casual" | "polite";
+type ConversionEngine = "rule" | "natural";
+type StyleMode = "standard" | "casual" | "polite";
 type RomanizationScheme = "jyutping" | "textbook" | "yale" | "education";
 
 type JyutpingUnit = {
@@ -133,13 +134,38 @@ const politeRules: Array<[string, string]> = [
 
 const casualEndings = ["啦", "喇", "啫", "呀"];
 
+const engineLabels: Record<ConversionEngine, string> = {
+  rule: "规则版",
+  natural: "自然版",
+};
+
+const engineNotes: Record<ConversionEngine, string> = {
+  rule: "规则版使用固定词表和替换规则，结果更稳定，适合对照学习。",
+  natural: "自然版会在规则结果上做一层本地口语润色，后续可继续接入大模型增强。",
+};
+
+const naturalPolishRules: Array<[RegExp, string]> = [
+  [/好靓，不过有啲贵/g, "几靓，不过有少少贵"],
+  [/喺边度？/g, "喺边度呀？"],
+  [/点行？/g, "点行呀？"],
+  [/得唔得？/g, "得唔得呀？"],
+  [/可唔可以([^，。！？]*)？/g, "可唔可以$1呀？"],
+];
+
 function applyRules(text: string, rules: Array<[string, string]>) {
   return [...rules]
     .sort(([left], [right]) => right.length - left.length)
     .reduce((next, [from, to]) => next.split(from).join(to), text);
 }
 
-function tidyCantonese(text: string, mode: StyleMode) {
+function applyNaturalPolish(text: string) {
+  return naturalPolishRules.reduce(
+    (result, [pattern, replacement]) => result.replace(pattern, replacement),
+    text,
+  );
+}
+
+function tidyCantonese(text: string, engine: ConversionEngine, mode: StyleMode) {
   let result = text.trim();
   result = result.replace(/[；;]/g, "，").replace(/\s+/g, "");
   result = applyRules(result, phraseRules);
@@ -149,6 +175,10 @@ function tidyCantonese(text: string, mode: StyleMode) {
     .replace(/没/g, "冇");
   result = result.replace(/([？?])$/g, "？");
   result = result.replace(/([。!！])$/g, "。");
+
+  if (engine === "natural") {
+    result = applyNaturalPolish(result);
+  }
 
   if (mode === "casual" && result && !/[？?。！!啦喇呀啫]$/.test(result)) {
     result += casualEndings[result.length % casualEndings.length];
@@ -217,9 +247,13 @@ function speak(text: string) {
 
 export default function Home() {
   const [input, setInput] = useState(samples[0]);
-  const [mode, setMode] = useState<StyleMode>("natural");
+  const [engine, setEngine] = useState<ConversionEngine>("rule");
+  const [mode, setMode] = useState<StyleMode>("standard");
   const [scheme, setScheme] = useState<RomanizationScheme>("jyutping");
-  const cantonese = useMemo(() => tidyCantonese(input, mode), [input, mode]);
+  const cantonese = useMemo(
+    () => tidyCantonese(input, engine, mode),
+    [engine, input, mode],
+  );
   const pronunciation = useMemo(() => splitPronunciation(cantonese), [cantonese]);
 
   return (
@@ -258,28 +292,46 @@ export default function Home() {
             onChange={(event) => setInput(event.target.value)}
             placeholder="例如：你们现在在哪里？我想去吃点东西。"
           />
-          <div className="mode-row" aria-label="表达风格">
-            <button
-              type="button"
-              className={mode === "natural" ? "active" : ""}
-              onClick={() => setMode("natural")}
-            >
-              自然
-            </button>
-            <button
-              type="button"
-              className={mode === "casual" ? "active" : ""}
-              onClick={() => setMode("casual")}
-            >
-              口语
-            </button>
-            <button
-              type="button"
-              className={mode === "polite" ? "active" : ""}
-              onClick={() => setMode("polite")}
-            >
-              礼貌
-            </button>
+          <div className="control-group">
+            <p className="control-label">转换引擎</p>
+            <div className="engine-row" aria-label="转换引擎">
+              {(Object.keys(engineLabels) as ConversionEngine[]).map((item) => (
+                <button
+                  key={item}
+                  type="button"
+                  className={engine === item ? "active" : ""}
+                  onClick={() => setEngine(item)}
+                >
+                  {engineLabels[item]}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="control-group">
+            <p className="control-label">表达风格</p>
+            <div className="mode-row" aria-label="表达风格">
+              <button
+                type="button"
+                className={mode === "standard" ? "active" : ""}
+                onClick={() => setMode("standard")}
+              >
+                标准
+              </button>
+              <button
+                type="button"
+                className={mode === "casual" ? "active" : ""}
+                onClick={() => setMode("casual")}
+              >
+                口语
+              </button>
+              <button
+                type="button"
+                className={mode === "polite" ? "active" : ""}
+                onClick={() => setMode("polite")}
+              >
+                礼貌
+              </button>
+            </div>
           </div>
         </div>
 
@@ -321,6 +373,10 @@ export default function Home() {
       </section>
 
       <section className="notes" aria-label="说明">
+        <div>
+          <strong>当前引擎：{engineLabels[engine]}</strong>
+          <span>{engineNotes[engine]}</span>
+        </div>
         <div>
           <strong>当前方案：{schemeNames[scheme]}</strong>
           <span>
