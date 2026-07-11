@@ -64,6 +64,8 @@ const phraseRules: Array<[string, string]> = [
   ["那里", "嗰度"],
   ["这个", "呢个"],
   ["那个", "嗰个"],
+  ["这条", "呢条"],
+  ["这", "呢"],
   ["这些", "呢啲"],
   ["那些", "嗰啲"],
   ["我们", "我哋"],
@@ -81,6 +83,7 @@ const phraseRules: Array<[string, string]> = [
   ["东西", "嘢"],
   ["很好看", "好靓"],
   ["但是", "不过"],
+  ["也", "都"],
   ["请问", "唔该"],
   ["地铁站", "港铁站"],
   ["上班", "返工"],
@@ -105,6 +108,8 @@ const phraseRules: Array<[string, string]> = [
   ["了", "咗"],
   ["吗", "啊"],
   ["呢", "呢"],
+  ["普通话", "普通话"],
+  ["广东话", "广东话"],
 ];
 
 const politeRules: Array<[string, string]> = [
@@ -125,6 +130,10 @@ const phraseJyutping: Record<string, string> = {
   "几时": "gei2 si4",
   "几多钱": "gei2 do1 cin2",
   "喺边度": "hai2 bin1 dou6",
+  "香港人": "hoeng1 gong2 jan4",
+  "香港": "hoeng1 gong2",
+  "广东话": "gwong2 dung1 waa6",
+  "普通话": "pou2 tung1 waa6",
   "食啲嘢": "sik6 di1 je5",
   "去边": "heoi3 bin1",
   "有冇": "jau5 mou5",
@@ -149,6 +158,7 @@ const phraseJyutping: Record<string, string> = {
   "嗰度": "go2 dou6",
   "呢个": "ni1 go3",
   "嗰个": "go2 go3",
+  "呢条": "ni1 tiu4",
   "呢啲": "ni1 di1",
   "嗰啲": "go2 di1",
   "我哋": "ngo5 dei6",
@@ -184,6 +194,18 @@ const phraseJyutping: Record<string, string> = {
   "不过": "bat1 gwo3",
   "好靓": "hou2 leng3",
   "嘢": "je5",
+  "都": "dou1",
+  "多谢": "do1 ze6",
+  "早晨": "zou2 san4",
+  "拜拜": "baai1 baai3",
+  "问题": "man6 tai4",
+  "朋友": "pang4 jau5",
+  "电话": "din6 waa2",
+  "时间": "si4 gaan3",
+  "地方": "dei6 fong1",
+  "学校": "hok6 haau6",
+  "老师": "lou5 si1",
+  "学生": "hok6 saang1",
 };
 
 const charJyutping: Record<string, string> = {
@@ -198,6 +220,13 @@ const charJyutping: Record<string, string> = {
   "寻": "cam4",
   "而": "ji4",
   "家": "gaa1",
+  "香": "hoeng1",
+  "港": "gong2",
+  "广": "gwong2",
+  "话": "waa6",
+  "语": "jyu5",
+  "普": "pou2",
+  "通": "tung1",
   "喺": "hai2",
   "边": "bin1",
   "度": "dou6",
@@ -223,6 +252,14 @@ const charJyutping: Record<string, string> = {
   "时": "si4",
   "多": "do1",
   "钱": "cin2",
+  "名": "meng2",
+  "姓": "sing3",
+  "叫": "giu3",
+  "字": "zi6",
+  "王": "wong4",
+  "李": "lei5",
+  "陈": "can4",
+  "黄": "wong4",
   "可": "ho2",
   "以": "ji5",
   "麻": "maa4",
@@ -248,6 +285,8 @@ const charJyutping: Record<string, string> = {
   "钟": "zung1",
   "意": "ji3",
   "贵": "gwai3",
+  "便": "pin4",
+  "宜": "ji4",
   "平": "peng4",
   "靓": "leng3",
   "请": "cing2",
@@ -255,6 +294,48 @@ const charJyutping: Record<string, string> = {
   "唔": "m4",
   "该": "goi1",
   "晒": "saai3",
+  "校": "haau6",
+  "老": "lou5",
+  "师": "si1",
+  "学": "hok6",
+  "生": "saang1",
+  "朋": "pang4",
+  "友": "jau5",
+  "电": "din6",
+  "方": "fong1",
+  "晨": "san4",
+  "拜": "baai3",
+  "题": "tai4",
+  "也": "jaa5",
+  "都": "dou1",
+  "帮": "bong1",
+  "打": "daa2",
+  "过": "gwo3",
+  "条": "tiu4",
+  "远": "jyun5",
+  "见": "gin3",
+  "爱": "oi3",
+  "住": "zyu6",
+  "坐": "co5",
+  "车": "ce1",
+  "巴": "baa1",
+  "士": "si6",
+  "很": "han2",
+  "忙": "mong4",
+  "快": "faai3",
+  "慢": "maan6",
+  "大": "daai6",
+  "小": "siu2",
+  "新": "san1",
+  "旧": "gau6",
+  "热": "jit6",
+  "冷": "laang5",
+  "水": "seoi2",
+  "茶": "caa4",
+  "饭": "faan6",
+  "菜": "coi3",
+  "鱼": "jyu4",
+  "肉": "juk6",
   "地": "dei6",
   "铁": "tit3",
   "站": "zaam6",
@@ -274,14 +355,19 @@ const charJyutping: Record<string, string> = {
 };
 
 function applyRules(text: string, rules: Array<[string, string]>) {
-  return rules.reduce((next, [from, to]) => next.split(from).join(to), text);
+  return [...rules]
+    .sort(([left], [right]) => right.length - left.length)
+    .reduce((next, [from, to]) => next.split(from).join(to), text);
 }
 
 function tidyCantonese(text: string, mode: StyleMode) {
   let result = text.trim();
   result = result.replace(/[；;]/g, "，").replace(/\s+/g, "");
   result = applyRules(result, phraseRules);
-  result = result.replace(/的/g, "嘅").replace(/不/g, "唔").replace(/没/g, "冇");
+  result = result
+    .replace(/的/g, "嘅")
+    .replace(/不(?!过)/g, "唔")
+    .replace(/没/g, "冇");
   result = result.replace(/([？?])$/g, "？");
   result = result.replace(/([。!！])$/g, "。");
 

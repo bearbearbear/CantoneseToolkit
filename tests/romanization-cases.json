@@ -1,0 +1,82 @@
+[
+  {
+    "input": "香港人讲广东话",
+    "description": "用户反馈的核心缺失用例"
+  },
+  {
+    "input": "我是香港人，我讲广东话，也会讲普通话。",
+    "description": "身份和语言"
+  },
+  {
+    "input": "你叫什么名字？我姓王。",
+    "description": "教材第一课常见自我介绍"
+  },
+  {
+    "input": "早晨，多谢你帮我。",
+    "description": "问候和感谢"
+  },
+  {
+    "input": "请问去地铁站怎么走？",
+    "description": "问路"
+  },
+  {
+    "input": "这个东西很好看，但是有点贵。",
+    "description": "购物评价"
+  },
+  {
+    "input": "这个便宜一点可以吗？",
+    "description": "购物议价"
+  },
+  {
+    "input": "你们现在在哪里？我想去吃点东西。",
+    "description": "约见和吃东西"
+  },
+  {
+    "input": "我今天不想上班，能不能明天再说？",
+    "description": "工作安排"
+  },
+  {
+    "input": "这个问题我不知道，你问老师。",
+    "description": "课堂高频"
+  },
+  {
+    "input": "我是学生，明天去学校。",
+    "description": "学校场景"
+  },
+  {
+    "input": "我的朋友打电话给我。",
+    "description": "朋友和电话"
+  },
+  {
+    "input": "现在几点？我没有时间。",
+    "description": "时间表达"
+  },
+  {
+    "input": "这里是什么地方？",
+    "description": "地点表达"
+  },
+  {
+    "input": "我想坐巴士去那里。",
+    "description": "交通表达"
+  },
+  {
+    "input": "今天很忙，明天再来。",
+    "description": "日程表达"
+  },
+  {
+    "input": "这个菜很好吃，我想喝茶。",
+    "description": "餐饮表达"
+  },
+  {
+    "input": "水很冷，饭很热。",
+    "description": "冷热形容"
+  },
+  {
+    "input": "这条路很远，走得很慢。",
+    "description": "路程表达"
+  },
+  {
+    "input": "拜拜，明天见。",
+    "description": "告别"
+  }
+]
