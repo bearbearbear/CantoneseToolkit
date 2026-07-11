@@ -1,27 +1,40 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import pronunciationData from "./data/cantonese-pronunciation-table.json";
 
 type StyleMode = "natural" | "casual" | "polite";
-type RomanizationScheme = "jyutping" | "textbook" | "yale";
+type RomanizationScheme = "jyutping" | "textbook" | "yale" | "education";
 
 type JyutpingUnit = {
   text: string;
-  jyutping: string;
+  readings: Partial<Record<RomanizationScheme, string[]>> | null;
 };
 
-const schemeNames: Record<RomanizationScheme, string> = {
-  jyutping: "Jyutping",
-  textbook: "教材：广州话拼音",
-  yale: "Yale 数字式",
-};
+const schemes = pronunciationData.schemes as Record<
+  RomanizationScheme,
+  { label: string; description: string }
+>;
 
-const schemeNotes: Record<RomanizationScheme, string> = {
-  jyutping: "香港语言学学会粤语拼音方案，使用 1-6 数字声调。",
-  textbook:
-    "《粤语初级教程》采用的广州话拼音方案，页面按教材示例使用 j/q/x、gu/ku 和上标声调。",
-  yale: "常见英语学习者熟悉的 Yale 写法，这里保留数字声调方便对照。",
-};
+const schemeNames = Object.fromEntries(
+  Object.entries(schemes).map(([key, value]) => [key, value.label]),
+) as Record<RomanizationScheme, string>;
+
+const schemeNotes = Object.fromEntries(
+  Object.entries(schemes).map(([key, value]) => [key, value.description]),
+) as Record<RomanizationScheme, string>;
+
+const characterReadings = pronunciationData.characters as Record<
+  string,
+  Partial<Record<RomanizationScheme, string[]>>
+>;
+const phraseReadings = pronunciationData.phrases as Record<
+  string,
+  Partial<Record<RomanizationScheme, string[]>>
+>;
+const pronunciationPhraseKeys = Object.keys(phraseReadings).sort(
+  (a, b) => b.length - a.length,
+);
 
 const samples = [
   "我今天不想上班，能不能明天再说？",
@@ -120,240 +133,6 @@ const politeRules: Array<[string, string]> = [
 
 const casualEndings = ["啦", "喇", "啫", "呀"];
 
-const phraseJyutping: Record<string, string> = {
-  "点解": "dim2 gaai2",
-  "点样": "dim2 joeng6",
-  "点算": "dim2 syun3",
-  "点行": "dim2 haang4",
-  "点": "dim2",
-  "咩": "me1",
-  "几时": "gei2 si4",
-  "几多钱": "gei2 do1 cin2",
-  "喺边度": "hai2 bin1 dou6",
-  "香港人": "hoeng1 gong2 jan4",
-  "香港": "hoeng1 gong2",
-  "广东话": "gwong2 dung1 waa6",
-  "普通话": "pou2 tung1 waa6",
-  "食啲嘢": "sik6 di1 je5",
-  "去边": "heoi3 bin1",
-  "有冇": "jau5 mou5",
-  "可唔可以": "ho2 m4 ho2 ji5",
-  "可唔可以麻烦你": "ho2 m4 ho2 ji5 maa4 faan4 nei5",
-  "得唔得": "dak1 m4 dak1",
-  "唔係": "m4 hai6",
-  "冇": "mou5",
-  "唔会": "m4 wui5",
-  "唔好": "m4 hou2",
-  "唔知": "m4 zi1",
-  "唔想": "m4 soeng2",
-  "唔使": "m4 sai2",
-  "今日": "gam1 jat6",
-  "听日": "ting1 jat6",
-  "寻日": "cam4 jat6",
-  "而家": "ji4 gaa1",
-  "头先": "tau4 sin1",
-  "等阵": "dang2 zan6",
-  "阵间": "zan6 gaan1",
-  "呢度": "ni1 dou6",
-  "嗰度": "go2 dou6",
-  "呢个": "ni1 go3",
-  "嗰个": "go2 go3",
-  "呢条": "ni1 tiu4",
-  "呢啲": "ni1 di1",
-  "嗰啲": "go2 di1",
-  "我哋": "ngo5 dei6",
-  "你哋": "nei5 dei6",
-  "佢哋": "keoi5 dei6",
-  "我嘅": "ngo5 ge3",
-  "你嘅": "nei5 ge3",
-  "佢嘅": "keoi5 ge3",
-  "好": "hou2",
-  "有啲": "jau5 di1",
-  "少少": "siu2 siu2",
-  "真係": "zan1 hai6",
-  "觉得": "gok3 dak1",
-  "钟意": "zung1 ji3",
-  "知": "zi1",
-  "讲": "gong2",
-  "睇": "tai2",
-  "食": "sik6",
-  "饮": "jam2",
-  "买": "maai5",
-  "畀": "bei2",
-  "搵": "wan2",
-  "行": "haang4",
-  "去": "heoi3",
-  "嚟": "lai4",
-  "喺": "hai2",
-  "係": "hai6",
-  "咗": "zo2",
-  "唔该晒": "m4 goi1 saai3",
-  "唔该": "m4 goi1",
-  "港铁站": "gong2 tit3 zaam6",
-  "返工": "faan1 gung1",
-  "不过": "bat1 gwo3",
-  "好靓": "hou2 leng3",
-  "嘢": "je5",
-  "都": "dou1",
-  "多谢": "do1 ze6",
-  "早晨": "zou2 san4",
-  "拜拜": "baai1 baai3",
-  "问题": "man6 tai4",
-  "朋友": "pang4 jau5",
-  "电话": "din6 waa2",
-  "时间": "si4 gaan3",
-  "地方": "dei6 fong1",
-  "学校": "hok6 haau6",
-  "老师": "lou5 si1",
-  "学生": "hok6 saang1",
-};
-
-const charJyutping: Record<string, string> = {
-  "我": "ngo5",
-  "你": "nei5",
-  "佢": "keoi5",
-  "哋": "dei6",
-  "嘅": "ge3",
-  "今": "gam1",
-  "日": "jat6",
-  "听": "ting1",
-  "寻": "cam4",
-  "而": "ji4",
-  "家": "gaa1",
-  "香": "hoeng1",
-  "港": "gong2",
-  "广": "gwong2",
-  "话": "waa6",
-  "语": "jyu5",
-  "普": "pou2",
-  "通": "tung1",
-  "喺": "hai2",
-  "边": "bin1",
-  "度": "dou6",
-  "呢": "ni1",
-  "嗰": "go2",
-  "个": "go3",
-  "啲": "di1",
-  "好": "hou2",
-  "冇": "mou5",
-  "係": "hai6",
-  "咗": "zo2",
-  "啦": "laa1",
-  "喇": "laa3",
-  "呀": "aa3",
-  "啊": "aa3",
-  "啫": "ze1",
-  "咩": "me1",
-  "点": "dim2",
-  "解": "gaai2",
-  "样": "joeng6",
-  "算": "syun3",
-  "几": "gei2",
-  "时": "si4",
-  "多": "do1",
-  "钱": "cin2",
-  "名": "meng2",
-  "姓": "sing3",
-  "叫": "giu3",
-  "字": "zi6",
-  "王": "wong4",
-  "李": "lei5",
-  "陈": "can4",
-  "黄": "wong4",
-  "可": "ho2",
-  "以": "ji5",
-  "麻": "maa4",
-  "烦": "faan4",
-  "得": "dak1",
-  "会": "wui5",
-  "使": "sai2",
-  "想": "soeng2",
-  "知": "zi1",
-  "睇": "tai2",
-  "讲": "gong2",
-  "食": "sik6",
-  "饮": "jam2",
-  "买": "maai5",
-  "畀": "bei2",
-  "搵": "wan2",
-  "行": "haang4",
-  "去": "heoi3",
-  "嚟": "lai4",
-  "真": "zan1",
-  "有": "jau5",
-  "少": "siu2",
-  "钟": "zung1",
-  "意": "ji3",
-  "贵": "gwai3",
-  "便": "pin4",
-  "宜": "ji4",
-  "平": "peng4",
-  "靓": "leng3",
-  "请": "cing2",
-  "问": "man6",
-  "唔": "m4",
-  "该": "goi1",
-  "晒": "saai3",
-  "校": "haau6",
-  "老": "lou5",
-  "师": "si1",
-  "学": "hok6",
-  "生": "saang1",
-  "朋": "pang4",
-  "友": "jau5",
-  "电": "din6",
-  "方": "fong1",
-  "晨": "san4",
-  "拜": "baai3",
-  "题": "tai4",
-  "也": "jaa5",
-  "都": "dou1",
-  "帮": "bong1",
-  "打": "daa2",
-  "过": "gwo3",
-  "条": "tiu4",
-  "远": "jyun5",
-  "见": "gin3",
-  "爱": "oi3",
-  "住": "zyu6",
-  "坐": "co5",
-  "车": "ce1",
-  "巴": "baa1",
-  "士": "si6",
-  "很": "han2",
-  "忙": "mong4",
-  "快": "faai3",
-  "慢": "maan6",
-  "大": "daai6",
-  "小": "siu2",
-  "新": "san1",
-  "旧": "gau6",
-  "热": "jit6",
-  "冷": "laang5",
-  "水": "seoi2",
-  "茶": "caa4",
-  "饭": "faan6",
-  "菜": "coi3",
-  "鱼": "jyu4",
-  "肉": "juk6",
-  "地": "dei6",
-  "铁": "tit3",
-  "站": "zaam6",
-  "上": "soeng5",
-  "班": "baan1",
-  "再": "zoi3",
-  "做": "zou6",
-  "工": "gung1",
-  "东": "dung1",
-  "西": "sai1",
-  "路": "lou6",
-  "人": "jan4",
-  "先": "sin1",
-  "阵": "zan6",
-  "间": "gaan1",
-  "头": "tau4",
-};
-
 function applyRules(text: string, rules: Array<[string, string]>) {
   return [...rules]
     .sort(([left], [right]) => right.length - left.length)
@@ -385,24 +164,25 @@ function tidyCantonese(text: string, mode: StyleMode) {
   return result || "喺左边输入中文，我会帮你转成粤语。";
 }
 
-function splitJyutping(text: string): JyutpingUnit[] {
-  const keys = Object.keys(phraseJyutping).sort((a, b) => b.length - a.length);
+function splitPronunciation(text: string): JyutpingUnit[] {
   const units: JyutpingUnit[] = [];
   let index = 0;
 
   while (index < text.length) {
-    const matched = keys.find((key) => text.startsWith(key, index));
+    const matched = pronunciationPhraseKeys.find((key) =>
+      text.startsWith(key, index),
+    );
     if (matched) {
-      units.push({ text: matched, jyutping: phraseJyutping[matched] });
+      units.push({ text: matched, readings: phraseReadings[matched] });
       index += matched.length;
       continue;
     }
 
     const char = text[index];
     if (/[\s，。！？,.!?]/.test(char)) {
-      units.push({ text: char, jyutping: "" });
+      units.push({ text: char, readings: null });
     } else {
-      units.push({ text: char, jyutping: charJyutping[char] || "?" });
+      units.push({ text: char, readings: characterReadings[char] || null });
     }
     index += 1;
   }
@@ -410,146 +190,11 @@ function splitJyutping(text: string): JyutpingUnit[] {
   return units;
 }
 
-const superscriptTone: Record<string, string> = {
-  "1": "¹",
-  "2": "²",
-  "3": "³",
-  "4": "⁴",
-  "5": "⁵",
-  "6": "⁶",
-};
-
-function splitSyllable(syllable: string) {
-  const match = syllable.match(/^([a-z]+)([1-6])$/i);
-  if (!match) {
-    return { body: syllable, tone: "" };
-  }
-
-  return { body: match[1].toLowerCase(), tone: match[2] };
-}
-
-function convertInitial(
-  body: string,
+function getReading(
+  readings: Partial<Record<RomanizationScheme, string[]>> | null,
   scheme: RomanizationScheme,
-): { initial: string; final: string } {
-  const initials = [
-    "ng",
-    "gw",
-    "kw",
-    "b",
-    "p",
-    "m",
-    "f",
-    "d",
-    "t",
-    "n",
-    "l",
-    "g",
-    "k",
-    "h",
-    "z",
-    "c",
-    "s",
-    "j",
-    "w",
-  ];
-  const initial = initials.find((item) => body.startsWith(item)) || "";
-  let nextInitial = initial;
-
-  if (scheme === "textbook") {
-    const map: Record<string, string> = {
-      z: "j",
-      c: "q",
-      s: "x",
-      j: "y",
-      gw: "gu",
-      kw: "ku",
-    };
-    nextInitial = map[initial] || initial;
-  }
-
-  if (scheme === "yale") {
-    const map: Record<string, string> = {
-      z: "j",
-      c: "ch",
-      j: "y",
-    };
-    nextInitial = map[initial] || initial;
-  }
-
-  return { initial: nextInitial, final: body.slice(initial.length) };
-}
-
-function convertFinal(final: string, scheme: RomanizationScheme) {
-  if (scheme === "textbook") {
-    const map: Record<string, string> = {
-      aa: "a",
-      aai: "ai",
-      aau: "ao",
-      aam: "am",
-      aan: "an",
-      aang: "ang",
-      aap: "ab",
-      aat: "ad",
-      aak: "ag",
-      ai: "ei",
-      au: "eo",
-      am: "em",
-      an: "en",
-      ang: "eng",
-      ap: "eb",
-      at: "ed",
-      ak: "eg",
-      eoi: "êu",
-      eon: "ên",
-      eot: "êd",
-      oeng: "êng",
-      oek: "êg",
-      oe: "ê",
-      yuet: "üed",
-      yun: "ün",
-      yut: "üd",
-      yu: "ü",
-      ik: "ig",
-      ek: "ég",
-      et: "éd",
-      ep: "éb",
-      e: "é",
-    };
-    return map[final] || final;
-  }
-
-  if (scheme === "yale") {
-    const map: Record<string, string> = {
-      aa: "a",
-      eoi: "eui",
-      eon: "eun",
-      eot: "eut",
-      oe: "eu",
-    };
-    return map[final] || final;
-  }
-
-  return final;
-}
-
-function convertSyllable(syllable: string, scheme: RomanizationScheme) {
-  if (scheme === "jyutping") {
-    return syllable;
-  }
-
-  const { body, tone } = splitSyllable(syllable);
-  const { initial, final } = convertInitial(body, scheme);
-  const converted = `${initial}${convertFinal(final, scheme)}`;
-  const toneMark = scheme === "textbook" ? superscriptTone[tone] : tone;
-  return `${converted}${toneMark || ""}`;
-}
-
-function convertRomanization(value: string, scheme: RomanizationScheme) {
-  return value
-    .split(" ")
-    .map((syllable) => convertSyllable(syllable, scheme))
-    .join(" ");
+) {
+  return readings?.[scheme]?.[0] || readings?.jyutping?.[0] || "?";
 }
 
 function speak(text: string) {
@@ -575,7 +220,7 @@ export default function Home() {
   const [mode, setMode] = useState<StyleMode>("natural");
   const [scheme, setScheme] = useState<RomanizationScheme>("jyutping");
   const cantonese = useMemo(() => tidyCantonese(input, mode), [input, mode]);
-  const jyutping = useMemo(() => splitJyutping(cantonese), [cantonese]);
+  const pronunciation = useMemo(() => splitPronunciation(cantonese), [cantonese]);
 
   return (
     <main className="page-shell">
@@ -662,15 +307,13 @@ export default function Home() {
           </div>
           <p className="cantonese-output">{cantonese}</p>
           <div className="jyutping-box" aria-label="粤拼标注">
-            {jyutping.map((unit, index) => (
+            {pronunciation.map((unit, index) => (
               <span
-                className={unit.jyutping ? "jyutping-unit" : "punctuation"}
+                className={unit.readings ? "jyutping-unit" : "punctuation"}
                 key={`${unit.text}-${index}`}
               >
                 <b>{unit.text}</b>
-                {unit.jyutping && (
-                  <small>{convertRomanization(unit.jyutping, scheme)}</small>
-                )}
+                {unit.readings && <small>{getReading(unit.readings, scheme)}</small>}
               </span>
             ))}
           </div>
@@ -680,7 +323,10 @@ export default function Home() {
       <section className="notes" aria-label="说明">
         <div>
           <strong>当前方案：{schemeNames[scheme]}</strong>
-          <span>{schemeNotes[scheme]}</span>
+          <span>
+            {schemeNotes[scheme]} 数据集含{" "}
+            {pronunciationData.metadata.characterCount.toLocaleString()} 个汉字读音。
+          </span>
         </div>
         <div>
           <strong>发音取决于浏览器语音。</strong>

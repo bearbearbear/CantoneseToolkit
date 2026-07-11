@@ -35,6 +35,7 @@ test("server-renders the Cantonese conversion tool", async () => {
   assert.match(html, /Jyutping/);
   assert.match(html, /教材：广州话拼音/);
   assert.match(html, /Yale 数字式/);
+  assert.match(html, /教院拼音/);
   assert.match(html, /我今日唔想返工，可唔可以听日再讲？/);
   assert.doesNotMatch(html, /react-loading-skeleton|codex-preview|SkeletonPreview/);
 });
