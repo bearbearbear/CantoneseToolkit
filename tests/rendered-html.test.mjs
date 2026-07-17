@@ -29,6 +29,7 @@ test("server-renders the Cantonese conversion tool", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
+  const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
   assert.match(html, /<title>中文转粤语发音工具<\/title>/i);
   assert.match(html, /中文转地道粤语/);
   assert.match(html, /粤语表达/);
@@ -40,6 +41,8 @@ test("server-renders the Cantonese conversion tool", async () => {
   assert.match(html, /转换设置/);
   assert.match(html, /输出拼音方案/);
   assert.match(html, /aria-haspopup="dialog"/);
+  assert.match(css, /\.settings-button\s*\{[^}]*position:\s*absolute;/s);
+  assert.match(css, /\.intro,\s*\.hero-actions\s*\{\s*display:\s*none;/s);
   assert.match(html, /标准/);
   assert.match(html, /香港字形/);
   assert.match(html, /Jyutping/);

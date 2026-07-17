@@ -52,6 +52,7 @@ button {
 }
 
 .hero {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
   gap: 32px;
@@ -147,6 +148,9 @@ h1 {
 }
 
 .settings-button {
+  position: absolute;
+  top: 22px;
+  right: 0;
   flex: 0 0 auto;
   min-width: 76px;
   padding: 0 16px;
@@ -557,8 +561,22 @@ textarea:focus {
 }
 
 @media (max-width: 520px) {
+  .hero {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .intro,
   .hero-actions {
-    grid-template-columns: 1fr;
+    display: none;
+  }
+
+  .settings-button {
+    top: 18px;
+  }
+
+  .settings-summary {
+    margin-top: 12px;
   }
 
   .panel-heading {

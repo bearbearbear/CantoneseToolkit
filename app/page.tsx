@@ -493,15 +493,6 @@ export default function Home() {
         <div className="hero-copy">
           <div className="hero-kicker">
             <p className="eyebrow">Mandarin to Cantonese</p>
-            <button
-              type="button"
-              className="settings-button"
-              aria-haspopup="dialog"
-              aria-expanded={settingsOpen}
-              onClick={() => setSettingsOpen(true)}
-            >
-              设置
-            </button>
           </div>
           <h1>中文转地道粤语</h1>
           <p className="intro">
@@ -520,6 +511,15 @@ export default function Home() {
             </button>
           ))}
         </div>
+        <button
+          type="button"
+          className="settings-button"
+          aria-haspopup="dialog"
+          aria-expanded={settingsOpen}
+          onClick={() => setSettingsOpen(true)}
+        >
+          设置
+        </button>
       </section>
 
       <section className="tool-grid" aria-label="粤语转换工具">
