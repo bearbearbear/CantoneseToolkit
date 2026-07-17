@@ -1,13 +1,15 @@
-const CACHE_NAME = "cantonese-tool-offline-v2";
+const CACHE_NAME = "cantonese-tool-offline-v3";
+const appAssetUrl = (path = "") => new URL(path, self.registration.scope).href;
+const APP_HOME = appAssetUrl();
 const CORE_ASSETS = [
-  "/",
-  "/manifest.webmanifest",
-  "/favicon.svg",
-  "/apple-touch-icon.png",
-  "/icon-192.png",
-  "/icon-512.png",
-  "/sw.js",
-];
+  "",
+  "manifest.webmanifest",
+  "favicon.svg",
+  "apple-touch-icon.png",
+  "icon-192.png",
+  "icon-512.png",
+  "sw.js",
+].map(appAssetUrl);
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -70,7 +72,7 @@ async function networkThenCache(request, fallbackToHome) {
     }
 
     if (fallbackToHome) {
-      const home = await cache.match("/");
+      const home = await cache.match(APP_HOME);
       if (home) {
         return home;
       }

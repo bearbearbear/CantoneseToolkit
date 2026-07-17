@@ -65,13 +65,30 @@ test("offline assets are available for browser caching", () => {
   const serviceWorker = readFileSync(serviceWorkerUrl, "utf8");
   const manifest = JSON.parse(readFileSync(manifestUrl, "utf8"));
 
-  assert.match(serviceWorker, /cantonese-tool-offline-v2/);
+  assert.match(serviceWorker, /cantonese-tool-offline-v3/);
   assert.match(serviceWorker, /fetch/);
   assert.match(serviceWorker, /apple-touch-icon\.png/);
+  assert.match(serviceWorker, /self\.registration\.scope/);
   assert.equal(manifest.display, "standalone");
   assert.equal(manifest.start_url, "/");
   assert.deepEqual(
     manifest.icons.map((icon) => icon.src),
     ["/favicon.svg", "/icon-192.png", "/icon-512.png"],
   );
+});
+
+test("GitHub Pages build uses the repository subpath", () => {
+  const pagesRoot = new URL("../pages-dist/", import.meta.url);
+  const html = readFileSync(new URL("index.html", pagesRoot), "utf8");
+  const manifest = JSON.parse(
+    readFileSync(new URL("manifest.webmanifest", pagesRoot), "utf8"),
+  );
+
+  assert.match(html, /中文转粤语发音工具/);
+  assert.match(html, /\/CantoneseToolkit\/assets\//);
+  assert.match(html, /\/CantoneseToolkit\/manifest\.webmanifest/);
+  assert.equal(manifest.start_url, "/CantoneseToolkit/");
+  assert.equal(manifest.scope, "/CantoneseToolkit/");
+  assert.equal(existsSync(new URL(".nojekyll", pagesRoot)), true);
+  assert.equal(existsSync(new URL("404.html", pagesRoot)), true);
 });

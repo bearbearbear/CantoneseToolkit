@@ -37,7 +37,7 @@ const phraseReadings = pronunciationData.phrases as Record<
 const pronunciationPhraseKeys = Object.keys(phraseReadings).sort(
   (a, b) => b.length - a.length,
 );
-const offlineCacheName = "cantonese-tool-offline-v2";
+const offlineCacheName = "cantonese-tool-offline-v3";
 
 const samples = [
   "我今天不想上班，能不能明天再说？",
@@ -356,15 +356,18 @@ function getOfflineResourceUrls() {
     return [];
   }
 
+  const appBaseUrl = new URL(".", document.baseURI);
+  const appResourceUrl = (path: string) =>
+    new URL(path.replace(/^\//, ""), appBaseUrl).href;
   const urls = new Set<string>([
-    "/",
-    window.location.pathname + window.location.search,
-    "/manifest.webmanifest",
-    "/favicon.svg",
-    "/apple-touch-icon.png",
-    "/icon-192.png",
-    "/icon-512.png",
-    "/sw.js",
+    appBaseUrl.href,
+    window.location.href,
+    appResourceUrl("manifest.webmanifest"),
+    appResourceUrl("favicon.svg"),
+    appResourceUrl("apple-touch-icon.png"),
+    appResourceUrl("icon-192.png"),
+    appResourceUrl("icon-512.png"),
+    appResourceUrl("sw.js"),
   ]);
 
   for (const entry of window.performance.getEntriesByType("resource")) {
@@ -375,7 +378,7 @@ function getOfflineResourceUrls() {
         url.origin === window.location.origin &&
         ["script", "link", "css", "fetch"].includes(resource.initiatorType)
       ) {
-        urls.add(url.pathname + url.search);
+        urls.add(url.href);
       }
     } catch {
       // Ignore browser-generated resource names that are not URLs.
@@ -429,7 +432,10 @@ export default function Home() {
       }
 
       try {
-        await navigator.serviceWorker.register("/sw.js");
+        const appBaseUrl = new URL(".", document.baseURI);
+        await navigator.serviceWorker.register(new URL("sw.js", appBaseUrl), {
+          scope: appBaseUrl.pathname,
+        });
         await navigator.serviceWorker.ready;
         await cacheOfflineResources();
         if (!cancelled) {
