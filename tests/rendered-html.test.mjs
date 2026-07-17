@@ -36,9 +36,12 @@ test("server-renders the Cantonese conversion tool", async () => {
   assert.match(html, /规则版/);
   assert.match(html, /自然版/);
   assert.match(html, /表达风格/);
+  assert.match(html, /偏好设置/);
+  assert.match(html, /转换设置/);
+  assert.match(html, /输出拼音方案/);
+  assert.match(html, /aria-haspopup="dialog"/);
   assert.match(html, /标准/);
   assert.match(html, /香港字形/);
-  assert.match(html, /粤拼方案/);
   assert.match(html, /Jyutping/);
   assert.match(html, /教材：广州话拼音/);
   assert.match(html, /Yale 数字式/);

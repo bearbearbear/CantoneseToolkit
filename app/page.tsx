@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import pronunciationData from "./data/cantonese-pronunciation-table.json";
 
 type ConversionEngine = "rule" | "natural";
@@ -144,6 +144,12 @@ const engineLabels: Record<ConversionEngine, string> = {
 const engineNotes: Record<ConversionEngine, string> = {
   rule: "规则版使用固定词表和替换规则，结果更稳定，适合对照学习。",
   natural: "自然版会在规则结果上做一层本地口语润色，后续可继续接入大模型增强。",
+};
+
+const modeLabels: Record<StyleMode, string> = {
+  standard: "标准",
+  casual: "口语",
+  polite: "礼貌",
 };
 
 const naturalPolishRules: Array<[RegExp, string]> = [
@@ -406,6 +412,8 @@ export default function Home() {
   const [mode, setMode] = useState<StyleMode>("standard");
   const [scheme, setScheme] = useState<RomanizationScheme>("jyutping");
   const [offlineStatus, setOfflineStatus] = useState<OfflineStatus>("checking");
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const closeSettingsButtonRef = useRef<HTMLButtonElement>(null);
   const standardizedInput = useMemo(
     () => normalizeHongKongText(cleanInputText(input)),
     [input],
@@ -455,14 +463,54 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!settingsOpen) {
+      return;
+    }
+
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setSettingsOpen(false);
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", closeOnEscape);
+    closeSettingsButtonRef.current?.focus();
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", closeOnEscape);
+      previouslyFocused?.focus();
+    };
+  }, [settingsOpen]);
+
   return (
     <main className="page-shell">
       <section className="hero">
-        <div>
-          <p className="eyebrow">Mandarin to Cantonese</p>
+        <div className="hero-copy">
+          <div className="hero-kicker">
+            <p className="eyebrow">Mandarin to Cantonese</p>
+            <button
+              type="button"
+              className="settings-button"
+              aria-haspopup="dialog"
+              aria-expanded={settingsOpen}
+              onClick={() => setSettingsOpen(true)}
+            >
+              设置
+            </button>
+          </div>
           <h1>中文转地道粤语</h1>
           <p className="intro">
             输入普通话中文，快速得到更像香港日常说法的粤语表达、可切换的粤语拼音标注，并可直接朗读。
+          </p>
+          <p className="settings-summary" aria-label="当前设置">
+            <span>{engineLabels[engine]}</span>
+            <span>{modeLabels[mode]}</span>
+            <span>{schemeNames[scheme]}</span>
           </p>
         </div>
         <div className="hero-actions" aria-label="示例">
@@ -497,47 +545,6 @@ export default function Home() {
               <b>{standardizedInput}</b>
             </div>
           )}
-          <div className="control-group">
-            <p className="control-label">转换引擎</p>
-            <div className="engine-row" aria-label="转换引擎">
-              {(Object.keys(engineLabels) as ConversionEngine[]).map((item) => (
-                <button
-                  key={item}
-                  type="button"
-                  className={engine === item ? "active" : ""}
-                  onClick={() => setEngine(item)}
-                >
-                  {engineLabels[item]}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="control-group">
-            <p className="control-label">表达风格</p>
-            <div className="mode-row" aria-label="表达风格">
-              <button
-                type="button"
-                className={mode === "standard" ? "active" : ""}
-                onClick={() => setMode("standard")}
-              >
-                标准
-              </button>
-              <button
-                type="button"
-                className={mode === "casual" ? "active" : ""}
-                onClick={() => setMode("casual")}
-              >
-                口语
-              </button>
-              <button
-                type="button"
-                className={mode === "polite" ? "active" : ""}
-                onClick={() => setMode("polite")}
-              >
-                礼貌
-              </button>
-            </div>
-          </div>
         </div>
 
         <div className="panel output-panel">
@@ -545,22 +552,11 @@ export default function Home() {
             <div>
               <p className="label">输出</p>
               <h2>粤语表达</h2>
+              <span className="panel-meta">{schemeNames[scheme]}</span>
             </div>
             <button type="button" className="speak-button" onClick={() => speak(cantonese)}>
               发音
             </button>
-          </div>
-          <div className="scheme-row" aria-label="粤拼方案">
-            {(Object.keys(schemeNames) as RomanizationScheme[]).map((item) => (
-              <button
-                key={item}
-                type="button"
-                className={scheme === item ? "active" : ""}
-                onClick={() => setScheme(item)}
-              >
-                {schemeNames[item]}
-              </button>
-            ))}
           </div>
           <p className="cantonese-output">{cantonese}</p>
           <div className="jyutping-box" aria-label="粤拼标注">
@@ -579,11 +575,7 @@ export default function Home() {
 
       <section className="notes" aria-label="说明">
         <div>
-          <strong>当前引擎：{engineLabels[engine]}</strong>
-          <span>{engineNotes[engine]} 输入会先统一为香港繁体字形。</span>
-        </div>
-        <div>
-          <strong>当前方案：{schemeNames[scheme]}</strong>
+          <strong>{schemeNames[scheme]} · 完整读音数据</strong>
           <span>
             {schemeNotes[scheme]} 数据集含{" "}
             {pronunciationData.metadata.characterCount.toLocaleString()} 个汉字读音。
@@ -604,6 +596,103 @@ export default function Home() {
           </span>
         </div>
       </section>
+
+      <div
+        className={`settings-layer ${settingsOpen ? "open" : ""}`}
+        hidden={!settingsOpen}
+        aria-hidden={!settingsOpen}
+        onMouseDown={(event) => {
+          if (event.target === event.currentTarget) {
+            setSettingsOpen(false);
+          }
+        }}
+      >
+        <section
+          className="settings-dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="settings-title"
+        >
+          <header className="settings-heading">
+            <div>
+              <p className="label">偏好设置</p>
+              <h2 id="settings-title">转换设置</h2>
+            </div>
+            <button
+              ref={closeSettingsButtonRef}
+              type="button"
+              className="close-settings-button"
+              aria-label="关闭设置"
+              onClick={() => setSettingsOpen(false)}
+            >
+              ×
+            </button>
+          </header>
+
+          <div className="settings-body">
+            <fieldset className="settings-group">
+              <legend>转换引擎</legend>
+              <p>{engineNotes[engine]}</p>
+              <div className="setting-options two-columns">
+                {(Object.keys(engineLabels) as ConversionEngine[]).map((item) => (
+                  <button
+                    key={item}
+                    type="button"
+                    className={engine === item ? "active" : ""}
+                    aria-pressed={engine === item}
+                    onClick={() => setEngine(item)}
+                  >
+                    {engineLabels[item]}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+
+            <fieldset className="settings-group">
+              <legend>表达风格</legend>
+              <p>控制转换结果的语气，输入仍会先统一为香港繁体字形。</p>
+              <div className="setting-options three-columns">
+                {(Object.keys(modeLabels) as StyleMode[]).map((item) => (
+                  <button
+                    key={item}
+                    type="button"
+                    className={mode === item ? "active" : ""}
+                    aria-pressed={mode === item}
+                    onClick={() => setMode(item)}
+                  >
+                    {modeLabels[item]}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+
+            <fieldset className="settings-group">
+              <legend>输出拼音方案</legend>
+              <p>{schemeNotes[scheme]}</p>
+              <div className="setting-options scheme-options">
+                {(Object.keys(schemeNames) as RomanizationScheme[]).map((item) => (
+                  <button
+                    key={item}
+                    type="button"
+                    className={scheme === item ? "active" : ""}
+                    aria-pressed={scheme === item}
+                    onClick={() => setScheme(item)}
+                  >
+                    {schemeNames[item]}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+          </div>
+
+          <footer className="settings-footer">
+            <p>{engineLabels[engine]} · {modeLabels[mode]} · {schemeNames[scheme]}</p>
+            <button type="button" onClick={() => setSettingsOpen(false)}>
+              完成
+            </button>
+          </footer>
+        </section>
+      </div>
     </main>
   );
 }
