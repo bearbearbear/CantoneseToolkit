@@ -579,22 +579,43 @@ textarea:focus {
     margin-top: 12px;
   }
 
-  .panel-heading {
-    align-items: flex-start;
-    flex-direction: column;
+  .tool-grid {
+    gap: 12px;
   }
 
-  .ghost-button,
-  .speak-button {
-    width: 100%;
+  .panel-heading {
+    min-height: 76px;
+    padding: 16px 16px 10px;
+  }
+
+  textarea {
+    width: calc(100% - 32px);
+    height: calc(3 * 1.6em + 30px);
+    min-height: calc(3 * 1.6em + 30px);
+    margin: 0 16px;
+    padding: 14px;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .standardization-preview {
     grid-template-columns: 1fr;
+    margin-right: 16px;
+    margin-left: 16px;
   }
 
   .cantonese-output {
+    margin-right: 16px;
+    margin-bottom: 12px;
+    margin-left: 16px;
+    padding: 16px;
     font-size: 1.42rem;
+  }
+
+  .jyutping-box {
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 16px;
   }
 
   .settings-layer {

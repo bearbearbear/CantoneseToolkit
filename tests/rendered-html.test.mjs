@@ -43,6 +43,7 @@ test("server-renders the Cantonese conversion tool", async () => {
   assert.match(html, /aria-haspopup="dialog"/);
   assert.match(css, /\.settings-button\s*\{[^}]*position:\s*absolute;/s);
   assert.match(css, /\.intro,\s*\.hero-actions\s*\{\s*display:\s*none;/s);
+  assert.match(css, /height:\s*calc\(3 \* 1\.6em \+ 30px\)/);
   assert.match(html, /标准/);
   assert.match(html, /香港字形/);
   assert.match(html, /Jyutping/);
