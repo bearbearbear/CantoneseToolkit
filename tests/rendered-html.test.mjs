@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 
 async function render() {
@@ -43,5 +44,23 @@ test("server-renders the Cantonese conversion tool", async () => {
   assert.match(html, /Yale 数字式/);
   assert.match(html, /教院拼音/);
   assert.match(html, /我今日唔想返工，可唔可以聽日再講？/);
+  assert.match(html, /离线状态/);
+  assert.match(html, /manifest\.webmanifest/);
   assert.doesNotMatch(html, /react-loading-skeleton|codex-preview|SkeletonPreview/);
+});
+
+test("offline assets are available for browser caching", () => {
+  const serviceWorkerUrl = new URL("../public/sw.js", import.meta.url);
+  const manifestUrl = new URL("../public/manifest.webmanifest", import.meta.url);
+
+  assert.equal(existsSync(serviceWorkerUrl), true);
+  assert.equal(existsSync(manifestUrl), true);
+
+  const serviceWorker = readFileSync(serviceWorkerUrl, "utf8");
+  const manifest = JSON.parse(readFileSync(manifestUrl, "utf8"));
+
+  assert.match(serviceWorker, /cantonese-tool-offline-v1/);
+  assert.match(serviceWorker, /fetch/);
+  assert.equal(manifest.display, "standalone");
+  assert.equal(manifest.start_url, "/");
 });

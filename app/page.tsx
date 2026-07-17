@@ -1,11 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import pronunciationData from "./data/cantonese-pronunciation-table.json";
 
 type ConversionEngine = "rule" | "natural";
 type StyleMode = "standard" | "casual" | "polite";
 type RomanizationScheme = "jyutping" | "textbook" | "yale" | "education";
+type OfflineStatus = "checking" | "ready" | "unsupported";
 
 type JyutpingUnit = {
   text: string;
@@ -36,6 +37,7 @@ const phraseReadings = pronunciationData.phrases as Record<
 const pronunciationPhraseKeys = Object.keys(phraseReadings).sort(
   (a, b) => b.length - a.length,
 );
+const offlineCacheName = "cantonese-tool-offline-v1";
 
 const samples = [
   "我今天不想上班，能不能明天再说？",
@@ -349,11 +351,55 @@ function speak(text: string) {
   window.speechSynthesis.speak(utterance);
 }
 
+function getOfflineResourceUrls() {
+  if (typeof window === "undefined") {
+    return [];
+  }
+
+  const urls = new Set<string>([
+    "/",
+    window.location.pathname + window.location.search,
+    "/manifest.webmanifest",
+    "/favicon.svg",
+    "/sw.js",
+  ]);
+
+  for (const entry of window.performance.getEntriesByType("resource")) {
+    const resource = entry as PerformanceResourceTiming;
+    try {
+      const url = new URL(resource.name);
+      if (
+        url.origin === window.location.origin &&
+        ["script", "link", "css", "fetch"].includes(resource.initiatorType)
+      ) {
+        urls.add(url.pathname + url.search);
+      }
+    } catch {
+      // Ignore browser-generated resource names that are not URLs.
+    }
+  }
+
+  return Array.from(urls);
+}
+
+async function cacheOfflineResources() {
+  if (typeof window === "undefined" || !("caches" in window)) {
+    return;
+  }
+
+  const cache = await window.caches.open(offlineCacheName);
+  const urls = getOfflineResourceUrls();
+  await Promise.allSettled(
+    urls.map((url) => cache.add(new Request(url, { cache: "reload" }))),
+  );
+}
+
 export default function Home() {
   const [input, setInput] = useState(samples[0]);
   const [engine, setEngine] = useState<ConversionEngine>("rule");
   const [mode, setMode] = useState<StyleMode>("standard");
   const [scheme, setScheme] = useState<RomanizationScheme>("jyutping");
+  const [offlineStatus, setOfflineStatus] = useState<OfflineStatus>("checking");
   const standardizedInput = useMemo(
     () => normalizeHongKongText(cleanInputText(input)),
     [input],
@@ -363,6 +409,42 @@ export default function Home() {
     [engine, input, mode],
   );
   const pronunciation = useMemo(() => splitPronunciation(cantonese), [cantonese]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function prepareOfflineMode() {
+      if (
+        typeof window === "undefined" ||
+        !("serviceWorker" in navigator) ||
+        !("caches" in window)
+      ) {
+        if (!cancelled) {
+          setOfflineStatus("unsupported");
+        }
+        return;
+      }
+
+      try {
+        await navigator.serviceWorker.register("/sw.js");
+        await navigator.serviceWorker.ready;
+        await cacheOfflineResources();
+        if (!cancelled) {
+          setOfflineStatus("ready");
+        }
+      } catch {
+        if (!cancelled) {
+          setOfflineStatus("unsupported");
+        }
+      }
+    }
+
+    prepareOfflineMode();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   return (
     <main className="page-shell">
@@ -501,6 +583,16 @@ export default function Home() {
         <div>
           <strong>发音取决于浏览器语音。</strong>
           <span>系统如有粤语或香港中文语音，会优先使用；否则回退到中文语音。</span>
+        </div>
+        <div>
+          <strong>离线状态</strong>
+          <span>
+            {offlineStatus === "ready"
+              ? "已保存到本机。之后断网再打开这个地址，也可以继续转换和查看粤拼。"
+              : offlineStatus === "checking"
+                ? "正在保存页面和读音数据，首次打开需要联网。"
+                : "当前浏览器不支持离线缓存，或需要先用 HTTPS 打开一次。"}
+          </span>
         </div>
       </section>
     </main>
