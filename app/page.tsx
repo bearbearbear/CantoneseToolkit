@@ -37,7 +37,7 @@ const phraseReadings = pronunciationData.phrases as Record<
 const pronunciationPhraseKeys = Object.keys(phraseReadings).sort(
   (a, b) => b.length - a.length,
 );
-const offlineCacheName = "cantonese-tool-offline-v1";
+const offlineCacheName = "cantonese-tool-offline-v2";
 
 const samples = [
   "我今天不想上班，能不能明天再说？",
@@ -361,6 +361,9 @@ function getOfflineResourceUrls() {
     window.location.pathname + window.location.search,
     "/manifest.webmanifest",
     "/favicon.svg",
+    "/apple-touch-icon.png",
+    "/icon-192.png",
+    "/icon-512.png",
     "/sw.js",
   ]);
 

@@ -52,15 +52,26 @@ test("server-renders the Cantonese conversion tool", async () => {
 test("offline assets are available for browser caching", () => {
   const serviceWorkerUrl = new URL("../public/sw.js", import.meta.url);
   const manifestUrl = new URL("../public/manifest.webmanifest", import.meta.url);
+  const appleIconUrl = new URL("../public/apple-touch-icon.png", import.meta.url);
+  const icon192Url = new URL("../public/icon-192.png", import.meta.url);
+  const icon512Url = new URL("../public/icon-512.png", import.meta.url);
 
   assert.equal(existsSync(serviceWorkerUrl), true);
   assert.equal(existsSync(manifestUrl), true);
+  assert.equal(existsSync(appleIconUrl), true);
+  assert.equal(existsSync(icon192Url), true);
+  assert.equal(existsSync(icon512Url), true);
 
   const serviceWorker = readFileSync(serviceWorkerUrl, "utf8");
   const manifest = JSON.parse(readFileSync(manifestUrl, "utf8"));
 
-  assert.match(serviceWorker, /cantonese-tool-offline-v1/);
+  assert.match(serviceWorker, /cantonese-tool-offline-v2/);
   assert.match(serviceWorker, /fetch/);
+  assert.match(serviceWorker, /apple-touch-icon\.png/);
   assert.equal(manifest.display, "standalone");
   assert.equal(manifest.start_url, "/");
+  assert.deepEqual(
+    manifest.icons.map((icon) => icon.src),
+    ["/favicon.svg", "/icon-192.png", "/icon-512.png"],
+  );
 });

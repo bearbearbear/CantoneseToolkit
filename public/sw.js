@@ -1,5 +1,13 @@
-const CACHE_NAME = "cantonese-tool-offline-v1";
-const CORE_ASSETS = ["/", "/manifest.webmanifest", "/favicon.svg", "/sw.js"];
+const CACHE_NAME = "cantonese-tool-offline-v2";
+const CORE_ASSETS = [
+  "/",
+  "/manifest.webmanifest",
+  "/favicon.svg",
+  "/apple-touch-icon.png",
+  "/icon-192.png",
+  "/icon-512.png",
+  "/sw.js",
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
