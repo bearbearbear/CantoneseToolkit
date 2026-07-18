@@ -8,6 +8,13 @@ type StyleMode = "standard" | "casual" | "polite";
 type RomanizationScheme = "jyutping" | "textbook" | "yale" | "education";
 type OfflineStatus = "checking" | "ready" | "unsupported";
 
+type SchemeDetail = {
+  initials: string;
+  finals: string;
+  tones: string;
+  examples: string[];
+};
+
 type JyutpingUnit = {
   text: string;
   readings: Partial<Record<RomanizationScheme, string[]>> | null;
@@ -25,6 +32,33 @@ const schemeNames = Object.fromEntries(
 const schemeNotes = Object.fromEntries(
   Object.entries(schemes).map(([key, value]) => [key, value.description]),
 ) as Record<RomanizationScheme, string>;
+
+const schemeDetails: Record<RomanizationScheme, SchemeDetail> = {
+  jyutping: {
+    initials: "以 b/p/m/f、d/t/n/l、g/k/ng/h、gw/kw/w、z/c/s、j 表示粤语声母，零声母直接写韵母。",
+    finals: "保留 aa、eoi、oe、yu、ng、m 等粤语核心韵母，长短元音区分清楚。",
+    tones: "使用 1-6 数字声调：1 阴平、2 阴上、3 阴去、4 阳平、5 阳上、6 阳去；入声并入 1/3/6。",
+    examples: ["香港 hoeng1 gong2", "广东话 gwong2 dung1 waa2"],
+  },
+  textbook: {
+    initials: "按教材写法使用 j/q/x 对应 Jyutping 的 z/c/s，gu/ku 对应 gw/kw，y 对应 j 或零声母。",
+    finals: "常把 aa 写作 a，oe/eo 写作 ê，eoi 写作 êu，yu 写作 ü，入声尾 -p/-t/-k 写作 -b/-d/-g。",
+    tones: "用上标 ¹²³⁴⁵⁶ 标在音节后，声调类别与 1-6 调相同。",
+    examples: ["香港 hêng¹ gong²", "广东话 guong² dung¹ wa²"],
+  },
+  yale: {
+    initials: "使用 j/ch/s、gw/kw、ng 等英文学习者较熟悉的拼法，jyu 类音节可写 jy 或 yu。",
+    finals: "用 aai、eung、eui、eu、yu 等韵母拼写，与 Jyutping 便于逐项对照。",
+    tones: "这里采用数字式 Yale，音节后标 1-6，方便和 Jyutping 同屏比较。",
+    examples: ["香港 heung1 gong2", "广东话 gwong2 dung1 wa2"],
+  },
+  education: {
+    initials: "教院拼音常用 dz/ts 对应 Jyutping 的 z/c，并保留 gw/kw、j、ng 等声母。",
+    finals: "把 eoi 写作 oey，yu 写作 y，oe 保留为 oe；其他韵母多与 Jyutping 接近。",
+    tones: "舒声多用 ¹²³⁴⁵⁶；入声按韵尾另标 ⁷⁸⁹，对应高、中、低入声。",
+    examples: ["香港 hoeng¹ gong²", "广东话 gwong² dung¹ waa²"],
+  },
+};
 
 const characterReadings = pronunciationData.characters as Record<
   string,
@@ -411,6 +445,8 @@ export default function Home() {
   const [engine, setEngine] = useState<ConversionEngine>("rule");
   const [mode, setMode] = useState<StyleMode>("standard");
   const [scheme, setScheme] = useState<RomanizationScheme>("jyutping");
+  const [schemeGuide, setSchemeGuide] =
+    useState<RomanizationScheme>("jyutping");
   const [offlineStatus, setOfflineStatus] = useState<OfflineStatus>("checking");
   const [settingsOpen, setSettingsOpen] = useState(false);
   const closeSettingsButtonRef = useRef<HTMLButtonElement>(null);
@@ -423,6 +459,7 @@ export default function Home() {
     [engine, input, mode],
   );
   const pronunciation = useMemo(() => splitPronunciation(cantonese), [cantonese]);
+  const activeSchemeDetail = schemeDetails[schemeGuide];
 
   useEffect(() => {
     let cancelled = false;
@@ -692,11 +729,44 @@ export default function Home() {
                     type="button"
                     className={scheme === item ? "active" : ""}
                     aria-pressed={scheme === item}
-                    onClick={() => setScheme(item)}
+                    aria-controls="scheme-guide"
+                    onFocus={() => setSchemeGuide(item)}
+                    onClick={() => {
+                      setScheme(item);
+                      setSchemeGuide(item);
+                    }}
                   >
                     {schemeNames[item]}
                   </button>
                 ))}
+              </div>
+              <div className="scheme-guide" id="scheme-guide" aria-live="polite">
+                <div className="scheme-guide-heading">
+                  <span>方案解释</span>
+                  <strong>{schemeNames[schemeGuide]}</strong>
+                </div>
+                <dl>
+                  <div>
+                    <dt>声母</dt>
+                    <dd>{activeSchemeDetail.initials}</dd>
+                  </div>
+                  <div>
+                    <dt>韵母</dt>
+                    <dd>{activeSchemeDetail.finals}</dd>
+                  </div>
+                  <div>
+                    <dt>声调</dt>
+                    <dd>{activeSchemeDetail.tones}</dd>
+                  </div>
+                  <div>
+                    <dt>示例</dt>
+                    <dd>
+                      {activeSchemeDetail.examples.map((example) => (
+                        <code key={example}>{example}</code>
+                      ))}
+                    </dd>
+                  </div>
+                </dl>
               </div>
             </fieldset>
           </div>

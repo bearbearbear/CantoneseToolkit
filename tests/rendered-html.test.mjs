@@ -50,6 +50,12 @@ test("server-renders the Cantonese conversion tool", async () => {
   assert.match(html, /教材：广州话拼音/);
   assert.match(html, /Yale 数字式/);
   assert.match(html, /教院拼音/);
+  assert.match(html, /方案解释/);
+  assert.match(html, /声母/);
+  assert.match(html, /韵母/);
+  assert.match(html, /声调/);
+  assert.match(html, /示例/);
+  assert.match(html, /香港 hoeng1 gong2/);
   assert.match(html, /我今日唔想返工，可唔可以聽日再講？/);
   assert.match(html, /<button[^>]+class="jyutping-unit"[^>]+aria-label="朗读 我/);
   assert.match(html, /title="单独发音"/);

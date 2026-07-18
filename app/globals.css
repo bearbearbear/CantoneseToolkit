@@ -522,6 +522,71 @@ textarea:focus {
   box-shadow: inset 0 0 0 1px var(--red);
 }
 
+.scheme-guide {
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid rgba(0, 109, 119, 0.22);
+  border-radius: 8px;
+  background: rgba(0, 109, 119, 0.06);
+}
+
+.scheme-guide-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.scheme-guide-heading span {
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.scheme-guide-heading strong {
+  color: var(--ink);
+  font-size: 0.98rem;
+}
+
+.scheme-guide dl {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.scheme-guide dl div {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.scheme-guide dt {
+  color: var(--ink);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.scheme-guide dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.scheme-guide code {
+  display: inline-block;
+  margin: 0 8px 6px 0;
+  padding: 3px 7px;
+  border: 1px solid rgba(215, 205, 189, 0.95);
+  border-radius: 6px;
+  background: var(--paper-strong);
+  color: var(--teal);
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
 .settings-footer {
   min-height: 72px;
   border-top: 1px solid var(--line);
@@ -666,6 +731,20 @@ textarea:focus {
   .setting-options.three-columns,
   .scheme-options {
     grid-template-columns: 1fr;
+  }
+
+  .scheme-guide {
+    padding: 14px;
+  }
+
+  .scheme-guide-heading,
+  .scheme-guide dl div {
+    grid-template-columns: 1fr;
+  }
+
+  .scheme-guide-heading {
+    display: grid;
+    gap: 4px;
   }
 
   .settings-footer {
