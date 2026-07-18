@@ -317,6 +317,26 @@ textarea:focus {
   border: 1px solid #e4d8c6;
   border-radius: 8px;
   background: var(--paper-strong);
+  color: inherit;
+  text-align: center;
+  touch-action: manipulation;
+  transition:
+    transform 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    background 140ms ease;
+}
+
+.jyutping-unit:hover,
+.jyutping-unit:focus-visible {
+  border-color: var(--teal);
+  background: #f8fffd;
+  box-shadow: 0 0 0 3px rgba(0, 109, 119, 0.12);
+  transform: translateY(-1px);
+}
+
+.jyutping-unit:active {
+  transform: translateY(0);
 }
 
 .jyutping-unit b {

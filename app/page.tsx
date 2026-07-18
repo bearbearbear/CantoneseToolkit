@@ -560,15 +560,31 @@ export default function Home() {
           </div>
           <p className="cantonese-output">{cantonese}</p>
           <div className="jyutping-box" aria-label="粤拼标注">
-            {pronunciation.map((unit, index) => (
-              <span
-                className={unit.readings ? "jyutping-unit" : "punctuation"}
-                key={`${unit.text}-${index}`}
-              >
-                <b>{unit.text}</b>
-                {unit.readings && <small>{getReading(unit.readings, scheme)}</small>}
-              </span>
-            ))}
+            {pronunciation.map((unit, index) => {
+              const reading = getReading(unit.readings, scheme);
+
+              if (!unit.readings) {
+                return (
+                  <span className="punctuation" key={`${unit.text}-${index}`}>
+                    {unit.text}
+                  </span>
+                );
+              }
+
+              return (
+                <button
+                  type="button"
+                  className="jyutping-unit"
+                  key={`${unit.text}-${index}`}
+                  aria-label={`朗读 ${unit.text}，${reading}`}
+                  title="单独发音"
+                  onClick={() => speak(unit.text)}
+                >
+                  <b>{unit.text}</b>
+                  <small>{reading}</small>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>

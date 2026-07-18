@@ -51,6 +51,8 @@ test("server-renders the Cantonese conversion tool", async () => {
   assert.match(html, /Yale 数字式/);
   assert.match(html, /教院拼音/);
   assert.match(html, /我今日唔想返工，可唔可以聽日再講？/);
+  assert.match(html, /<button[^>]+class="jyutping-unit"[^>]+aria-label="朗读 我/);
+  assert.match(html, /title="单独发音"/);
   assert.match(html, /离线状态/);
   assert.match(html, /manifest\.webmanifest/);
   assert.doesNotMatch(html, /react-loading-skeleton|codex-preview|SkeletonPreview/);
