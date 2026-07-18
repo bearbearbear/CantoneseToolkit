@@ -2,9 +2,14 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
 
-const pageSource = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
 const cases = JSON.parse(
   readFileSync(new URL("./romanization-cases.json", import.meta.url), "utf8"),
+);
+const conversionRuleData = JSON.parse(
+  readFileSync(
+    new URL("../app/data/cantonese-conversion-rules.json", import.meta.url),
+    "utf8",
+  ),
 );
 const pronunciationData = JSON.parse(
   readFileSync(
@@ -13,16 +18,10 @@ const pronunciationData = JSON.parse(
   ),
 );
 
-function extractLiteral(name) {
-  const pattern = new RegExp(`const ${name}[^=]*= ([\\s\\S]*?);\\n\\n`);
-  const match = pageSource.match(pattern);
-  assert.ok(match, `Could not find ${name}`);
-  return Function(`"use strict"; return (${match[1]});`)();
-}
-
-const phraseRules = extractLiteral("phraseRules");
-const hongKongPhraseNormalizations = extractLiteral("hongKongPhraseNormalizations");
-const hongKongCharacterMap = extractLiteral("hongKongCharacterMap");
+const phraseRules = conversionRuleData.phraseRules;
+const hongKongPhraseNormalizations =
+  conversionRuleData.hongKongPhraseNormalizations;
+const hongKongCharacterMap = conversionRuleData.hongKongCharacterMap;
 const phraseReadings = pronunciationData.phrases;
 const characterReadings = pronunciationData.characters;
 const phraseKeys = Object.keys(phraseReadings).sort((a, b) => b.length - a.length);

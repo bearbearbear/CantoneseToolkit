@@ -1,5 +1,6 @@
 import vinext from "vinext";
 import { defineConfig } from "vite";
+import type { Plugin, ViteDevServer } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
 
@@ -33,6 +34,53 @@ const localBindingConfig = {
     : [],
 };
 
+function serveStylesheetCssDirectly(): Plugin {
+  return {
+    name: "cantonese-tool-dev-css-direct",
+    apply: "serve" as const,
+    configureServer(server: ViteDevServer) {
+      server.middlewares.use(async (req, res, next) => {
+        if (!req.url) {
+          next();
+          return;
+        }
+
+        const requestUrl = new URL(req.url, "http://localhost");
+        const isCssRequest = requestUrl.pathname.endsWith(".css");
+        const hasSpecialCssQuery =
+          requestUrl.searchParams.has("direct") ||
+          requestUrl.searchParams.has("inline") ||
+          requestUrl.searchParams.has("raw") ||
+          requestUrl.searchParams.has("url");
+        const acceptsCss = `${req.headers.accept ?? ""}`.includes("text/css");
+        const isStyleFetch = req.headers["sec-fetch-dest"] === "style";
+
+        if (!isCssRequest || hasSpecialCssQuery || (!acceptsCss && !isStyleFetch)) {
+          next();
+          return;
+        }
+
+        try {
+          const cssUrl = `${requestUrl.pathname}${requestUrl.search ? `${requestUrl.search}&` : "?"}direct`;
+          const result = await server.transformRequest(cssUrl);
+
+          if (!result) {
+            next();
+            return;
+          }
+
+          res.statusCode = 200;
+          res.setHeader("Content-Type", "text/css");
+          res.setHeader("Cache-Control", "no-cache");
+          res.end(result.code);
+        } catch (error) {
+          next(error);
+        }
+      });
+    },
+  };
+}
+
 export default defineConfig(async () => {
   // Keep Wrangler and Miniflare state project-local. These are non-secret tool
   // settings; application environment belongs in ignored `.env*` files.
@@ -48,6 +96,7 @@ export default defineConfig(async () => {
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,
     plugins: [
+      serveStylesheetCssDirectly(),
       vinext(),
       sites(),
       cloudflare({
