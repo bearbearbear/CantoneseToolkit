@@ -24,9 +24,9 @@ function get(entry, column) {
   return entry[columnIndex[column]];
 }
 
-test("core Cantonese vocab v0.1 has the expected draft shape", () => {
-  assert.ok(coreVocab.entries.length >= 280);
-  assert.ok(coreVocab.entries.length <= 380);
+test("core Cantonese vocab has the expected 1000-entry difference-only draft shape", () => {
+  assert.ok(coreVocab.entries.length >= 990);
+  assert.ok(coreVocab.entries.length <= 1010);
 
   for (const column of [
     "mandarin",
@@ -81,6 +81,18 @@ test("core Cantonese vocab does not duplicate Mandarin keys", () => {
   }
 
   assert.deepEqual(duplicates, []);
+});
+
+test("core Cantonese vocab and generated phrase rules keep only differences", () => {
+  const unchangedVocabEntries = coreVocab.entries
+    .filter((entry) => get(entry, "mandarin") === get(entry, "cantonese"))
+    .map((entry) => get(entry, "mandarin"));
+  const unchangedPhraseRules = conversionRuleData.phraseRules
+    .filter(([from, to]) => from === to)
+    .map(([from]) => from);
+
+  assert.deepEqual(unchangedVocabEntries, []);
+  assert.deepEqual(unchangedPhraseRules, []);
 });
 
 test("exact vocab entries are exported to phrase rules while contextual entries are not", () => {

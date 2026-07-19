@@ -1,0 +1,79 @@
+﻿id,stage,rule_type,source_pattern,target_pattern,condition,priority,example_source,example_target,notes,review_status,provenance
+RUL-0001,10,negation,不 + VERB,唔 + VERB,default verbal negation,100,我不去。,我唔去。,,draft_curated,curated_v0.1
+RUL-0002,10,negation,不 + ADJ,唔 + ADJ,default adjectival negation,100,这个不贵。,呢個唔貴。,,draft_curated,curated_v0.1
+RUL-0003,10,copula_negation,不是,唔係,copular negation,110,他不是医生。,佢唔係醫生。,,draft_curated,curated_v0.1
+RUL-0004,10,existence_negation,没有 + NP,冇 + NP,absence or possession,110,我没有钱。,我冇錢。,,draft_curated,curated_v0.1
+RUL-0005,10,past_negation,没有 + VP,冇 + VP,completed-time context,105,我昨天没有去。,我尋日冇去。,,draft_curated,curated_v0.1
+RUL-0006,10,not_yet,还没有 + VP,仲未 + VP,unfinished action,120,我还没有吃饭。,我仲未食飯。,,draft_curated,curated_v0.1
+RUL-0007,10,negative_imperative,别 + VP,唔好 + VP,command or advice,110,别走。,唔好走。,,draft_curated,curated_v0.1
+RUL-0008,10,negative_imperative,不要 + VP,唔好 + VP,command or advice,105,不要说话。,唔好講嘢。,,draft_curated,curated_v0.1
+RUL-0009,10,item_rejection,不要 + NP,唔要 + NP,rejecting an item or option,105,不要冰。,唔要冰。,,draft_curated,curated_v0.1
+RUL-0010,10,skill_negative,不会 + VP,唔識 + VP,learned skill,110,我不会开车。,我唔識揸車。,,draft_curated,curated_v0.1
+RUL-0011,10,future_negative,不会 + VP,唔會 + VP,future or likelihood,100,明天不会下雨。,聽日唔會落雨。,,draft_curated,curated_v0.1
+RUL-0012,10,permission_negative,不能 + VP,唔可以 + VP,rule or permission,105,这里不能停车。,呢度唔可以停車。,,draft_curated,curated_v0.1
+RUL-0013,10,ability_negative,VERB + 不了,VERB + 唔到,inability/result,100,我吃不了这么多。,我食唔到咁多。,,draft_curated,curated_v0.1
+RUL-0014,20,yes_no_question,是不是 + X,係咪 + X,yes/no copular question,110,是不是这里？,係咪呢度呀？,append particle optionally,draft_curated,curated_v0.1
+RUL-0015,20,a_not_a,能不能 + VP,可唔可以 + VP,permission/request,110,能不能帮我？,可唔可以幫我呀？,,draft_curated,curated_v0.1
+RUL-0016,20,a_not_a,有没有 + NP,有冇 + NP,existence/possession,110,有没有位置？,有冇位呀？,,draft_curated,curated_v0.1
+RUL-0017,20,preference_question,喜欢不喜欢 + NP,鍾唔鍾意 + NP,preference,105,你喜欢不喜欢这个？,你鍾唔鍾意呢個呀？,,draft_curated,curated_v0.1
+RUL-0018,20,degree_question,ADJ 不 ADJ,ADJ 唔 ADJ,A-not-A adjective,95,贵不贵？,貴唔貴呀？,,draft_curated,curated_v0.1
+RUL-0019,20,why,为什么,點解,question word,120,你为什么迟到？,你點解遲到呀？,,draft_curated,curated_v0.1
+RUL-0020,20,what,什么,乜嘢,question word,120,你想吃什么？,你想食乜嘢呀？,,draft_curated,curated_v0.1
+RUL-0021,20,who,谁,邊個,question word,120,他是谁？,佢係邊個呀？,,draft_curated,curated_v0.1
+RUL-0022,20,where,哪里,邊度,question word,120,你去哪里？,你去邊度呀？,,draft_curated,curated_v0.1
+RUL-0023,20,when,什么时候,幾時,question word,120,你什么时候来？,你幾時嚟呀？,,draft_curated,curated_v0.1
+RUL-0024,20,how,怎么,點,question word,115,这个怎么用？,呢個點用呀？,,draft_curated,curated_v0.1
+RUL-0025,20,how_many,多少,幾多,question word,115,多少钱？,幾多錢呀？,,draft_curated,curated_v0.1
+RUL-0026,30,progressive,正在 + VERB,VERB + 緊,progressive aspect,120,我正在吃饭。,我食緊飯。,move marker after verb,draft_curated,curated_v0.1
+RUL-0027,30,progressive_separable,正在 + VERB + OBJECT,VERB + 緊 + OBJECT,progressive with object,125,他正在开会。,佢開緊會。,,draft_curated,curated_v0.1
+RUL-0028,30,perfective,VERB + 了,VERB + 咗,"completed action, not sentence-final change",115,我买了这个。,我買咗呢個。,,draft_curated,curated_v0.1
+RUL-0029,30,experiential,VERB + 过,VERB + 過,experiential aspect,90,我去过香港。,我去過香港。,,draft_curated,curated_v0.1
+RUL-0030,30,not_yet_question,VERB + 了吗,VERB + 咗未,completed-action question,110,你吃饭了吗？,你食咗飯未呀？,,draft_curated,curated_v0.1
+RUL-0031,30,not_yet_question,VERB + 了没有,VERB + 咗未,completed-action question,110,你到了没有？,你到咗未呀？,,draft_curated,curated_v0.1
+RUL-0032,30,sentence_change,X + 了,X + 喇,new state at sentence end,80,天黑了。,天黑喇。,do not apply after 咗,draft_curated,curated_v0.1
+RUL-0033,40,degree,很 + ADJ,好 + ADJ,colloquial degree,110,很漂亮。,好靚。,,draft_curated,curated_v0.1
+RUL-0034,40,mild_degree,有点 + ADJ,有啲 + ADJ,mild degree,110,有点累。,有啲攰。,,draft_curated,curated_v0.1
+RUL-0035,40,not_very,不太 + ADJ,唔係幾 + ADJ,mild negative degree,110,不太贵。,唔係幾貴。,,draft_curated,curated_v0.1
+RUL-0036,40,degree_suffix,ADJ + 一点,ADJ + 啲,comparative/request,105,便宜一点。,平啲。,,draft_curated,curated_v0.1
+RUL-0037,40,comparison,NP1 + 比 + NP2 + ADJ,NP1 + ADJ + 過 + NP2,standard comparison,120,这个比那个贵。,呢個貴過嗰個。,,draft_curated,curated_v0.1
+RUL-0038,40,quantity,这么多,咁多,demonstrative quantity,110,不要买这么多。,唔好買咁多。,,draft_curated,curated_v0.1
+RUL-0039,40,degree_demonstrative,这么 + ADJ,咁 + ADJ,demonstrative degree,110,为什么这么贵？,點解咁貴呀？,,draft_curated,curated_v0.1
+RUL-0040,50,pronoun,他|她|它,佢,third-person singular,120,他来了。,佢嚟咗。,,draft_curated,curated_v0.1
+RUL-0041,50,pronoun_plural,他们|她们|它们,佢哋,third-person plural,120,他们到了。,佢哋到咗。,,draft_curated,curated_v0.1
+RUL-0042,50,pronoun_plural,我们,我哋,first-person plural,120,我们走吧。,我哋走啦。,,draft_curated,curated_v0.1
+RUL-0043,50,pronoun_plural,你们,你哋,second-person plural,120,你们先走。,你哋走先。,,draft_curated,curated_v0.1
+RUL-0044,50,demonstrative,这个,呢個,singular proximal,120,这个很好。,呢個幾好。,,draft_curated,curated_v0.1
+RUL-0045,50,demonstrative,那个,嗰個,singular distal,120,那个是谁的？,嗰個係邊個嘅？,,draft_curated,curated_v0.1
+RUL-0046,50,demonstrative_plural,这些,呢啲,plural proximal,120,这些多少钱？,呢啲幾多錢呀？,,draft_curated,curated_v0.1
+RUL-0047,50,demonstrative_plural,那些,嗰啲,plural distal,120,那些不要。,嗰啲唔要。,,draft_curated,curated_v0.1
+RUL-0048,50,location,在 + PLACE,喺 + PLACE,locative preposition,115,我在这里。,我喺呢度。,,draft_curated,curated_v0.1
+RUL-0049,50,source,从 + PLACE + 来,由 + PLACE + 嚟,origin,100,我从广州来。,我由廣州嚟。,,draft_curated,curated_v0.1
+RUL-0050,50,goal,到 + PLACE + 去,去 + PLACE,goal phrase normalization,85,我到机场去。,我去機場。,,draft_curated,curated_v0.1
+RUL-0051,60,give_order,给 + PERSON + VERB/NP,畀 + PERSON + VERB/NP,recipient follows 畀,110,给我看看。,畀我睇下。,,draft_curated,curated_v0.1
+RUL-0052,60,tell_order,告诉 + PERSON + CLAUSE,話 + PERSON + 知 + CLAUSE,tell construction,115,告诉我几点开始。,話我知幾點開始。,,draft_curated,curated_v0.1
+RUL-0053,60,look_short,看一下,睇下,light verb complement,120,帮我看一下。,幫我睇下。,,draft_curated,curated_v0.1
+RUL-0054,60,repeat,再 + VERB + 一遍|一次,再 + VERB + 多次,repeat action,105,再说一遍。,再講多次。,,draft_curated,curated_v0.1
+RUL-0055,60,come_back,回来,返嚟,directional verb,110,你什么时候回来？,你幾時返嚟呀？,,draft_curated,curated_v0.1
+RUL-0056,60,go_home,回家,返屋企,directional verb,110,我现在回家。,我而家返屋企。,,draft_curated,curated_v0.1
+RUL-0057,60,work,上班,返工,daily work,120,我今天上班。,我今日返工。,,draft_curated,curated_v0.1
+RUL-0058,60,off_work,下班,放工,office/general,115,我六点下班。,我六點放工。,,draft_curated,curated_v0.1
+RUL-0059,60,eat,吃,食,common verb,120,你吃什么？,你食乜嘢呀？,,draft_curated,curated_v0.1
+RUL-0060,60,drink,喝,飲,common verb,120,你喝什么？,你飲乜嘢呀？,,draft_curated,curated_v0.1
+RUL-0061,60,see,看,睇,common verb,120,你看这个。,你睇下呢個。,postprocess may add 下,draft_curated,curated_v0.1
+RUL-0062,60,find,找,搵,common verb,120,我找不到。,我搵唔到。,,draft_curated,curated_v0.1
+RUL-0063,60,take,拿,攞,common verb,120,请拿一个。,唔該攞一個。,,draft_curated,curated_v0.1
+RUL-0064,60,walk,走路,行路,common verb,120,走路要多久？,行路要幾耐呀？,,draft_curated,curated_v0.1
+RUL-0065,70,suggestion,CLAUSE + 吧,CLAUSE + 啦,suggestion,100,我们走吧。,我哋走啦。,,draft_curated,curated_v0.1
+RUL-0066,70,first_action,我 + VERB + 先,我 + VERB + 先,Cantonese preferred '先' often sentence-final,80,我先走。,我走先。,requires reordering when source 先 precedes verb,draft_curated,curated_v0.1
+RUL-0067,70,source_first,先 + VERB,VERB + 先,simple action sequencing,95,我先走。,我走先。,,draft_curated,curated_v0.1
+RUL-0068,70,classifier_document,这个 + 文件,呢份文件,document classifier,105,这个文件有问题。,呢份文件有問題。,,draft_curated,curated_v0.1
+RUL-0069,70,classifier_device,这个 + 设备,呢部設備,device classifier,90,这个设备坏了。,呢部設備壞咗。,,draft_curated,curated_v0.1
+RUL-0070,70,classifier_vehicle,一辆 + VEHICLE,一架 + VEHICLE,vehicle classifier,105,一辆出租车。,一架的士。,,draft_curated,curated_v0.1
+RUL-0071,70,classifier_bottle,一瓶 + DRINK,一支 + DRINK,bottle classifier,95,一瓶水。,一支水。,,draft_curated,curated_v0.1
+RUL-0072,70,home_location,在家,喺屋企,home location,110,我今天在家。,我今日喺屋企。,,draft_curated,curated_v0.1
+RUL-0073,90,question_particle,YES_NO_QUESTION + ？,YES_NO_QUESTION + 呀？,neutral yes/no question,80,可以吗？,得唔得呀？,avoid duplicate particles,draft_curated,curated_v0.1
+RUL-0074,90,wh_question_particle,WH_QUESTION + ？,WH_QUESTION + 呀？,neutral wh-question,75,你去哪里？,你去邊度呀？,avoid if already has 㗎/咩,draft_curated,curated_v0.1
+RUL-0075,90,state_change_particle,COMPLETED_OR_NEW_STATE + 。,COMPLETED_OR_NEW_STATE + 喇。,new state emphasis,65,我到了。,我到咗喇。,optional,draft_curated,curated_v0.1
+RUL-0076,90,dedupe_particle,呀呀|喇喇|啦啦,呀|喇|啦,cleanup,120,你去邊度呀呀？,你去邊度呀？,,draft_curated,curated_v0.1
+RUL-0077,90,dedupe_negation,唔唔,唔,cleanup,120,我唔唔去。,我唔去。,,draft_curated,curated_v0.1
+RUL-0078,90,punctuation,？？|。。|！！,？|。|！,cleanup,120,你去邊度？？,你去邊度？,,draft_curated,curated_v0.1

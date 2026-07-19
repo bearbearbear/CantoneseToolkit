@@ -1,0 +1,111 @@
+{
+  "dataset_name": "Offline Mandarin-to-Cantonese Text Translator Starter Data",
+  "version": "0.1.0",
+  "build_date": "2026-07-19",
+  "default_variant": "Hong Kong colloquial Cantonese",
+  "counts": {
+    "phrases": 396,
+    "lexicon": 331,
+    "templates": 91,
+    "rules": 78,
+    "tests": 566
+  },
+  "runtime_translation_units": 896,
+  "review_status": "draft_curated_requires_native_review",
+  "source_policy": "Newly curated prototype compilation. Public resources used as linguistic references; no wholesale copying intended.",
+  "reference_sources": [
+    {
+      "name": "CC-Canto",
+      "url": "https://cccanto.org/about.html",
+      "license": "CC BY-SA 3.0",
+      "use": "vocabulary and Cantonese usage reference"
+    },
+    {
+      "name": "HKCanCor",
+      "url": "https://github.com/fcbond/hkcancor",
+      "license": "CC BY 4.0",
+      "use": "Hong Kong spoken Cantonese corpus reference"
+    },
+    {
+      "name": "LSHK Jyutping",
+      "url": "https://jyutping.org/en/jyutping/",
+      "license": "reference site",
+      "use": "orthographic and pronunciation standard reference; pronunciation not included in v0.1"
+    },
+    {
+      "name": "CanCLID Cantonese sentences",
+      "url": "https://github.com/CanCLID/sentences",
+      "license": "check repository/file-level terms before reuse",
+      "use": "written Cantonese sentence-style reference"
+    }
+  ],
+  "files": [
+    {
+      "name": "lexicon.csv",
+      "bytes": 25710,
+      "sha256": "c6fd18db3df511849314d830aa35b795a98146210a775120fa2fe0e706e7e04d"
+    },
+    {
+      "name": "lexicon.jsonl",
+      "bytes": 67329,
+      "sha256": "fb8107183ab9500e28d6d8aacda2052ed12181e8ea8f369ed4c6d9c8c96cbd7a"
+    },
+    {
+      "name": "phrases.csv",
+      "bytes": 58151,
+      "sha256": "2fb390cb694ad6fe425a5bfd11a5bf3f4383fd470c72b282ea7c5651b93999d5"
+    },
+    {
+      "name": "phrases.jsonl",
+      "bytes": 115864,
+      "sha256": "edd19c43c5d2e52af9446193c317defa1b34abcacd028021df0c4211203d9978"
+    },
+    {
+      "name": "rules.csv",
+      "bytes": 10891,
+      "sha256": "2d91e2e30723046521f3a2eb5641b80aa8954b84a2119f719408dced3bc67268"
+    },
+    {
+      "name": "rules.jsonl",
+      "bytes": 24328,
+      "sha256": "a2e0d9bdf2ead1886feb2fb7e95cfc39fd30aea2ade7a8f47e9a375b164e3d25"
+    },
+    {
+      "name": "runtime-core-v0.1.0.json",
+      "bytes": 238394,
+      "sha256": "0369691e9a0b1481abefa656d485c97cfd79247a823271508b996ef73389d38d"
+    },
+    {
+      "name": "schema.json",
+      "bytes": 2203,
+      "sha256": "3c31c76ccab71e11bb353919f11e1b55dc8d17deaf461469a91556e2adb413e8"
+    },
+    {
+      "name": "templates.csv",
+      "bytes": 14755,
+      "sha256": "bdf946fff4e5a8b682ff2eb9eb5672ff23668af2ac00a34bdb50f92392dad265"
+    },
+    {
+      "name": "templates.jsonl",
+      "bytes": 30638,
+      "sha256": "88960772b4b32ad0b08fcedce4e318d75fbbed801be7ed460edc49393081e876"
+    },
+    {
+      "name": "tests.csv",
+      "bytes": 49717,
+      "sha256": "b3f5f015a964cf0e373cb7d7f27c017e20109a8415506852ca110694a69f6dfe"
+    },
+    {
+      "name": "tests.jsonl",
+      "bytes": 122635,
+      "sha256": "0ab575a121bd0edf878c61a29225612f3289339bd589313edf90c3b63b81980b"
+    }
+  ],
+  "known_limitations": [
+    "All entries are draft-curated and require review by Hong Kong Cantonese native editors.",
+    "The rule DSL is declarative design data; an engine must implement slot parsing, POS/context checks and conflict resolution.",
+    "Some Hong Kong code-switching choices such as send/Wi-Fi are included and should be configurable.",
+    "Long sentences, nested clauses, idioms and domain-specific language are outside v0.1 scope.",
+    "Jyutping and audio fields are intentionally omitted from v0.1."
+  ]
+}

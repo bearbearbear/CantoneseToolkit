@@ -40,6 +40,9 @@ for (const [from, to] of generatedPhraseRules) {
   merged.set(from, to);
 }
 for (const [from, to] of rules.phraseRules) {
+  if (from === to) {
+    continue;
+  }
   const vocabType = vocabTypes.get(from);
   if (vocabType && vocabType !== "exact") {
     continue;
