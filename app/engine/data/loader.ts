@@ -1,4 +1,4 @@
-import runtimeCoreData from "../../../resources/mandarin_cantonese_v1_1_1/runtime-core-v1.1.1.json";
+import runtimeCoreData from "../../../resources/mandarin_cantonese_v1_2_0/runtime-core-v1.2.0.json";
 import type { RuntimeCore } from "../schema";
 
 let runtimeCore: RuntimeCore | null = null;

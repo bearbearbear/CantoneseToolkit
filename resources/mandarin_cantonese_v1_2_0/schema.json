@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mandarin to Cantonese Offline Translator v1.2 Data Model",
+  "version": "1.2.0",
+  "entities": {
+    "phrase": [
+      "id",
+      "source",
+      "target",
+      "scene",
+      "subtype",
+      "register",
+      "variant",
+      "priority",
+      "match_mode",
+      "notes",
+      "review_status",
+      "provenance"
+    ],
+    "template": [
+      "id",
+      "source_pattern",
+      "target_pattern",
+      "source_patterns",
+      "target_patterns",
+      "slot_types",
+      "scene",
+      "intent",
+      "priority",
+      "transform_pipeline",
+      "constraints",
+      "identity_structure",
+      "example_source",
+      "example_target",
+      "notes",
+      "review_status",
+      "provenance"
+    ],
+    "slot_type": [
+      "slot_type",
+      "kind",
+      "semantic_class",
+      "parent_type",
+      "description",
+      "value_count",
+      "target_strategy",
+      "constraints",
+      "review_status",
+      "provenance"
+    ],
+    "slot_value": [
+      "id",
+      "slot_type",
+      "source",
+      "target",
+      "canonical_source",
+      "target_strategy",
+      "semantic_class",
+      "features",
+      "priority",
+      "review_status",
+      "provenance"
+    ],
+    "lexicon": [
+      "id",
+      "source",
+      "target",
+      "pos",
+      "scene",
+      "priority",
+      "condition",
+      "flags",
+      "notes",
+      "review_status",
+      "provenance"
+    ],
+    "rule": [
+      "id",
+      "stage",
+      "rule_type",
+      "source_pattern",
+      "target_pattern",
+      "condition",
+      "priority",
+      "example_source",
+      "example_target",
+      "notes",
+      "review_status",
+      "provenance"
+    ],
+    "test": [
+      "id",
+      "source",
+      "expected_target",
+      "scene",
+      "test_type",
+      "required_features",
+      "forbidden_features",
+      "notes",
+      "status"
+    ]
+  }
+}

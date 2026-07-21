@@ -1,0 +1,61 @@
+﻿slot_type,kind,semantic_class,parent_type,description,value_count,target_strategy,constraints,review_status,provenance
+battery_item,closed_list,object,warranty_item,Typed values for battery_item; used for constrained template matching.,7,mapped_value_metadata,{},generated_candidate,controlled_slot_bank_v1.0
+body,closed_list,medical,,Typed values for body; used for constrained template matching.,25,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+booking_time,closed_list,time,schedule_time,Typed values for booking_time; used for constrained template matching.,8,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+brand_item,closed_list,object,product_item,Typed values for brand_item; used for constrained template matching.,15,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+checkout_time,closed_list,time,deadline_time,Typed values for checkout_time; used for constrained template matching.,6,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+clothes,closed_list,object,tryable_item,Typed values for clothes; used for constrained template matching.,25,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+color,closed_list,attribute,,Typed values for color; used for constrained template matching.,15,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+daily_action,closed_list,action,,Typed values for daily_action; used for constrained template matching.,50,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+deadline_time,closed_list,time,schedule_time,Typed values for deadline_time; used for constrained template matching.,10,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+deliverable_document,closed_list,object,document,Typed values for deliverable_document; used for constrained template matching.,20,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+document,closed_list,object,,Typed values for document; used for constrained template matching.,30,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+drink,closed_list,food_and_drink,,Typed values for drink; used for constrained template matching.,25,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+drink_additive,closed_list,food_and_drink,ingredient,Typed values for drink_additive; used for constrained template matching.,3,same_form_metadata,{},generated_candidate,controlled_slot_bank_v1.0
+drink_customizable,closed_list,food_and_drink,drink_plain,Typed values for drink_customizable; used for constrained template matching.,16,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+drink_plain,closed_list,food_and_drink,drink,Typed values for drink_plain; used for constrained template matching.,19,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+duration,closed_list,time,,Typed values for duration; used for constrained template matching.,12,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+duration_simple,closed_list,time,duration,Typed values for duration_simple; used for constrained template matching.,10,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+duration_symptom,closed_list,time,symptom,Typed values for duration_symptom; used for constrained template matching.,21,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+food,closed_list,food_and_drink,,Typed values for food; used for constrained template matching.,50,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+future_time,closed_list,time,time,Typed values for future_time; used for constrained template matching.,21,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+generic_time_prefix,closed_list,time,,Typed values for generic_time_prefix; used for constrained template matching.,5,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+ingestible_medicine,closed_list,medical,medicine,Typed values for ingestible_medicine; used for constrained template matching.,9,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+ingredient,closed_list,food_and_drink,,Typed values for ingredient; used for constrained template matching.,20,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+item,closed_list,object,,Typed values for item; used for constrained template matching.,50,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+leisure_person,closed_list,person,person_social,Typed values for leisure_person; used for constrained template matching.,3,same_form_metadata,{},generated_candidate,controlled_slot_bank_v1.0
+measurable_service,closed_list,action,service,Typed values for measurable_service; used for constrained template matching.,16,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+medicine,closed_list,medical,,Typed values for medicine; used for constrained template matching.,15,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+past_time,closed_list,time,time,Typed values for past_time; used for constrained template matching.,6,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+person,closed_list,person,,Typed values for person; used for constrained template matching.,15,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+person_social,closed_list,person,person,Typed values for person_social; used for constrained template matching.,10,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+place,closed_list,place,,Typed values for place; used for constrained template matching.,35,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+place_local,closed_list,place,place,Typed values for place_local; used for constrained template matching.,24,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+product_item,closed_list,object,item,Typed values for product_item; used for constrained template matching.,34,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+quality_adj,closed_list,attribute,,Typed values for quality_adj; used for constrained template matching.,30,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+requestable_room_item,closed_list,object,room_item,Typed values for requestable_room_item; used for constrained template matching.,13,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+room_item,closed_list,object,,Typed values for room_item; used for constrained template matching.,25,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+route_place,closed_list,place,place,Typed values for route_place; used for constrained template matching.,25,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+schedule_time,closed_list,time,future_time,Typed values for schedule_time; used for constrained template matching.,18,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+scheduled_service,closed_list,action,service,Typed values for scheduled_service; used for constrained template matching.,15,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+service,closed_list,action,,Typed values for service; used for constrained template matching.,25,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+severity_symptom,closed_list,medical,symptom,Typed values for severity_symptom; used for constrained template matching.,26,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+size,closed_list,attribute,,Typed values for size; used for constrained template matching.,10,mapped_value_metadata,{},generated_candidate,controlled_slot_bank_v1.0
+social_action,closed_list,action,daily_action,Typed values for social_action; used for constrained template matching.,20,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+storage_item,closed_list,object,item,Typed values for storage_item; used for constrained template matching.,21,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+symptom,closed_list,medical,,Typed values for symptom; used for constrained template matching.,30,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+ticket_place,closed_list,place,,Typed values for ticket_place; used for constrained template matching.,7,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+time,closed_list,time,,Typed values for time; used for constrained template matching.,25,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+treatable_symptom,closed_list,medical,symptom,Typed values for treatable_symptom; used for constrained template matching.,20,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+tryable_item,closed_list,object,,Typed values for tryable_item; used for constrained template matching.,28,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+warranty_item,closed_list,object,brand_item,Typed values for warranty_item; used for constrained template matching.,11,mapped_value_metadata,{},generated_candidate,controlled_slot_bank_v1.0
+work_action,closed_list,action,,Typed values for work_action; used for constrained template matching.,40,mixed,{},generated_candidate,controlled_slot_bank_v1.0
+VP,open_span,action,,Open translated span of type VP; resolved recursively by the engine.,0,recursive_translation,{},draft_curated,engine_schema_v1.2
+NP,open_span,object,,Open translated span of type NP; resolved recursively by the engine.,0,recursive_translation,{},draft_curated,engine_schema_v1.2
+PERSON,open_span,person,,Open translated span of type PERSON; resolved recursively by the engine.,0,recursive_translation,{},draft_curated,engine_schema_v1.2
+PLACE,open_span,place,,Open translated span of type PLACE; resolved recursively by the engine.,0,recursive_translation,{},draft_curated,engine_schema_v1.2
+TIME,open_span,time,,Open translated span of type TIME; resolved recursively by the engine.,0,recursive_translation,{},draft_curated,engine_schema_v1.2
+NUMBER,open_span,number,,Open translated span of type NUMBER; resolved recursively by the engine.,0,recursive_translation,{},draft_curated,engine_schema_v1.2
+ITEM,open_span,object,,Open translated span of type ITEM; resolved recursively by the engine.,0,recursive_translation,{},draft_curated,engine_schema_v1.2
+ADJ,open_span,attribute,,Open translated span of type ADJ; resolved recursively by the engine.,0,recursive_translation,{},draft_curated,engine_schema_v1.2
+CLAUSE,open_span,clause,,Open translated clause resolved recursively by the engine.,0,recursive_translation,{},draft_curated,engine_schema_v1.2

@@ -1,0 +1,184 @@
+﻿id,stage,rule_type,source_pattern,target_pattern,condition,priority,example_source,example_target,notes,review_status,provenance
+RUL-0001,10,negation,不 + VERB,唔 + VERB,default verbal negation,100,我不去。,我唔去。,,draft_curated,curated_v0.1
+RUL-0002,10,negation,不 + ADJ,唔 + ADJ,default adjectival negation,100,这个不贵。,呢個唔貴。,,draft_curated,curated_v0.1
+RUL-0003,10,copula_negation,不是,唔係,copular negation,110,他不是医生。,佢唔係醫生。,,draft_curated,curated_v0.1
+RUL-0004,10,existence_negation,没有 + NP,冇 + NP,absence or possession,110,我没有钱。,我冇錢。,,draft_curated,curated_v0.1
+RUL-0005,10,past_negation,没有 + VP,冇 + VP,completed-time context,105,我昨天没有去。,我尋日冇去。,,draft_curated,curated_v0.1
+RUL-0006,10,not_yet,还没有 + VP,仲未 + VP,unfinished action,120,我还没有吃饭。,我仲未食飯。,,draft_curated,curated_v0.1
+RUL-0007,10,negative_imperative,别 + VP,唔好 + VP,command or advice,110,别走。,唔好走。,,draft_curated,curated_v0.1
+RUL-0008,10,negative_imperative,不要 + VP,唔好 + VP,command or advice,105,不要说话。,唔好講嘢。,,draft_curated,curated_v0.1
+RUL-0009,10,item_rejection,不要 + NP,唔要 + NP,rejecting an item or option,105,不要冰。,唔要冰。,,draft_curated,curated_v0.1
+RUL-0010,10,skill_negative,不会 + VP,唔識 + VP,learned skill,110,我不会开车。,我唔識揸車。,,draft_curated,curated_v0.1
+RUL-0011,10,future_negative,不会 + VP,唔會 + VP,future or likelihood,100,明天不会下雨。,聽日唔會落雨。,,draft_curated,curated_v0.1
+RUL-0012,10,permission_negative,不能 + VP,唔可以 + VP,rule or permission,105,这里不能停车。,呢度唔可以停車。,,draft_curated,curated_v0.1
+RUL-0013,10,ability_negative,VERB + 不了,VERB + 唔到,inability/result,100,我吃不了这么多。,我食唔到咁多。,,draft_curated,curated_v0.1
+RUL-0014,20,yes_no_question,是不是 + X,係咪 + X,yes/no copular question,110,是不是这里？,係咪呢度呀？,append particle optionally,draft_curated,curated_v0.1
+RUL-0015,20,a_not_a,能不能 + VP,可唔可以 + VP,permission/request,110,能不能帮我？,可唔可以幫我呀？,,draft_curated,curated_v0.1
+RUL-0016,20,a_not_a,有没有 + NP,有冇 + NP,existence/possession,110,有没有位置？,有冇位呀？,,draft_curated,curated_v0.1
+RUL-0017,20,preference_question,喜欢不喜欢 + NP,鍾唔鍾意 + NP,preference,105,你喜欢不喜欢这个？,你鍾唔鍾意呢個呀？,,draft_curated,curated_v0.1
+RUL-0018,20,degree_question,ADJ 不 ADJ,ADJ 唔 ADJ,A-not-A adjective,95,贵不贵？,貴唔貴呀？,,draft_curated,curated_v0.1
+RUL-0019,20,why,为什么,點解,question word,120,你为什么迟到？,你點解遲到呀？,,draft_curated,curated_v0.1
+RUL-0020,20,what,什么,乜嘢,question word,120,你想吃什么？,你想食乜嘢呀？,,draft_curated,curated_v0.1
+RUL-0021,20,who,谁,邊個,question word,120,他是谁？,佢係邊個呀？,,draft_curated,curated_v0.1
+RUL-0022,20,where,哪里,邊度,question word,120,你去哪里？,你去邊度呀？,,draft_curated,curated_v0.1
+RUL-0023,20,when,什么时候,幾時,question word,120,你什么时候来？,你幾時嚟呀？,,draft_curated,curated_v0.1
+RUL-0024,20,how,怎么,點,question word,115,这个怎么用？,呢個點用呀？,,draft_curated,curated_v0.1
+RUL-0025,20,how_many,多少,幾多,question word,115,多少钱？,幾多錢呀？,,draft_curated,curated_v0.1
+RUL-0026,30,progressive,正在 + VERB,VERB + 緊,progressive aspect,120,我正在吃饭。,我食緊飯。,move marker after verb,draft_curated,curated_v0.1
+RUL-0027,30,progressive_separable,正在 + VERB + OBJECT,VERB + 緊 + OBJECT,progressive with object,125,他正在开会。,佢開緊會。,,draft_curated,curated_v0.1
+RUL-0028,30,perfective,VERB + 了,VERB + 咗,"completed action, not sentence-final change",115,我买了这个。,我買咗呢個。,,draft_curated,curated_v0.1
+RUL-0030,30,not_yet_question,VERB + 了吗,VERB + 咗未,completed-action question,110,你吃饭了吗？,你食咗飯未呀？,,draft_curated,curated_v0.1
+RUL-0031,30,not_yet_question,VERB + 了没有,VERB + 咗未,completed-action question,110,你到了没有？,你到咗未呀？,,draft_curated,curated_v0.1
+RUL-0032,30,sentence_change,X + 了,X + 喇,new state at sentence end,80,天黑了。,天黑喇。,do not apply after 咗,draft_curated,curated_v0.1
+RUL-0033,40,degree,很 + ADJ,好 + ADJ,colloquial degree,110,很漂亮。,好靚。,,draft_curated,curated_v0.1
+RUL-0034,40,mild_degree,有点 + ADJ,有啲 + ADJ,mild degree,110,有点累。,有啲攰。,,draft_curated,curated_v0.1
+RUL-0035,40,not_very,不太 + ADJ,唔係幾 + ADJ,mild negative degree,110,不太贵。,唔係幾貴。,,draft_curated,curated_v0.1
+RUL-0036,40,degree_suffix,ADJ + 一点,ADJ + 啲,comparative/request,105,便宜一点。,平啲。,,draft_curated,curated_v0.1
+RUL-0037,40,comparison,NP1 + 比 + NP2 + ADJ,NP1 + ADJ + 過 + NP2,standard comparison,120,这个比那个贵。,呢個貴過嗰個。,,draft_curated,curated_v0.1
+RUL-0038,40,quantity,这么多,咁多,demonstrative quantity,110,不要买这么多。,唔好買咁多。,,draft_curated,curated_v0.1
+RUL-0039,40,degree_demonstrative,这么 + ADJ,咁 + ADJ,demonstrative degree,110,为什么这么贵？,點解咁貴呀？,,draft_curated,curated_v0.1
+RUL-0040,50,pronoun,他|她|它,佢,third-person singular,120,他来了。,佢嚟咗。,,draft_curated,curated_v0.1
+RUL-0041,50,pronoun_plural,他们|她们|它们,佢哋,third-person plural,120,他们到了。,佢哋到咗。,,draft_curated,curated_v0.1
+RUL-0042,50,pronoun_plural,我们,我哋,first-person plural,120,我们走吧。,我哋走啦。,,draft_curated,curated_v0.1
+RUL-0043,50,pronoun_plural,你们,你哋,second-person plural,120,你们先走。,你哋走先。,,draft_curated,curated_v0.1
+RUL-0044,50,demonstrative,这个,呢個,singular proximal,120,这个很好。,呢個幾好。,,draft_curated,curated_v0.1
+RUL-0045,50,demonstrative,那个,嗰個,singular distal,120,那个是谁的？,嗰個係邊個嘅？,,draft_curated,curated_v0.1
+RUL-0046,50,demonstrative_plural,这些,呢啲,plural proximal,120,这些多少钱？,呢啲幾多錢呀？,,draft_curated,curated_v0.1
+RUL-0047,50,demonstrative_plural,那些,嗰啲,plural distal,120,那些不要。,嗰啲唔要。,,draft_curated,curated_v0.1
+RUL-0048,50,location,在 + PLACE,喺 + PLACE,locative preposition,115,我在这里。,我喺呢度。,,draft_curated,curated_v0.1
+RUL-0049,50,source,从 + PLACE + 来,由 + PLACE + 嚟,origin,100,我从广州来。,我由廣州嚟。,,draft_curated,curated_v0.1
+RUL-0050,50,goal,到 + PLACE + 去,去 + PLACE,goal phrase normalization,85,我到机场去。,我去機場。,,draft_curated,curated_v0.1
+RUL-0051,60,give_order,给 + PERSON + VERB/NP,畀 + PERSON + VERB/NP,recipient follows 畀,110,给我看看。,畀我睇下。,,draft_curated,curated_v0.1
+RUL-0052,60,tell_order,告诉 + PERSON + CLAUSE,話 + PERSON + 知 + CLAUSE,tell construction,115,告诉我几点开始。,話我知幾點開始。,,draft_curated,curated_v0.1
+RUL-0053,60,look_short,看一下,睇下,light verb complement,120,帮我看一下。,幫我睇下。,,draft_curated,curated_v0.1
+RUL-0054,60,repeat,再 + VERB + 一遍|一次,再 + VERB + 多次,repeat action,105,再说一遍。,再講多次。,,draft_curated,curated_v0.1
+RUL-0055,60,come_back,回来,返嚟,directional verb,110,你什么时候回来？,你幾時返嚟呀？,,draft_curated,curated_v0.1
+RUL-0056,60,go_home,回家,返屋企,directional verb,110,我现在回家。,我而家返屋企。,,draft_curated,curated_v0.1
+RUL-0057,60,work,上班,返工,daily work,120,我今天上班。,我今日返工。,,draft_curated,curated_v0.1
+RUL-0058,60,off_work,下班,放工,office/general,115,我六点下班。,我六點放工。,,draft_curated,curated_v0.1
+RUL-0059,60,eat,吃,食,common verb,120,你吃什么？,你食乜嘢呀？,,draft_curated,curated_v0.1
+RUL-0060,60,drink,喝,飲,common verb,120,你喝什么？,你飲乜嘢呀？,,draft_curated,curated_v0.1
+RUL-0061,60,see,看,睇,common verb,120,你看这个。,你睇下呢個。,postprocess may add 下,draft_curated,curated_v0.1
+RUL-0062,60,find,找,搵,common verb,120,我找不到。,我搵唔到。,,draft_curated,curated_v0.1
+RUL-0063,60,take,拿,攞,common verb,120,请拿一个。,唔該攞一個。,,draft_curated,curated_v0.1
+RUL-0064,60,walk,走路,行路,common verb,120,走路要多久？,行路要幾耐呀？,,draft_curated,curated_v0.1
+RUL-0065,70,suggestion,CLAUSE + 吧,CLAUSE + 啦,suggestion,100,我们走吧。,我哋走啦。,,draft_curated,curated_v0.1
+RUL-0067,70,source_first,先 + VERB,VERB + 先,simple action sequencing,95,我先走。,我走先。,,draft_curated,curated_v0.1
+RUL-0068,70,classifier_document,这个 + 文件,呢份文件,document classifier,105,这个文件有问题。,呢份文件有問題。,,draft_curated,curated_v0.1
+RUL-0069,70,classifier_device,这个 + 设备,呢部設備,device classifier,90,这个设备坏了。,呢部設備壞咗。,,draft_curated,curated_v0.1
+RUL-0070,70,classifier_vehicle,一辆 + VEHICLE,一架 + VEHICLE,vehicle classifier,105,一辆出租车。,一架的士。,,draft_curated,curated_v0.1
+RUL-0071,70,classifier_bottle,一瓶 + DRINK,一支 + DRINK,bottle classifier,95,一瓶水。,一支水。,,draft_curated,curated_v0.1
+RUL-0072,70,home_location,在家,喺屋企,home location,110,我今天在家。,我今日喺屋企。,,draft_curated,curated_v0.1
+RUL-0073,90,question_particle,YES_NO_QUESTION + ？,YES_NO_QUESTION + 呀？,neutral yes/no question,80,可以吗？,得唔得呀？,avoid duplicate particles,draft_curated,curated_v0.1
+RUL-0074,90,wh_question_particle,WH_QUESTION + ？,WH_QUESTION + 呀？,neutral wh-question,75,你去哪里？,你去邊度呀？,avoid if already has 㗎/咩,draft_curated,curated_v0.1
+RUL-0075,90,state_change_particle,COMPLETED_OR_NEW_STATE + 。,COMPLETED_OR_NEW_STATE + 喇。,new state emphasis,65,我到了。,我到咗喇。,optional,draft_curated,curated_v0.1
+RUL-0076,90,dedupe_particle,呀呀|喇喇|啦啦,呀|喇|啦,cleanup,120,你去邊度呀呀？,你去邊度呀？,,draft_curated,curated_v0.1
+RUL-0077,90,dedupe_negation,唔唔,唔,cleanup,120,我唔唔去。,我唔去。,,draft_curated,curated_v0.1
+RUL-0078,90,punctuation,？？|。。|！！,？|。|！,cleanup,120,你去邊度？？,你去邊度？,,draft_curated,curated_v0.1
+RUL-0079,10,negation,并不 + VP,並唔 + VP,emphatic negation,90,我并不同意。,我並唔同意。,,generated_candidate,controlled_generation_v1.0
+RUL-0080,10,negation,从来不 + VP,從來都唔 + VP,habitual negation,95,我从来不迟到。,我從來都唔遲到。,,generated_candidate,controlled_generation_v1.0
+RUL-0081,10,negation,什么都没有,乜都冇,total absence,105,这里什么都没有。,呢度乜都冇。,,generated_candidate,controlled_generation_v1.0
+RUL-0082,10,negation,谁都不 + VP,邊個都唔 + VP,universal negative,95,谁都不知道。,邊個都唔知。,,generated_candidate,controlled_generation_v1.0
+RUL-0083,10,negation,再也不 + VP,以後都唔再 + VP,future resolve,95,我再也不去了。,我以後都唔再去喇。,,generated_candidate,controlled_generation_v1.0
+RUL-0084,10,negation,不一定 + VP,未必 + VP,uncertainty,100,他不一定来。,佢未必嚟。,,generated_candidate,controlled_generation_v1.0
+RUL-0085,20,question,到底为什么,究竟點解,emphatic why,95,你到底为什么走？,你究竟點解走呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0086,20,question,到底怎么 + VP,究竟點樣 + VP,emphatic how,95,到底怎么做？,究竟點樣做呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0087,20,question,什么时候才 + VP,幾時先 + VP,delayed expectation,100,什么时候才到？,幾時先到呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0088,20,question,有没有可能 + VP,有冇可能 + VP,possibility question,90,有没有可能改时间？,有冇可能改時間呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0089,20,question,是不是因为 + CLAUSE,係咪因為 + CLAUSE,reason confirmation,95,是不是因为下雨？,係咪因為落雨呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0090,20,question,要不要 + VP,要唔要 + VP,choice question,105,要不要一起去？,要唔要一齊去呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0091,20,question,好不好,好唔好,proposal confirmation,105,明天去好不好？,聽日去好唔好呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0092,20,question,对不对,啱唔啱,correctness question,105,这样对不对？,咁樣啱唔啱呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0093,20,question,行不行,得唔得,feasibility question,105,下午三点行不行？,下晝三點得唔得呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0094,20,question,够不够,夠唔夠,sufficiency question,100,这些够不够？,呢啲夠唔夠呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0095,30,aspect,刚刚 + VP,啱啱 + VP,recent completion,100,我刚刚吃过。,我啱啱食過。,,generated_candidate,controlled_generation_v1.0
+RUL-0096,30,aspect,刚才 + VP,頭先 + VP,past recent time,100,他刚才打电话。,佢頭先打電話。,,generated_candidate,controlled_generation_v1.0
+RUL-0097,30,aspect,快要 + VP + 了,就嚟 + VP + 喇,imminent event,105,快要下雨了。,就嚟落雨喇。,,generated_candidate,controlled_generation_v1.0
+RUL-0098,30,aspect,差点 + VP,差啲 + VP,near miss,100,我差点迟到。,我差啲遲到。,,generated_candidate,controlled_generation_v1.0
+RUL-0099,30,aspect,一直在 + VP,一路 + VP + 緊,continuous action,95,他一直在等。,佢一路等緊。,,generated_candidate,controlled_generation_v1.0
+RUL-0100,30,aspect,又 + VP + 了,又 + VP + 喇,repeated change,95,又下雨了。,又落雨喇。,,generated_candidate,controlled_generation_v1.0
+RUL-0101,30,aspect,才刚 + VP,先啱啱 + VP,very recent,90,我才刚到。,我先啱啱到。,,generated_candidate,controlled_generation_v1.0
+RUL-0102,30,aspect,已经不 + VP + 了,已經唔再 + VP,cessation,95,我已经不做了。,我已經唔再做。,,generated_candidate,controlled_generation_v1.0
+RUL-0103,30,aspect,还在 + VP,仲 + VP + 緊,continuing action,105,他还在开会。,佢仲開緊會。,,generated_candidate,controlled_generation_v1.0
+RUL-0107,40,degree,挺 + ADJ,幾 + ADJ,moderate positive degree,100,这里挺方便。,呢度幾方便。,,generated_candidate,controlled_generation_v1.0
+RUL-0108,40,degree,太 + ADJ + 了,太 + ADJ + 喇,excessive degree,105,太晚了。,太夜喇。,,generated_candidate,controlled_generation_v1.0
+RUL-0109,40,degree,越来越 + ADJ,越嚟越 + ADJ,progressive degree,100,越来越贵。,越嚟越貴。,,generated_candidate,controlled_generation_v1.0
+RUL-0110,40,degree,没那么 + ADJ,冇咁 + ADJ,lower degree,100,没那么贵。,冇咁貴。,,generated_candidate,controlled_generation_v1.0
+RUL-0111,40,degree,跟 + NP + 一样 + ADJ,同 + NP + 一樣咁 + ADJ,equality comparison,90,跟这个一样大。,同呢個一樣咁大。,,generated_candidate,controlled_generation_v1.0
+RUL-0112,40,comparison,比 + NP + 更 + ADJ,比 + NP + 更加 + ADJ,comparative,90,比昨天更忙。,比尋日更加忙。,,generated_candidate,controlled_generation_v1.0
+RUL-0113,40,comparison,没有 + NP + 那么 + ADJ,冇 + NP + 咁 + ADJ,inferior comparison,90,没有那个那么贵。,冇嗰個咁貴。,,generated_candidate,controlled_generation_v1.0
+RUL-0114,40,quantity,一点也不 + ADJ,一啲都唔 + ADJ,zero degree,100,一点也不贵。,一啲都唔貴。,,generated_candidate,controlled_generation_v1.0
+RUL-0115,40,quantity,多一点 + NP,多啲 + NP,increase quantity,100,多一点水。,多啲水。,,generated_candidate,controlled_generation_v1.0
+RUL-0116,40,quantity,少一点 + NP,少啲 + NP,decrease quantity,100,少一点糖。,少啲糖。,,generated_candidate,controlled_generation_v1.0
+RUL-0117,40,quantity,这么多 + NP,咁多 + NP,demonstrative quantity,100,这么多人。,咁多人。,,generated_candidate,controlled_generation_v1.0
+RUL-0118,40,quantity,那么少 + NP,咁少 + NP,demonstrative quantity,95,那么少时间。,咁少時間。,,generated_candidate,controlled_generation_v1.0
+RUL-0119,50,pronoun,每个人,個個人,distributive person,90,每个人都知道。,個個人都知。,,generated_candidate,controlled_generation_v1.0
+RUL-0121,50,demonstrative,这边,呢邊,near side,100,请来这边。,唔該過嚟呢邊。,,generated_candidate,controlled_generation_v1.0
+RUL-0122,50,demonstrative,那边,嗰邊,far side,100,他在那边。,佢喺嗰邊。,,generated_candidate,controlled_generation_v1.0
+RUL-0123,50,demonstrative,这种,呢種,near kind,100,这种药。,呢種藥。,,generated_candidate,controlled_generation_v1.0
+RUL-0124,50,demonstrative,那种,嗰種,far kind,100,那种颜色。,嗰種顏色。,,generated_candidate,controlled_generation_v1.0
+RUL-0125,50,demonstrative,这次,今次,current occasion,100,这次没问题。,今次冇問題。,,generated_candidate,controlled_generation_v1.0
+RUL-0127,50,time,今天早上,今朝,today morning,105,今天早上见。,今朝見。,,generated_candidate,controlled_generation_v1.0
+RUL-0128,50,time,明天早上,聽朝,tomorrow morning,105,明天早上出发。,聽朝出發。,,generated_candidate,controlled_generation_v1.0
+RUL-0129,50,time,昨天晚上,昨晚,last night,100,昨天晚上下雨。,昨晚落雨。,,generated_candidate,controlled_generation_v1.0
+RUL-0130,50,time,前天,前日,day before yesterday,100,前天见过他。,前日見過佢。,,generated_candidate,controlled_generation_v1.0
+RUL-0131,50,time,后天,後日,day after tomorrow,100,后天回来。,後日返嚟。,,generated_candidate,controlled_generation_v1.0
+RUL-0132,50,time,一会儿,一陣,short while,105,等一会儿。,等一陣。,,generated_candidate,controlled_generation_v1.0
+RUL-0133,50,time,马上,即刻,immediately,105,马上回来。,即刻返嚟。,,generated_candidate,controlled_generation_v1.0
+RUL-0134,50,time,最近,近排,recent period,100,最近很忙。,近排好忙。,,generated_candidate,controlled_generation_v1.0
+RUL-0136,50,time,以后,之後,afterwards,95,吃饭以后走。,食完飯之後走。,,generated_candidate,controlled_generation_v1.0
+RUL-0137,60,verb,拿 + NP,攞 + NP,take or hold,105,拿这个。,攞呢個。,,generated_candidate,controlled_generation_v1.0
+RUL-0138,60,verb,找 + NP,搵 + NP,search for,105,找钥匙。,搵鎖匙。,,generated_candidate,controlled_generation_v1.0
+RUL-0139,60,verb,看 + NP,睇 + NP,look or watch,105,看电影。,睇戲。,,generated_candidate,controlled_generation_v1.0
+RUL-0140,60,verb,说 + NP,講 + NP,speak or say,105,说中文。,講中文。,,generated_candidate,controlled_generation_v1.0
+RUL-0141,60,verb,告诉 + PERSON,話 + PERSON + 知,tell someone,110,告诉我。,話我知。,,generated_candidate,controlled_generation_v1.0
+RUL-0143,60,verb,开车,揸車,drive,110,我会开车。,我識揸車。,,generated_candidate,controlled_generation_v1.0
+RUL-0144,60,verb,坐地铁,搭港鐵,take metro,110,坐地铁去。,搭港鐵去。,,generated_candidate,controlled_generation_v1.0
+RUL-0145,60,verb,坐公交车,搭巴士,take bus,110,坐公交车去。,搭巴士去。,,generated_candidate,controlled_generation_v1.0
+RUL-0146,60,verb,打出租车,搭的士,take taxi,110,我们打出租车。,我哋搭的士。,,generated_candidate,controlled_generation_v1.0
+RUL-0147,60,verb,出门,出街,go out,100,我要出门。,我要出街。,,generated_candidate,controlled_generation_v1.0
+RUL-0148,60,verb,拍照,影相,take photo,110,可以拍照吗？,可唔可以影相呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0149,60,verb,充电,叉電,charge device,110,手机要充电。,手機要叉電。,,generated_candidate,controlled_generation_v1.0
+RUL-0150,60,verb,休息一下,抖下,take a rest,105,我想休息一下。,我想抖下。,,generated_candidate,controlled_generation_v1.0
+RUL-0151,60,verb,聊天,傾偈,chat,110,我们聊聊天。,我哋傾下偈。,,generated_candidate,controlled_generation_v1.0
+RUL-0152,60,verb,帮忙,幫手,help,105,谢谢你帮忙。,多謝你幫手。,,generated_candidate,controlled_generation_v1.0
+RUL-0153,60,verb,修理 + NP,整 + NP,repair,100,修理手机。,整手機。,,generated_candidate,controlled_generation_v1.0
+RUL-0154,70,word_order,给 + PERSON + VERB,畀 + PERSON + VERB,recipient before verb,105,给我看看。,畀我睇下。,,generated_candidate,controlled_generation_v1.0
+RUL-0155,70,word_order,VERB + 一下,VERB + 下,brief action complement,105,看一下。,睇下。,,generated_candidate,controlled_generation_v1.0
+RUL-0156,70,word_order,先 + VP + 再 + VP,VP + 先，再 + VP,sequence preference,90,先吃饭再走。,食飯先，再走。,,generated_candidate,controlled_generation_v1.0
+RUL-0157,70,word_order,在 + PLACE + VP,喺 + PLACE + VP,locative phrase,105,在公司开会。,喺公司開會。,,generated_candidate,controlled_generation_v1.0
+RUL-0158,70,word_order,从 + PLACE + 到 + PLACE,由 + PLACE + 去 + PLACE,route expression,100,从这里到机场。,由呢度去機場。,,generated_candidate,controlled_generation_v1.0
+RUL-0159,70,word_order,跟 + PERSON + 一起 + VP,同 + PERSON + 一齊 + VP,comitative,105,跟朋友一起吃饭。,同朋友一齊食飯。,,generated_candidate,controlled_generation_v1.0
+RUL-0160,70,word_order,把 + NP + VERB,將 + NP + VERB,disposal construction,85,把门关上。,將門閂埋。,,generated_candidate,controlled_generation_v1.0
+RUL-0161,70,word_order,除了 + NP + 以外,除咗 + NP + 之外,exceptive construction,100,除了这个以外。,除咗呢個之外。,,generated_candidate,controlled_generation_v1.0
+RUL-0162,70,word_order,一边 + VP + 一边 + VP,一路 + VP + 一路 + VP,simultaneous actions,90,一边走一边说。,一路行一路講。,,generated_candidate,controlled_generation_v1.0
+RUL-0163,80,classifier,一辆车,一架車,vehicle classifier,100,一辆出租车。,一架的士。,,generated_candidate,controlled_generation_v1.0
+RUL-0164,80,classifier,一张票,一張飛,ticket classifier/lexeme,100,一张车票。,一張車飛。,,generated_candidate,controlled_generation_v1.0
+RUL-0167,80,classifier,一家店,一間舖,shop classifier,100,一家便利店。,一間便利店。,,generated_candidate,controlled_generation_v1.0
+RUL-0168,80,classifier,一瓶水,一樽水,bottle classifier,105,一瓶水。,一樽水。,,generated_candidate,controlled_generation_v1.0
+RUL-0170,80,classifier,一把伞,一把遮,umbrella classifier/lexeme,100,一把伞。,一把遮。,,generated_candidate,controlled_generation_v1.0
+RUL-0171,80,classifier,一件衣服,一件衫,clothing classifier/lexeme,100,一件衣服。,一件衫。,,generated_candidate,controlled_generation_v1.0
+RUL-0172,80,classifier,一双鞋,一對鞋,pair classifier,100,一双鞋。,一對鞋。,,generated_candidate,controlled_generation_v1.0
+RUL-0173,80,collocation,打开空调,開冷氣,turn on air conditioning,105,请打开空调。,唔該開冷氣。,,generated_candidate,controlled_generation_v1.0
+RUL-0174,80,collocation,关掉空调,閂冷氣,turn off air conditioning,100,请关掉空调。,唔該閂冷氣。,,generated_candidate,controlled_generation_v1.0
+RUL-0175,80,collocation,打开灯,開燈,turn on light,100,打开灯。,開燈。,,generated_candidate,controlled_generation_v1.0
+RUL-0176,80,collocation,关掉灯,熄燈,turn off light,105,关掉灯。,熄燈。,,generated_candidate,controlled_generation_v1.0
+RUL-0178,80,collocation,关门,閂門,close door,105,请关门。,唔該閂門。,,generated_candidate,controlled_generation_v1.0
+RUL-0179,80,collocation,接电话,聽電話,answer phone,100,他没有接电话。,佢冇聽電話。,,generated_candidate,controlled_generation_v1.0
+RUL-0180,80,collocation,付钱,畀錢,pay,105,在哪里付钱？,喺邊度畀錢呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0181,80,collocation,结账,埋單,settle bill,110,我要结账。,我要埋單。,,generated_candidate,controlled_generation_v1.0
+RUL-0184,90,particle,提醒句 + 啊,提醒句 + 呀,soft reminder,85,别忘了啊。,唔好唔記得呀。,,generated_candidate,controlled_generation_v1.0
+RUL-0185,90,particle,建议句 + 吧,建议句 + 啦,suggestion particle,105,我们走吧。,我哋走啦。,,generated_candidate,controlled_generation_v1.0
+RUL-0186,90,particle,状态变化 + 了,状态变化 + 喇,change-of-state particle,105,天黑了。,天黑喇。,,generated_candidate,controlled_generation_v1.0
+RUL-0187,90,particle,惊讶疑问 + 吗,惊讶疑问 + 咩,surprised question,80,你不知道吗？,你唔知咩？,,generated_candidate,controlled_generation_v1.0
+RUL-0188,90,particle,新信息陈述,新信息陈述 + 喎,informative particle optional,60,这里很方便。,呢度好方便喎。,,generated_candidate,controlled_generation_v1.0
+RUL-0189,90,particle,限制说明 + 而已,限制说明 + 啫,limiting particle,95,只是问问而已。,淨係問下啫。,,generated_candidate,controlled_generation_v1.0
+RUL-0190,90,particle,确认说明 + 的,确认说明 + 嘅,nominal/confirming particle,85,是这样的。,係咁嘅。,,generated_candidate,controlled_generation_v1.0
+RUL-0191,90,punctuation,吗？,呀？,default neutral question ending,75,是这样吗？,係咁樣呀？,,generated_candidate,controlled_generation_v1.0
+RUL-0192,90,punctuation,吧。,啦。,default suggestion ending,90,走吧。,走啦。,,generated_candidate,controlled_generation_v1.0
+RUL-0193,20,question,难道 + CLAUSE,唔通 + CLAUSE,rhetorical question,90,难道你不知道？,唔通你唔知？,,generated_candidate,controlled_generation_v1.0
+RUL-0194,30,aspect,VP + 下去,VP + 落去,continuation aspect,90,继续做下去。,繼續做落去。,,generated_candidate,controlled_generation_v1.0
+RUL-0195,30,aspect,VP + 起来,VP + 起上嚟,inchoative/directional complement,85,天气冷起来了。,天氣凍起上嚟喇。,,generated_candidate,controlled_generation_v1.0
+RUL-0196,40,degree,不太 + ADJ,唔係好 + ADJ,mild negative degree,105,这里不太方便。,呢度唔係好方便。,,generated_candidate,controlled_generation_v1.0
+RUL-0198,50,time,这个星期,今個星期,current week,100,这个星期很忙。,今個星期好忙。,,generated_candidate,controlled_generation_v1.0
+RUL-0200,60,verb,穿 + 衣物,著 + 衣物,wear clothing,105,穿这件衣服。,著呢件衫。,,generated_candidate,controlled_generation_v1.0

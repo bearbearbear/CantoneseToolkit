@@ -1,3 +1,5 @@
+import simplifiedToHongKong from "./data/simplified-to-hongkong.json";
+
 const punctuationMap: Record<string, string> = {
   ",": "，",
   ";": "，",
@@ -7,67 +9,10 @@ const punctuationMap: Record<string, string> = {
   ".": "。",
 };
 
-const hongKongCharacterMap: Record<string, string> = {
-  们: "們",
-  为: "為",
-  么: "麼",
-  什: "甚",
-  样: "樣",
-  办: "辦",
-  钱: "錢",
-  现: "現",
-  哪: "哪",
-  里: "裏",
-  儿: "兒",
-  没: "沒",
-  会: "會",
-  听: "聽",
-  刚: "剛",
-  阵: "陣",
-  这: "這",
-  个: "個",
-  条: "條",
-  东: "東",
-  请: "請",
-  问: "問",
-  铁: "鐵",
-  点: "點",
-  觉: "覺",
-  欢: "歡",
-  钟: "鐘",
-  说: "說",
-  説: "說",
-  讲: "講",
-  饮: "飲",
-  买: "買",
-  给: "給",
-  来: "來",
-  吗: "嗎",
-  话: "話",
-  广: "廣",
-  国: "國",
-  语: "語",
-  电: "電",
-  车: "車",
-  靓: "靚",
-  贵: "貴",
-  边: "邊",
-  门: "門",
-  网: "網",
-  联: "聯",
-  后: "後",
-  着: "著",
-  与: "與",
-  对: "對",
-  发: "發",
-  头: "頭",
-  间: "間",
-  学: "學",
-  师: "師",
-  谢: "謝",
-  题: "題",
-  时: "時",
-};
+// Full single-character simplified -> Hong Kong traditional table derived from
+// OpenCC's STCharacters + HKVariants, with curated overrides for domain senses
+// (e.g. 钟->鐘 clock, 说->說 HK form). See app/engine/data/simplified-to-hongkong.json.
+const hongKongCharacterMap = simplifiedToHongKong as Record<string, string>;
 
 export type ProtectedSlot = {
   token: string;

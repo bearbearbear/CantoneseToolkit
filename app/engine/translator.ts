@@ -16,12 +16,14 @@ import { postProcess } from "./postprocessor";
 import type {
   MatchedFeature,
   RuntimeCore,
+  TranslationCandidate,
   TranslationOptions,
   TranslationResult,
 } from "./schema";
 import { compileTemplates, matchTemplate } from "./template-matcher";
 import { applyRewriteRules } from "./rewrite-engine";
 import { generateCandidates } from "./candidate-generator";
+import { scoreCandidate } from "./scorer";
 
 type TranslatorRuntime = ReturnType<typeof buildTranslatorRuntime>;
 
@@ -69,15 +71,16 @@ function translateWithRuntime(
   }
 
   const exactPhrase = findExactPhraseMatch(sourceText, runtime.core.phrases, scene);
-  const rawCandidates: Array<{
-    target: string;
-    matchedFeatures: MatchedFeature[];
-    warnings: string[];
-  }> = [];
 
+  // A curated exact-phrase hit is authoritative: it must not be outscored by
+  // token-level lexicon/rule candidates, so short-circuit here.
   if (exactPhrase) {
-    rawCandidates.push({
-      target: exactPhrase.target,
+    const postProcessed = postProcess(
+      restoreSlots(exactPhrase.target, normalized.slots),
+      options,
+    );
+    const scored = scoreCandidate({
+      target: postProcessed.text,
       matchedFeatures: [
         {
           id: exactPhrase.id,
@@ -85,10 +88,33 @@ function translateWithRuntime(
           source: exactPhrase.source,
           target: exactPhrase.target,
         },
+        ...postProcessed.features,
       ],
       warnings: [],
     });
+    const candidate: TranslationCandidate = {
+      ...scored,
+      confidence: Math.max(scored.confidence, 0.95),
+    };
+
+    return {
+      source: text,
+      normalizedSource: normalized.displayText,
+      target: candidate.target,
+      confidence: candidate.confidence,
+      matchedTemplate: null,
+      matchedFeatures: candidate.matchedFeatures,
+      candidates: [candidate],
+      warnings: [],
+      dataVersion: runtime.core.version,
+    };
   }
+
+  const rawCandidates: Array<{
+    target: string;
+    matchedFeatures: MatchedFeature[];
+    warnings: string[];
+  }> = [];
 
   const template = matchTemplate(
     sourceText,

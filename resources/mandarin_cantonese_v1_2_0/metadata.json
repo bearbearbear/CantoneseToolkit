@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Offline Web Mandarin-to-Cantonese Text Translator Data",
+  "version": "1.2.0",
+  "build_date": "2026-07-21",
+  "architecture": "fixed phrases + typed templates + slot values + rewrite rules + lexicon",
+  "counts": {
+    "phrases": 369,
+    "lexicon": 214,
+    "templates": 272,
+    "rules": 183,
+    "slot_types": 60,
+    "slot_values": 1019,
+    "tests": 3263,
+    "translation_units": 1038,
+    "old_generated_phrases_removed": 6477,
+    "old_generated_templates_replaced": 709,
+    "controlled_frame_capacity": 16515
+  },
+  "runtime_network_requests": 0,
+  "normalization_policy": {
+    "lexicon_and_fixed_phrases": "same-lexeme script-only mappings remain forbidden",
+    "slot_values": "same-form or script-only rows are allowed solely as semantic classification metadata and are not counted as translation mappings",
+    "identity_templates": "allowed only when typed slots or transforms provide compositional value"
+  },
+  "license": "CC BY-SA 3.0 because the package still includes adapted CC-Canto-derived material; see ATTRIBUTION.md",
+  "quality_notice": "Generated frame templates, compact templates and slot banks require native-speaker review before production release."
+}

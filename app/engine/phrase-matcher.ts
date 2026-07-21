@@ -11,6 +11,7 @@ export type PhraseLikeEntry = {
   target: string;
   scene: string;
   priority: number;
+  condition?: string;
 };
 
 export type TokenizedSegment = {
@@ -71,13 +72,68 @@ export function longestMatch(
     }
     node = next;
 
-    const entry = node.entries.find((item) => sceneMatches(item.scene, scene));
+    const entry = node.entries.find(
+      (item) =>
+        sceneMatches(item.scene, scene) &&
+        conditionSatisfied(item, characters, index, cursor + 1),
+    );
     if (entry) {
       best = { end: cursor + 1, entry };
     }
   }
 
   return best;
+}
+
+const ABILITY_NOUN_BEFORE = new Set(
+  Array.from("开開一兩两几幾這这那嗰待晚宴機机都工約约茶舞大盛協协商聚"),
+);
+const ABILITY_NOUN_AFTER = new Set(
+  Array.from("議议員员場场所費费長长館馆展期"),
+);
+const ABILITY_SKILL_AFTER = new Set(
+  Array.from("游講讲說说寫写唱跳揸煮彈弹畫画踢拼砌織织"),
+);
+
+// Only treat 会 / 不会 as the "know how to" sense when the surrounding context
+// looks like an ability (a skill verb follows and it is not part of a 会-noun
+// such as 开会 / 会议 / 机会). Otherwise fall through so it normalizes to 會.
+function isLearnedSkillContext(
+  characters: string[],
+  start: number,
+  end: number,
+): boolean {
+  const before = start > 0 ? characters[start - 1] : "";
+  const after = end < characters.length ? characters[end] : "";
+
+  if (before && ABILITY_NOUN_BEFORE.has(before)) {
+    return false;
+  }
+  if (after && ABILITY_NOUN_AFTER.has(after)) {
+    return false;
+  }
+
+  return after ? ABILITY_SKILL_AFTER.has(after) : false;
+}
+
+// Gate context-dependent lexicon senses (see the `condition` column). Unknown
+// conditions default to applying so existing coverage is preserved.
+export function conditionSatisfied(
+  entry: PhraseLikeEntry,
+  characters: string[],
+  start: number,
+  end: number,
+): boolean {
+  if (!entry.condition) {
+    return true;
+  }
+
+  switch (entry.condition) {
+    case "learned_skill":
+      return isLearnedSkillContext(characters, start, end);
+    default:
+      return true;
+  }
 }
 
 export function tokenizeByTrie(
@@ -140,6 +196,7 @@ export function makePhraseLikeEntries(
       target: entry.target,
       scene: entry.scene,
       priority: entry.priority,
+      condition: entry.condition,
     }));
 
   return [...phraseEntries, ...lexiconEntries].sort((left, right) => {

@@ -1,0 +1,80 @@
+{
+  "version": "1.2.0",
+  "build_date": "2026-07-21",
+  "passed": true,
+  "counts": {
+    "phrases": 369,
+    "lexicon": 214,
+    "templates": 272,
+    "rules": 183,
+    "slot_types": 60,
+    "slot_values": 1019,
+    "tests": 3263,
+    "translation_units": 1038,
+    "old_generated_phrases_removed": 6477,
+    "old_generated_templates_replaced": 709,
+    "controlled_frame_capacity": 16515
+  },
+  "checks": [
+    {
+      "check": "phrases_no_generated_cartesian_rows",
+      "passed": true,
+      "detail": "369 retained fixed phrases"
+    },
+    {
+      "check": "all_legacy_frames_have_templates",
+      "passed": true,
+      "detail": "152 frames"
+    },
+    {
+      "check": "all_referenced_slot_types_exist",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "check": "closed_slot_types_have_values",
+      "passed": true,
+      "detail": "51 populated closed slot types"
+    },
+    {
+      "check": "lexicon_no_explicit_passthrough_markers",
+      "passed": true,
+      "detail": "214 lexicon rows"
+    },
+    {
+      "check": "fixed_phrases_source_target_not_identical",
+      "passed": true,
+      "detail": "369 phrase rows"
+    },
+    {
+      "check": "template_ids_unique",
+      "passed": true,
+      "detail": "272"
+    },
+    {
+      "check": "slot_value_ids_unique",
+      "passed": true,
+      "detail": "1019"
+    },
+    {
+      "check": "all_migrated_phrases_point_to_template",
+      "passed": true,
+      "detail": "6477"
+    },
+    {
+      "check": "template_composition_tests_present",
+      "passed": true,
+      "detail": "1927"
+    },
+    {
+      "check": "phrases_no_exact_duplicates",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "check": "templates_no_structural_duplicates",
+      "passed": true,
+      "detail": "0"
+    }
+  ]
+}

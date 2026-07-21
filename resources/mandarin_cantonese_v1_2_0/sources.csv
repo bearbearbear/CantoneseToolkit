@@ -1,0 +1,5 @@
+﻿source_id,name,url,license,usage
+SRC-001,Project v0.1 curated seed,local:v0.1,project material / distributed in combined package under CC BY-SA 3.0,"preserved phrase, lexicon, template, rule and test rows"
+SRC-002,CC-Canto 2017-02-02,https://github.com/amadeusine/cc-canto-data,CC BY-SA 3.0,"filtered same-lexeme lexicon candidates, traditional forms and Jyutping notes"
+SRC-003,CEDICT 2007-08-25 mirror,https://github.com/jtoy/crdict/blob/master/cedict_ts.u8,CC BY-SA family; used as Mandarin headword membership filter,filtering CC-Canto candidates to Mandarin dictionary headwords
+SRC-004,Controlled generation v1.0,local:build methodology,distributed in combined package under CC BY-SA 3.0,"scene phrases, templates, grammar rules and tests"

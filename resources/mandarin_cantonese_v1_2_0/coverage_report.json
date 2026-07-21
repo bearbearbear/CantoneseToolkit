@@ -1,0 +1,11 @@
+{
+  "version": "1.2.0",
+  "exact_fixed_phrases": 369,
+  "curated_templates": 90,
+  "frame_templates": 152,
+  "compact_generic_templates": 30,
+  "closed_slot_types": 51,
+  "slot_values": 1019,
+  "controlled_frame_combination_capacity": 16515,
+  "note": "Combination capacity is a theoretical upper bound from typed slot products; runtime constraints and semantic checks may reduce valid combinations."
+}

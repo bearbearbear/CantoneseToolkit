@@ -54,14 +54,25 @@ export type LexiconEntry = {
   provenance: string;
 };
 
+export type TransformStep = {
+  type: string;
+  slot?: string;
+  marker?: string;
+};
+
 export type TemplateEntry = {
   id: string;
   source_pattern: string;
   target_pattern: string;
-  slots: string;
+  source_patterns: string;
+  target_patterns: string;
+  slot_types: string;
   scene: string;
+  intent: string;
   priority: number;
-  template_type: string;
+  transform_pipeline: string;
+  constraints: string;
+  identity_structure: string;
   example_source: string;
   example_target: string;
   notes: string;
