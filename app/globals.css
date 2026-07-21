@@ -295,6 +295,14 @@ textarea:focus {
   line-height: 1.45;
 }
 
+.translation-warning {
+  margin: -6px 24px 18px;
+  color: var(--red);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
 .jyutping-box {
   display: flex;
   flex: 1;

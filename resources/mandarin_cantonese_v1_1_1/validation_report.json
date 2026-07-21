@@ -1,0 +1,107 @@
+{
+  "version": "1.1.1",
+  "build_date": "2026-07-20",
+  "counts": {
+    "phrases": 6846,
+    "lexicon": 214,
+    "templates": 799,
+    "rules": 183,
+    "tests": 3263,
+    "translation_units": 8042
+  },
+  "removed_in_this_release": {
+    "total": 112,
+    "translation_units": 109,
+    "tests": 3,
+    "by_dataset": {
+      "lexicon": 102,
+      "phrases": 6,
+      "rules": 1,
+      "tests": 3
+    },
+    "retagged_tests": 1
+  },
+  "checks": [
+    {
+      "check": "phrases_unique_ids",
+      "passed": true,
+      "detail": "6846"
+    },
+    {
+      "check": "phrases_no_same_lexeme_passthrough",
+      "passed": true,
+      "detail": "0 hits"
+    },
+    {
+      "check": "phrases_no_normalized_duplicates",
+      "passed": true,
+      "detail": "0 groups"
+    },
+    {
+      "check": "lexicon_unique_ids",
+      "passed": true,
+      "detail": "214"
+    },
+    {
+      "check": "lexicon_no_same_lexeme_passthrough",
+      "passed": true,
+      "detail": "0 hits"
+    },
+    {
+      "check": "lexicon_no_normalized_duplicates",
+      "passed": true,
+      "detail": "0 groups"
+    },
+    {
+      "check": "templates_unique_ids",
+      "passed": true,
+      "detail": "799"
+    },
+    {
+      "check": "templates_no_same_lexeme_passthrough",
+      "passed": true,
+      "detail": "0 hits"
+    },
+    {
+      "check": "templates_no_normalized_duplicates",
+      "passed": true,
+      "detail": "0 groups"
+    },
+    {
+      "check": "rules_unique_ids",
+      "passed": true,
+      "detail": "183"
+    },
+    {
+      "check": "rules_no_same_lexeme_passthrough",
+      "passed": true,
+      "detail": "0 hits"
+    },
+    {
+      "check": "rules_no_normalized_duplicates",
+      "passed": true,
+      "detail": "0 groups"
+    },
+    {
+      "check": "tests_unique_ids",
+      "passed": true,
+      "detail": "3263"
+    },
+    {
+      "check": "tests_no_same_lexeme_passthrough",
+      "passed": true,
+      "detail": "0 hits"
+    },
+    {
+      "check": "runtime_counts_match",
+      "passed": true,
+      "detail": "{'phrases': 6846, 'lexicon': 214, 'templates': 799, 'rules': 183, 'tests': 3263, 'translation_units': 8042}"
+    },
+    {
+      "check": "lexicon_expected_count",
+      "passed": true,
+      "detail": "214"
+    }
+  ],
+  "passed": true
+}

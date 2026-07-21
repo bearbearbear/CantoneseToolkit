@@ -1,35 +1,29 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import conversionRuleData from "./data/cantonese-conversion-rules.json";
 import pronunciationData from "./data/cantonese-pronunciation-table.json";
+import {
+  cleanInputText,
+  normalizeHongKongText,
+} from "./engine/normalizer";
+import type { TranslationResult } from "./engine/schema";
+import { translate } from "./engine/translator";
+import type {
+  TranslatorWorkerRequest,
+  TranslatorWorkerResponse,
+} from "./worker/protocol";
 
 type ConversionEngine = "rule" | "natural";
 type StyleMode = "standard" | "casual" | "polite";
 type RomanizationScheme = "jyutping" | "textbook" | "yale" | "education";
 type OfflineStatus = "checking" | "ready" | "unsupported";
+type TranslatorStatus = "booting" | "ready" | "fallback";
 
 type SchemeDetail = {
   initials: string;
   finals: string;
   tones: string;
   examples: string[];
-};
-
-type TextRule = [string, string];
-
-type NaturalPolishRuleData = {
-  pattern: string;
-  flags: string;
-  replacement: string;
-};
-
-type ConversionRuleData = {
-  phraseRules: TextRule[];
-  politeRules: TextRule[];
-  naturalPolishRules: NaturalPolishRuleData[];
-  hongKongPhraseNormalizations: TextRule[];
-  hongKongCharacterMap: Record<string, string>;
 };
 
 type JyutpingUnit = {
@@ -89,6 +83,10 @@ const pronunciationPhraseKeys = Object.keys(phraseReadings).sort(
   (a, b) => b.length - a.length,
 );
 const offlineCacheName = "cantonese-tool-offline-v3";
+const translatorWorkerUrl = new URL(
+  "./worker/worker-entry.ts",
+  import.meta.url,
+);
 
 const samples = [
   "我今天不想上班，能不能明天再说？",
@@ -97,23 +95,14 @@ const samples = [
   "请问去地铁站怎么走？",
 ];
 
-const conversionRulesData = conversionRuleData as ConversionRuleData;
-const phraseRules = conversionRulesData.phraseRules;
-const politeRules = conversionRulesData.politeRules;
-const hongKongPhraseNormalizations =
-  conversionRulesData.hongKongPhraseNormalizations;
-const hongKongCharacterMap = conversionRulesData.hongKongCharacterMap;
-
-const casualEndings = ["啦", "喇", "啫", "呀"];
-
 const engineLabels: Record<ConversionEngine, string> = {
   rule: "规则版",
   natural: "自然版",
 };
 
 const engineNotes: Record<ConversionEngine, string> = {
-  rule: "规则版使用固定词表和替换规则，结果更稳定，适合对照学习。",
-  natural: "自然版会在规则结果上做一层本地口语润色，后续可继续接入大模型增强。",
+  rule: "规则版使用最高优先级候选，结果更稳定，适合对照学习。",
+  natural: "自然版会保留更多候选参与评分，适合新版词库继续扩充后选择更自然的表达。",
 };
 
 const modeLabels: Record<StyleMode, string> = {
@@ -121,76 +110,6 @@ const modeLabels: Record<StyleMode, string> = {
   casual: "口语",
   polite: "礼貌",
 };
-
-const naturalPolishRules = conversionRulesData.naturalPolishRules.map(
-  ({ pattern, flags, replacement }) =>
-    [new RegExp(pattern, flags), replacement] as const,
-);
-
-function applyRules(text: string, rules: TextRule[]) {
-  return [...rules]
-    .sort(([left], [right]) => right.length - left.length)
-    .reduce((next, [from, to]) => next.split(from).join(to), text);
-}
-
-function cleanInputText(text: string) {
-  return text.trim().replace(/[；;]/g, "，").replace(/\s+/g, "");
-}
-
-function normalizeHongKongText(text: string) {
-  const phraseNormalized = applyRules(text, hongKongPhraseNormalizations);
-  return Array.from(phraseNormalized)
-    .map((character) => hongKongCharacterMap[character] || character)
-    .join("");
-}
-
-function compileRules(rules: TextRule[]) {
-  const normalizedRules = rules.map(([from, to]) => [
-    normalizeHongKongText(from),
-    normalizeHongKongText(to),
-  ]) as TextRule[];
-  return [...rules, ...normalizedRules];
-}
-
-const conversionRules = compileRules(phraseRules);
-const politenessRules = compileRules(politeRules);
-
-function applyNaturalPolish(text: string) {
-  return naturalPolishRules.reduce(
-    (result, [pattern, replacement]) => result.replace(pattern, replacement),
-    text,
-  );
-}
-
-function tidyCantonese(text: string, engine: ConversionEngine, mode: StyleMode) {
-  let result = normalizeHongKongText(cleanInputText(text));
-  result = applyRules(result, conversionRules);
-  result = result
-    .replace(/的/g, "嘅")
-    .replace(/不(?![过過])/g, "唔")
-    .replace(/[没沒]/g, "冇");
-  result = result.replace(/([？?])$/g, "？");
-  result = result.replace(/([。!！])$/g, "。");
-
-  if (engine === "natural") {
-    result = applyNaturalPolish(result);
-  }
-
-  if (mode === "casual" && result && !/[？?。！!啦喇呀啫]$/.test(result)) {
-    result += casualEndings[result.length % casualEndings.length];
-  }
-
-  if (mode === "polite") {
-    result = applyRules(result, politenessRules);
-    if (!/^唔[该該]/.test(result) && /[？?]$/.test(result)) {
-      result = `唔該，${result}`;
-    }
-  }
-
-  result = normalizeHongKongText(result);
-
-  return result || "喺左邊輸入中文，我會幫你轉成粵語。";
-}
 
 function splitPronunciation(text: string): JyutpingUnit[] {
   const units: JyutpingUnit[] = [];
@@ -322,18 +241,103 @@ export default function Home() {
   const [schemeGuide, setSchemeGuide] =
     useState<RomanizationScheme>("jyutping");
   const [offlineStatus, setOfflineStatus] = useState<OfflineStatus>("checking");
+  const [translatorStatus, setTranslatorStatus] =
+    useState<TranslatorStatus>(() =>
+      typeof window !== "undefined" && !("Worker" in window)
+        ? "fallback"
+        : "booting",
+    );
+  const [workerTranslation, setWorkerTranslation] =
+    useState<TranslationResult | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const closeSettingsButtonRef = useRef<HTMLButtonElement>(null);
+  const workerRef = useRef<Worker | null>(null);
+  const requestCounterRef = useRef(0);
+  const latestRequestIdRef = useRef<string | null>(null);
   const standardizedInput = useMemo(
     () => normalizeHongKongText(cleanInputText(input)),
     [input],
   );
-  const cantonese = useMemo(
-    () => tidyCantonese(input, engine, mode),
+  const fallbackTranslation = useMemo(
+    () =>
+      translate(input, {
+        scene: "general",
+        style: mode,
+        beamWidth: engine === "natural" ? 8 : 4,
+      }),
     [engine, input, mode],
   );
+  const activeTranslation = workerTranslation || fallbackTranslation;
+  const cantonese = activeTranslation.target;
   const pronunciation = useMemo(() => splitPronunciation(cantonese), [cantonese]);
   const activeSchemeDetail = schemeDetails[schemeGuide];
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !("Worker" in window)) {
+      return;
+    }
+
+    const worker = new Worker(translatorWorkerUrl, { type: "module" });
+    workerRef.current = worker;
+
+    worker.onmessage = (event: MessageEvent<TranslatorWorkerResponse>) => {
+      const message = event.data;
+
+      if (message.type === "READY") {
+        setTranslatorStatus("ready");
+        return;
+      }
+
+      if (message.type === "RESULT") {
+        if (message.requestId === latestRequestIdRef.current) {
+          setWorkerTranslation(message);
+        }
+        return;
+      }
+
+      setTranslatorStatus("fallback");
+    };
+    worker.onerror = () => {
+      setTranslatorStatus("fallback");
+      workerRef.current = null;
+      worker.terminate();
+    };
+    worker.postMessage({
+      type: "INIT",
+      dataVersion: fallbackTranslation.dataVersion,
+      scene: "general",
+    } satisfies TranslatorWorkerRequest);
+
+    return () => {
+      workerRef.current = null;
+      worker.terminate();
+    };
+  }, [fallbackTranslation.dataVersion]);
+
+  useEffect(() => {
+    const worker = workerRef.current;
+
+    if (!worker || translatorStatus !== "ready") {
+      setWorkerTranslation(fallbackTranslation);
+      return;
+    }
+
+    const requestId = `req-${Date.now()}-${requestCounterRef.current++}`;
+    latestRequestIdRef.current = requestId;
+    setWorkerTranslation(fallbackTranslation);
+    worker.postMessage({
+      type: "TRANSLATE",
+      requestId,
+      text: input,
+      options: {
+        scene: "general",
+        variant: "hong-kong",
+        includeJyutping: false,
+        style: mode,
+        beamWidth: engine === "natural" ? 8 : 4,
+      },
+    } satisfies TranslatorWorkerRequest);
+  }, [engine, fallbackTranslation, input, mode, translatorStatus]);
 
   useEffect(() => {
     let cancelled = false;
@@ -478,13 +482,21 @@ export default function Home() {
             <div>
               <p className="label">输出</p>
               <h2>粤语表达</h2>
-              <span className="panel-meta">{schemeNames[scheme]}</span>
+              <span className="panel-meta">
+                {schemeNames[scheme]} · 置信度{" "}
+                {Math.round(activeTranslation.confidence * 100)}%
+              </span>
             </div>
             <button type="button" className="speak-button" onClick={() => speak(cantonese)}>
               发音
             </button>
           </div>
           <p className="cantonese-output">{cantonese}</p>
+          {activeTranslation.warnings.length > 0 && (
+            <p className="translation-warning" aria-live="polite">
+              {activeTranslation.warnings[0]}
+            </p>
+          )}
           <div className="jyutping-box" aria-label="粤拼标注">
             {pronunciation.map((unit, index) => {
               const reading = getReading(unit.readings, scheme);
@@ -526,6 +538,16 @@ export default function Home() {
         <div>
           <strong>发音取决于浏览器语音。</strong>
           <span>系统如有粤语或香港中文语音，会优先使用；否则回退到中文语音。</span>
+        </div>
+        <div>
+          <strong>翻译引擎</strong>
+          <span>
+            {translatorStatus === "ready"
+              ? `Worker 已就绪，数据包 v${activeTranslation.dataVersion}。`
+              : translatorStatus === "booting"
+                ? `正在加载数据包 v${activeTranslation.dataVersion}。`
+                : `当前使用主线程降级，数据包 v${activeTranslation.dataVersion}。`}
+          </span>
         </div>
         <div>
           <strong>离线状态</strong>

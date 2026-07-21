@@ -56,7 +56,9 @@ test("server-renders the Cantonese conversion tool", async () => {
   assert.match(html, /声调/);
   assert.match(html, /示例/);
   assert.match(html, /香港 hoeng1 gong2/);
-  assert.match(html, /我今日唔想返工，可唔可以聽日再講？/);
+  assert.match(html, /我今日唔想返工，可唔可以聽日再講呀？/);
+  assert.match(html, /Worker 已就绪|正在加载数据包|当前使用主线程降级/);
+  assert.match(html, /数据包 v1\.1\.1/);
   assert.match(html, /<button[^>]+class="jyutping-unit"[^>]+aria-label="朗读 我/);
   assert.match(html, /title="单独发音"/);
   assert.match(html, /离线状态/);

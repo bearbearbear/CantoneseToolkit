@@ -1,0 +1,51 @@
+{
+  "dataset_name": "Offline Web Mandarin-to-Cantonese Text Translator Data",
+  "version": "1.1.1",
+  "build_date": "2026-07-20",
+  "default_variant": "Hong Kong colloquial Cantonese",
+  "counts": {
+    "phrases": 6846,
+    "lexicon": 214,
+    "templates": 799,
+    "rules": 183,
+    "tests": 3263,
+    "translation_units": 8042
+  },
+  "review_status_counts": {
+    "draft_curated": 749,
+    "generated_candidate": 7293
+  },
+  "removed_in_this_release": {
+    "total": 112,
+    "translation_units": 109,
+    "tests": 3,
+    "by_dataset": {
+      "lexicon": 102,
+      "phrases": 6,
+      "rules": 1,
+      "tests": 3
+    },
+    "retagged_tests": 1
+  },
+  "normalization_policy": {
+    "rule": "Remove same-lexeme entries under bidirectional simplified/traditional and regional glyph normalization.",
+    "checks": [
+      "t2s(source) == t2s(target)",
+      "s2t(source) == target",
+      "s2hk(source) == target",
+      "s2tw(source) == target",
+      "flags == passthrough_same_lexeme",
+      "condition contains same-lexeme"
+    ],
+    "applies_to": [
+      "phrases",
+      "lexicon",
+      "templates",
+      "rules",
+      "tests"
+    ],
+    "enforced_in_future_builds": true
+  },
+  "license": "CC BY-SA 3.0 (package still includes adapted CC-Canto entries; see ATTRIBUTION.md)",
+  "runtime_file": "runtime-core-v1.1.1.json"
+}

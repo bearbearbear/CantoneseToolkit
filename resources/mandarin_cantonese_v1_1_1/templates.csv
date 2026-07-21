@@ -1,0 +1,800 @@
+﻿id,source_pattern,target_pattern,slots,scene,priority,template_type,example_source,example_target,notes,review_status,provenance
+TPL-0001,你为什么{vp:VP}？,你點解{vp}呀？,VP,general,100,why_question,你为什么不去？,你點解唔去呀？,,draft_curated,curated_v0.1
+TPL-0002,为什么{vp:VP}？,點解{vp}呀？,VP,general,100,why_question,为什么这么贵？,點解咁貴呀？,,draft_curated,curated_v0.1
+TPL-0003,你在做什么？,你做緊咩呀？,,general,100,progressive_question,你在做什么？,你做緊咩呀？,fixed_high_frequency,draft_curated,curated_v0.1
+TPL-0004,你正在{vp:VP}吗？,你係咪{vp}緊呀？,VP,general,95,progressive_question,你正在开会吗？,你係咪開緊會呀？,,draft_curated,curated_v0.1
+TPL-0005,你有没有{np:NP}？,你有冇{np}呀？,NP,general,100,existence_question,你有没有时间？,你有冇時間呀？,,draft_curated,curated_v0.1
+TPL-0006,这里有没有{np:NP}？,呢度有冇{np}呀？,NP,general,100,existence_question,这里有没有洗手间？,呢度有冇洗手間呀？,,draft_curated,curated_v0.1
+TPL-0007,{np:NP}在哪里？,{np}喺邊度呀？,NP,general,100,location_question,洗手间在哪里？,洗手間喺邊度呀？,,draft_curated,curated_v0.1
+TPL-0008,怎么去{place:PLACE}？,點去{place}呀？,PLACE,transport,100,directions,怎么去机场？,點去機場呀？,,draft_curated,curated_v0.1
+TPL-0009,从这里怎么去{place:PLACE}？,由呢度點去{place}呀？,PLACE,transport,100,directions,从这里怎么去车站？,由呢度點去車站呀？,,draft_curated,curated_v0.1
+TPL-0010,{np:NP}多少钱？,{np}幾多錢呀？,NP,shopping,100,price_question,这个多少钱？,呢個幾多錢呀？,,draft_curated,curated_v0.1
+TPL-0011,{np:NP}要多少钱？,{np}要幾多錢呀？,NP,general,95,price_question,修理要多少钱？,整返好要幾多錢呀？,verb_lexicon_may_rewrite,draft_curated,curated_v0.1
+TPL-0012,{np:NP}什么时候{vp:VP}？,{np}幾時{vp}呀？,NP|VP,general,95,time_question,货什么时候到？,啲貨幾時到呀？,,draft_curated,curated_v0.1
+TPL-0013,你什么时候{vp:VP}？,你幾時{vp}呀？,VP,general,100,time_question,你什么时候回来？,你幾時返嚟呀？,,draft_curated,curated_v0.1
+TPL-0014,要多久？,要幾耐呀？,,general,100,duration_question,要多久？,要幾耐呀？,,draft_curated,curated_v0.1
+TPL-0015,{vp:VP}要多久？,{vp}要幾耐呀？,VP,general,100,duration_question,走路要多久？,行路要幾耐呀？,,draft_curated,curated_v0.1
+TPL-0016,哪个{np:NP}比较好？,邊個{np}比較好呀？,NP,general,95,choice_question,哪个方案比较好？,邊個方案比較好呀？,,draft_curated,curated_v0.1
+TPL-0017,你觉得{clause:CLAUSE}怎么样？,你覺得{clause}點呀？,CLAUSE,general,90,opinion_question,你觉得这个方案怎么样？,你覺得呢個方案點呀？,,draft_curated,curated_v0.1
+TPL-0018,可以{vp:VP}吗？,可唔可以{vp}呀？,VP,general,100,permission_question,可以坐这里吗？,可唔可以坐呢度呀？,,draft_curated,curated_v0.1
+TPL-0019,能不能{vp:VP}？,可唔可以{vp}呀？,VP,general,100,permission_question,能不能便宜一点？,可唔可以平啲呀？,,draft_curated,curated_v0.1
+TPL-0020,你能不能{vp:VP}？,你可唔可以{vp}呀？,VP,general,100,request_question,你能不能帮我？,你可唔可以幫我呀？,,draft_curated,curated_v0.1
+TPL-0021,你能帮我{vp:VP}吗？,你可唔可以幫我{vp}呀？,VP,general,100,request_question,你能帮我看一下吗？,你可唔可以幫我睇下呀？,,draft_curated,curated_v0.1
+TPL-0022,请{vp:VP}。,唔該{vp}。,VP,general,95,polite_request,请等一下。,唔該等陣。,,draft_curated,curated_v0.1
+TPL-0023,请帮我{vp:VP}。,唔該幫我{vp}。,VP,general,100,polite_request,请帮我叫车。,唔該幫我叫車。,,draft_curated,curated_v0.1
+TPL-0024,麻烦你{vp:VP}。,唔該你{vp}。,VP,general,100,polite_request,麻烦你再说一遍。,唔該你再講多次。,,draft_curated,curated_v0.1
+TPL-0025,请给我{np:NP}。,唔該畀{np}我。,NP,general,100,give_request,请给我一杯水。,唔該畀杯水我。,classifier_reduction_optional,draft_curated,curated_v0.1
+TPL-0026,请把{np:NP}给我。,唔該將{np}畀我。,NP,general,95,give_request,请把文件给我。,唔該將份文件畀我。,,draft_curated,curated_v0.1
+TPL-0027,请把{np:NP}发给我。,唔該將{np}send畀我。,NP,work,90,send_request,请把文件发给我。,唔該將份文件send畀我。,code_switch_hk,draft_curated,curated_v0.1
+TPL-0028,请告诉我{clause:CLAUSE}。,唔該話我知{clause}。,CLAUSE,general,100,tell_request,请告诉我什么时候到。,唔該話我知幾時到。,,draft_curated,curated_v0.1
+TPL-0029,请再{vp:VP}一次。,唔該再{vp}多次。,VP,general,100,repeat_request,请再说一次。,唔該再講多次。,,draft_curated,curated_v0.1
+TPL-0030,请{vp:VP}一点。,唔該{vp}啲。,VP,general,95,degree_request,请说慢一点。,唔該講慢啲。,,draft_curated,curated_v0.1
+TPL-0031,我想{vp:VP}。,我想{vp}。,VP,general,95,desire,我想吃饭。,我想食飯。,,draft_curated,curated_v0.1
+TPL-0032,我想要{np:NP}。,我想要{np}。,NP,general,95,desire,我想要这个。,我想要呢個。,,draft_curated,curated_v0.1
+TPL-0033,我要{np:NP}。,我要{np}。,NP,general,100,request_item,我要一杯水。,我要一杯水。,,draft_curated,curated_v0.1
+TPL-0034,我要去{place:PLACE}。,我要去{place}。,PLACE,transport,100,destination,我要去机场。,我要去機場。,,draft_curated,curated_v0.1
+TPL-0035,我正在{vp:VP}。,我{vp}緊。,VP,general,100,progressive,我正在吃饭。,我食緊飯。,,draft_curated,curated_v0.1
+TPL-0036,{person:PERSON}正在{vp:VP}。,{person}{vp}緊。,PERSON|VP,general,100,progressive,他正在开会。,佢開緊會。,,draft_curated,curated_v0.1
+TPL-0037,我已经{vp:VP}了。,我已經{vp}咗喇。,VP,general,100,completed,我已经到了。,我已經到咗喇。,,draft_curated,curated_v0.1
+TPL-0038,{person:PERSON}已经{vp:VP}了。,{person}已經{vp}咗喇。,PERSON|VP,general,95,completed,他已经走了。,佢已經走咗喇。,,draft_curated,curated_v0.1
+TPL-0039,我还没有{vp:VP}。,我仲未{vp}。,VP,general,100,not_yet,我还没有吃饭。,我仲未食飯。,,draft_curated,curated_v0.1
+TPL-0040,{person:PERSON}还没有{vp:VP}。,{person}仲未{vp}。,PERSON|VP,general,100,not_yet,他还没有来。,佢仲未嚟。,,draft_curated,curated_v0.1
+TPL-0041,我没有{np:NP}。,我冇{np}。,NP,general,100,nonexistence,我没有钱。,我冇錢。,,draft_curated,curated_v0.1
+TPL-0042,{person:PERSON}没有{np:NP}。,{person}冇{np}。,PERSON|NP,general,95,nonexistence,他没有时间。,佢冇時間。,,draft_curated,curated_v0.1
+TPL-0043,我昨天没有{vp:VP}。,我尋日冇{vp}。,VP,general,100,past_negative,我昨天没有去。,我尋日冇去。,,draft_curated,curated_v0.1
+TPL-0044,我不会{vp:VP}。,我唔識{vp}。,VP,general,95,skill_negative,我不会说粤语。,我唔識講廣東話。,only_learned_skills,draft_curated,curated_v0.1
+TPL-0045,我不能{vp:VP}。,我唔可以{vp}。,VP,general,95,permission_negative,我不能进去。,我唔可以入去。,permission_or_rule,draft_curated,curated_v0.1
+TPL-0046,我做不到{vp:VP}。,我做唔到{vp}。,VP,general,95,ability_negative,我做不到按时完成。,我做唔到準時完成。,,draft_curated,curated_v0.1
+TPL-0047,我觉得{clause:CLAUSE}。,我覺得{clause}。,CLAUSE,general,90,opinion,我觉得这个很好。,我覺得呢個幾好。,,draft_curated,curated_v0.1
+TPL-0048,我不知道{clause:CLAUSE}。,我唔知{clause}。,CLAUSE,general,100,knowledge_negative,我不知道他在哪里。,我唔知佢喺邊度。,,draft_curated,curated_v0.1
+TPL-0049,我不明白{clause:CLAUSE}。,我唔明{clause}。,CLAUSE,general,100,understanding_negative,我不明白你说什么。,我唔明你講乜嘢。,,draft_curated,curated_v0.1
+TPL-0050,我记得{clause:CLAUSE}。,我記得{clause}。,CLAUSE,general,90,memory,我记得他来过。,我記得佢嚟過。,,draft_curated,curated_v0.1
+TPL-0051,我忘记{vp:VP}了。,我唔記得咗{vp}。,VP,general,90,memory_negative,我忘记带钥匙了。,我唔記得咗帶鎖匙。,,draft_curated,curated_v0.1
+TPL-0052,我有点{adj:ADJ}。,我有啲{adj}。,ADJ,general,100,degree,我有点累。,我有啲攰。,,draft_curated,curated_v0.1
+TPL-0053,我很{adj:ADJ}。,我好{adj}。,ADJ,general,100,degree,我很累。,我好攰。,,draft_curated,curated_v0.1
+TPL-0054,这个很{adj:ADJ}。,呢個好{adj}。,ADJ,general,100,degree,这个很好看。,呢個好靚。,,draft_curated,curated_v0.1
+TPL-0055,这个太{adj:ADJ}了。,呢個太{adj}喇。,ADJ,general,100,excessive_degree,这个太贵了。,呢個太貴喇。,,draft_curated,curated_v0.1
+TPL-0056,有没有{adj:ADJ}一点的？,有冇{adj}啲㗎？,ADJ,shopping,100,comparative_request,有没有便宜一点的？,有冇平啲㗎？,,draft_curated,curated_v0.1
+TPL-0057,比{np:NP}更{adj:ADJ}。,{adj}過{np}。,NP|ADJ,general,90,comparison,比那个更便宜。,平過嗰個。,,draft_curated,curated_v0.1
+TPL-0058,{np1:NP}比{np2:NP}{adj:ADJ}。,{np1}{adj}過{np2}。,NP|NP|ADJ,general,100,comparison,这个比那个贵。,呢個貴過嗰個。,,draft_curated,curated_v0.1
+TPL-0059,越{adj1:ADJ}越{adj2:ADJ}。,越{adj1}越{adj2}。,ADJ|ADJ,general,80,correlative,越快越好。,越快越好。,passthrough_structure,draft_curated,curated_v0.1
+TPL-0060,我们一起{vp:VP}吧。,我哋一齊{vp}啦。,VP,social,100,suggestion,我们一起吃饭吧。,我哋一齊食飯啦。,,draft_curated,curated_v0.1
+TPL-0061,我们{time:TIME}见。,我哋{time}見。,TIME,social,100,arrangement,我们明天见。,我哋聽日見。,,draft_curated,curated_v0.1
+TPL-0062,我们在{place:PLACE}见。,我哋喺{place}見。,PLACE,social,100,arrangement,我们在门口见。,我哋喺門口見。,,draft_curated,curated_v0.1
+TPL-0064,我{time:TIME}到。,我{time}到。,TIME,social,90,arrangement,我三点到。,我三點到。,,draft_curated,curated_v0.1
+TPL-0065,到时候给我打电话。,到時打電話畀我。,,social,100,arrangement,到时候给我打电话。,到時打電話畀我。,,draft_curated,curated_v0.1
+TPL-0066,你喜欢{np:NP}吗？,你鍾唔鍾意{np}呀？,NP,social,100,preference_question,你喜欢这个吗？,你鍾唔鍾意呢個呀？,,draft_curated,curated_v0.1
+TPL-0067,我喜欢{np:NP}。,我鍾意{np}。,NP,social,100,preference,我喜欢这个。,我鍾意呢個。,,draft_curated,curated_v0.1
+TPL-0068,我不太喜欢{np:NP}。,我唔係幾鍾意{np}。,NP,social,100,preference_negative,我不太喜欢这个。,我唔係幾鍾意呢個。,,draft_curated,curated_v0.1
+TPL-0069,别{vp:VP}。,唔好{vp}。,VP,general,100,negative_imperative,别担心。,唔使擔心。,lexical_exception_may_override,draft_curated,curated_v0.1
+TPL-0070,我要{number:NUMBER}{item:ITEM}。,我要{number}{item}。,NUMBER|ITEM,restaurant|shopping,100,order_item,我要两杯水。,我要兩杯水。,,draft_curated,curated_v0.1
+TPL-0071,不要{item:ITEM}。,唔要{item}。,ITEM,restaurant|shopping,100,reject_item,不要冰。,唔要冰。,,draft_curated,curated_v0.1
+TPL-0072,少一点{item:ITEM}。,少啲{item}。,ITEM,restaurant,95,preference,少一点糖。,少啲糖。,lexical_phrase_can_override_to_少甜,draft_curated,curated_v0.1
+TPL-0073,{item:ITEM}可以打包吗？,{item}可唔可以打包呀？,ITEM,restaurant,100,takeaway,这个可以打包吗？,呢個可唔可以打包呀？,,draft_curated,curated_v0.1
+TPL-0074,这里面有{item:ITEM}吗？,呢度面有冇{item}呀？,ITEM,restaurant,100,allergy_question,这里面有花生吗？,呢度面有冇花生呀？,,draft_curated,curated_v0.1
+TPL-0075,我对{item:ITEM}过敏。,我對{item}敏感。,ITEM,medical|restaurant,100,allergy,我对花生过敏。,我對花生敏感。,,draft_curated,curated_v0.1
+TPL-0076,有{color:ADJ}的吗？,有冇{color}㗎？,ADJ,shopping,95,color_choice,有黑色的吗？,有冇黑色㗎？,,draft_curated,curated_v0.1
+TPL-0077,有{size:ADJ}一点的吗？,有冇{size}啲㗎？,ADJ,shopping,100,size_choice,有大一点的吗？,有冇大啲㗎？,,draft_curated,curated_v0.1
+TPL-0078,我想换{np:NP}。,我想換{np}。,NP,shopping,100,exchange,我想换这个。,我想換呢個。,,draft_curated,curated_v0.1
+TPL-0079,我想退{np:NP}。,我想退{np}。,NP,shopping,95,return,我想退这个。,我想退呢個。,,draft_curated,curated_v0.1
+TPL-0080,请在{time:TIME}前{vp:VP}。,唔該喺{time}之前{vp}。,TIME|VP,work,95,deadline,请在明天前完成。,唔該喺聽日之前完成。,,draft_curated,curated_v0.1
+TPL-0081,{np:NP}什么时候完成？,{np}幾時完成呀？,NP,work,100,deadline_question,这个任务什么时候完成？,呢個任務幾時完成呀？,,draft_curated,curated_v0.1
+TPL-0082,{np:NP}由谁负责？,{np}由邊個負責呀？,NP,work,100,responsibility,这个项目由谁负责？,呢個項目由邊個負責呀？,,draft_curated,curated_v0.1
+TPL-0083,我会尽快{vp:VP}。,我會盡快{vp}。,VP,work,95,commitment,我会尽快回复。,我會盡快覆。,,draft_curated,curated_v0.1
+TPL-0084,我还需要{amount:NUMBER}时间。,我仲需要{amount}時間。,NUMBER,work,95,time_needed,我还需要一点时间。,我仲需要少少時間。,,draft_curated,curated_v0.1
+TPL-0085,我们需要再{vp:VP}。,我哋需要再{vp}。,VP,work,95,discussion,我们需要再讨论。,我哋需要再傾下。,,draft_curated,curated_v0.1
+TPL-0086,我{body:NP}痛。,我{body}痛。,NP,medical,100,symptom,我头痛。,我頭痛。,,draft_curated,curated_v0.1
+TPL-0087,我从{time:TIME}开始{symptom:VP}。,我由{time}開始{symptom}。,TIME|VP,medical,95,symptom_duration,我从昨天开始咳嗽。,我由尋日開始咳。,,draft_curated,curated_v0.1
+TPL-0088,{symptom:VP}多久了？,{symptom}咗幾耐呀？,VP,medical,100,symptom_duration,头痛多久了？,頭痛咗幾耐呀？,,draft_curated,curated_v0.1
+TPL-0089,这个药一天吃{number:NUMBER}次。,呢隻藥一日食{number}次。,NUMBER,medical,100,medicine_instruction,这个药一天吃三次。,呢隻藥一日食三次。,,draft_curated,curated_v0.1
+TPL-0090,我有{condition:NP}。,我有{condition}。,NP,medical,90,medical_history,我有高血压。,我有高血壓。,,draft_curated,curated_v0.1
+TPL-0091,请联系{person:PERSON}。,唔該聯絡{person}。,PERSON,medical,100,emergency_contact,请联系我的家人。,唔該聯絡我屋企人。,,draft_curated,curated_v0.1
+TPL-0092,今天我想{vp:VP}。,今日我想{vp}。,VP,general,82,want,今天我想去机场。,今日我想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0093,明天我想{vp:VP}。,聽日我想{vp}。,VP,general,82,want,明天我想去机场。,聽日我想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0094,现在我想{vp:VP}。,而家我想{vp}。,VP,general,82,want,现在我想去机场。,而家我想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0095,等一下我想{vp:VP}。,等陣我想{vp}。,VP,general,82,want,等一下我想去机场。,等陣我想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0096,下次我想{vp:VP}。,下次我想{vp}。,VP,general,82,want,下次我想去机场。,下次我想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0097,你想{vp:VP}。,你想{vp}。,VP,general,82,want,你想去机场。,你想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0098,今天你想{vp:VP}。,今日你想{vp}。,VP,general,82,want,今天你想去机场。,今日你想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0099,明天你想{vp:VP}。,聽日你想{vp}。,VP,general,82,want,明天你想去机场。,聽日你想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0100,现在你想{vp:VP}。,而家你想{vp}。,VP,general,82,want,现在你想去机场。,而家你想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0101,等一下你想{vp:VP}。,等陣你想{vp}。,VP,general,82,want,等一下你想去机场。,等陣你想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0102,下次你想{vp:VP}。,下次你想{vp}。,VP,general,82,want,下次你想去机场。,下次你想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0103,我们想{vp:VP}。,我哋想{vp}。,VP,general,82,want,我们想去机场。,我哋想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0104,今天我们想{vp:VP}。,今日我哋想{vp}。,VP,general,82,want,今天我们想去机场。,今日我哋想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0105,明天我们想{vp:VP}。,聽日我哋想{vp}。,VP,general,82,want,明天我们想去机场。,聽日我哋想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0106,现在我们想{vp:VP}。,而家我哋想{vp}。,VP,general,82,want,现在我们想去机场。,而家我哋想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0107,等一下我们想{vp:VP}。,等陣我哋想{vp}。,VP,general,82,want,等一下我们想去机场。,等陣我哋想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0108,下次我们想{vp:VP}。,下次我哋想{vp}。,VP,general,82,want,下次我们想去机场。,下次我哋想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0109,{person:PERSON}想{vp:VP}。,{person}想{vp}。,"VP,PERSON",general,82,want,他想去机场。,佢想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0110,今天{person:PERSON}想{vp:VP}。,今日{person}想{vp}。,"VP,PERSON",general,82,want,今天他想去机场。,今日佢想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0111,明天{person:PERSON}想{vp:VP}。,聽日{person}想{vp}。,"VP,PERSON",general,82,want,明天他想去机场。,聽日佢想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0112,现在{person:PERSON}想{vp:VP}。,而家{person}想{vp}。,"VP,PERSON",general,82,want,现在他想去机场。,而家佢想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0113,等一下{person:PERSON}想{vp:VP}。,等陣{person}想{vp}。,"VP,PERSON",general,82,want,等一下他想去机场。,等陣佢想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0114,下次{person:PERSON}想{vp:VP}。,下次{person}想{vp}。,"VP,PERSON",general,82,want,下次他想去机场。,下次佢想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0115,我不想{vp:VP}。,我唔想{vp}。,VP,general,82,not_want,我不想去机场。,我唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0116,今天我不想{vp:VP}。,今日我唔想{vp}。,VP,general,82,not_want,今天我不想去机场。,今日我唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0117,明天我不想{vp:VP}。,聽日我唔想{vp}。,VP,general,82,not_want,明天我不想去机场。,聽日我唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0118,现在我不想{vp:VP}。,而家我唔想{vp}。,VP,general,82,not_want,现在我不想去机场。,而家我唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0119,等一下我不想{vp:VP}。,等陣我唔想{vp}。,VP,general,82,not_want,等一下我不想去机场。,等陣我唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0120,下次我不想{vp:VP}。,下次我唔想{vp}。,VP,general,82,not_want,下次我不想去机场。,下次我唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0121,你不想{vp:VP}。,你唔想{vp}。,VP,general,82,not_want,你不想去机场。,你唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0122,今天你不想{vp:VP}。,今日你唔想{vp}。,VP,general,82,not_want,今天你不想去机场。,今日你唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0123,明天你不想{vp:VP}。,聽日你唔想{vp}。,VP,general,82,not_want,明天你不想去机场。,聽日你唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0124,现在你不想{vp:VP}。,而家你唔想{vp}。,VP,general,82,not_want,现在你不想去机场。,而家你唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0125,等一下你不想{vp:VP}。,等陣你唔想{vp}。,VP,general,82,not_want,等一下你不想去机场。,等陣你唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0126,下次你不想{vp:VP}。,下次你唔想{vp}。,VP,general,82,not_want,下次你不想去机场。,下次你唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0127,我们不想{vp:VP}。,我哋唔想{vp}。,VP,general,82,not_want,我们不想去机场。,我哋唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0128,今天我们不想{vp:VP}。,今日我哋唔想{vp}。,VP,general,82,not_want,今天我们不想去机场。,今日我哋唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0129,明天我们不想{vp:VP}。,聽日我哋唔想{vp}。,VP,general,82,not_want,明天我们不想去机场。,聽日我哋唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0130,现在我们不想{vp:VP}。,而家我哋唔想{vp}。,VP,general,82,not_want,现在我们不想去机场。,而家我哋唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0131,等一下我们不想{vp:VP}。,等陣我哋唔想{vp}。,VP,general,82,not_want,等一下我们不想去机场。,等陣我哋唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0132,下次我们不想{vp:VP}。,下次我哋唔想{vp}。,VP,general,82,not_want,下次我们不想去机场。,下次我哋唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0133,{person:PERSON}不想{vp:VP}。,{person}唔想{vp}。,"VP,PERSON",general,82,not_want,他不想去机场。,佢唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0134,今天{person:PERSON}不想{vp:VP}。,今日{person}唔想{vp}。,"VP,PERSON",general,82,not_want,今天他不想去机场。,今日佢唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0135,明天{person:PERSON}不想{vp:VP}。,聽日{person}唔想{vp}。,"VP,PERSON",general,82,not_want,明天他不想去机场。,聽日佢唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0136,现在{person:PERSON}不想{vp:VP}。,而家{person}唔想{vp}。,"VP,PERSON",general,82,not_want,现在他不想去机场。,而家佢唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0137,等一下{person:PERSON}不想{vp:VP}。,等陣{person}唔想{vp}。,"VP,PERSON",general,82,not_want,等一下他不想去机场。,等陣佢唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0138,下次{person:PERSON}不想{vp:VP}。,下次{person}唔想{vp}。,"VP,PERSON",general,82,not_want,下次他不想去机场。,下次佢唔想去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0139,我要{vp:VP}。,我要{vp}。,VP,general,82,need_action,我要去机场。,我要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0140,今天我要{vp:VP}。,今日我要{vp}。,VP,general,82,need_action,今天我要去机场。,今日我要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0141,明天我要{vp:VP}。,聽日我要{vp}。,VP,general,82,need_action,明天我要去机场。,聽日我要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0142,现在我要{vp:VP}。,而家我要{vp}。,VP,general,82,need_action,现在我要去机场。,而家我要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0143,等一下我要{vp:VP}。,等陣我要{vp}。,VP,general,82,need_action,等一下我要去机场。,等陣我要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0144,下次我要{vp:VP}。,下次我要{vp}。,VP,general,82,need_action,下次我要去机场。,下次我要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0145,你要{vp:VP}。,你要{vp}。,VP,general,82,need_action,你要去机场。,你要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0146,今天你要{vp:VP}。,今日你要{vp}。,VP,general,82,need_action,今天你要去机场。,今日你要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0147,明天你要{vp:VP}。,聽日你要{vp}。,VP,general,82,need_action,明天你要去机场。,聽日你要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0148,现在你要{vp:VP}。,而家你要{vp}。,VP,general,82,need_action,现在你要去机场。,而家你要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0149,等一下你要{vp:VP}。,等陣你要{vp}。,VP,general,82,need_action,等一下你要去机场。,等陣你要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0150,下次你要{vp:VP}。,下次你要{vp}。,VP,general,82,need_action,下次你要去机场。,下次你要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0151,我们要{vp:VP}。,我哋要{vp}。,VP,general,82,need_action,我们要去机场。,我哋要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0152,今天我们要{vp:VP}。,今日我哋要{vp}。,VP,general,82,need_action,今天我们要去机场。,今日我哋要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0153,明天我们要{vp:VP}。,聽日我哋要{vp}。,VP,general,82,need_action,明天我们要去机场。,聽日我哋要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0154,现在我们要{vp:VP}。,而家我哋要{vp}。,VP,general,82,need_action,现在我们要去机场。,而家我哋要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0155,等一下我们要{vp:VP}。,等陣我哋要{vp}。,VP,general,82,need_action,等一下我们要去机场。,等陣我哋要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0156,下次我们要{vp:VP}。,下次我哋要{vp}。,VP,general,82,need_action,下次我们要去机场。,下次我哋要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0157,{person:PERSON}要{vp:VP}。,{person}要{vp}。,"VP,PERSON",general,82,need_action,他要去机场。,佢要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0158,今天{person:PERSON}要{vp:VP}。,今日{person}要{vp}。,"VP,PERSON",general,82,need_action,今天他要去机场。,今日佢要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0159,明天{person:PERSON}要{vp:VP}。,聽日{person}要{vp}。,"VP,PERSON",general,82,need_action,明天他要去机场。,聽日佢要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0160,现在{person:PERSON}要{vp:VP}。,而家{person}要{vp}。,"VP,PERSON",general,82,need_action,现在他要去机场。,而家佢要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0161,等一下{person:PERSON}要{vp:VP}。,等陣{person}要{vp}。,"VP,PERSON",general,82,need_action,等一下他要去机场。,等陣佢要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0162,下次{person:PERSON}要{vp:VP}。,下次{person}要{vp}。,"VP,PERSON",general,82,need_action,下次他要去机场。,下次佢要去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0163,我需要{np:NP}。,我需要{np}。,NP,general,82,need_item,我需要这个文件。,我需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0164,今天我需要{np:NP}。,今日我需要{np}。,NP,general,82,need_item,今天我需要这个文件。,今日我需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0165,明天我需要{np:NP}。,聽日我需要{np}。,NP,general,82,need_item,明天我需要这个文件。,聽日我需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0166,现在我需要{np:NP}。,而家我需要{np}。,NP,general,82,need_item,现在我需要这个文件。,而家我需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0167,等一下我需要{np:NP}。,等陣我需要{np}。,NP,general,82,need_item,等一下我需要这个文件。,等陣我需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0168,下次我需要{np:NP}。,下次我需要{np}。,NP,general,82,need_item,下次我需要这个文件。,下次我需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0169,你需要{np:NP}。,你需要{np}。,NP,general,82,need_item,你需要这个文件。,你需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0170,今天你需要{np:NP}。,今日你需要{np}。,NP,general,82,need_item,今天你需要这个文件。,今日你需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0171,明天你需要{np:NP}。,聽日你需要{np}。,NP,general,82,need_item,明天你需要这个文件。,聽日你需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0172,现在你需要{np:NP}。,而家你需要{np}。,NP,general,82,need_item,现在你需要这个文件。,而家你需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0173,等一下你需要{np:NP}。,等陣你需要{np}。,NP,general,82,need_item,等一下你需要这个文件。,等陣你需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0174,下次你需要{np:NP}。,下次你需要{np}。,NP,general,82,need_item,下次你需要这个文件。,下次你需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0175,我们需要{np:NP}。,我哋需要{np}。,NP,general,82,need_item,我们需要这个文件。,我哋需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0176,今天我们需要{np:NP}。,今日我哋需要{np}。,NP,general,82,need_item,今天我们需要这个文件。,今日我哋需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0177,明天我们需要{np:NP}。,聽日我哋需要{np}。,NP,general,82,need_item,明天我们需要这个文件。,聽日我哋需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0178,现在我们需要{np:NP}。,而家我哋需要{np}。,NP,general,82,need_item,现在我们需要这个文件。,而家我哋需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0179,等一下我们需要{np:NP}。,等陣我哋需要{np}。,NP,general,82,need_item,等一下我们需要这个文件。,等陣我哋需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0180,下次我们需要{np:NP}。,下次我哋需要{np}。,NP,general,82,need_item,下次我们需要这个文件。,下次我哋需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0181,{person:PERSON}需要{np:NP}。,{person}需要{np}。,"NP,PERSON",general,82,need_item,他需要这个文件。,佢需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0182,今天{person:PERSON}需要{np:NP}。,今日{person}需要{np}。,"NP,PERSON",general,82,need_item,今天他需要这个文件。,今日佢需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0183,明天{person:PERSON}需要{np:NP}。,聽日{person}需要{np}。,"NP,PERSON",general,82,need_item,明天他需要这个文件。,聽日佢需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0184,现在{person:PERSON}需要{np:NP}。,而家{person}需要{np}。,"NP,PERSON",general,82,need_item,现在他需要这个文件。,而家佢需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0185,等一下{person:PERSON}需要{np:NP}。,等陣{person}需要{np}。,"NP,PERSON",general,82,need_item,等一下他需要这个文件。,等陣佢需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0186,下次{person:PERSON}需要{np:NP}。,下次{person}需要{np}。,"NP,PERSON",general,82,need_item,下次他需要这个文件。,下次佢需要呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0187,今天我没有{np:NP}。,今日我冇{np}。,NP,general,82,absence,今天我没有这个文件。,今日我冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0188,明天我没有{np:NP}。,聽日我冇{np}。,NP,general,82,absence,明天我没有这个文件。,聽日我冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0189,现在我没有{np:NP}。,而家我冇{np}。,NP,general,82,absence,现在我没有这个文件。,而家我冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0190,等一下我没有{np:NP}。,等陣我冇{np}。,NP,general,82,absence,等一下我没有这个文件。,等陣我冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0191,下次我没有{np:NP}。,下次我冇{np}。,NP,general,82,absence,下次我没有这个文件。,下次我冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0192,你没有{np:NP}。,你冇{np}。,NP,general,82,absence,你没有这个文件。,你冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0193,今天你没有{np:NP}。,今日你冇{np}。,NP,general,82,absence,今天你没有这个文件。,今日你冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0194,明天你没有{np:NP}。,聽日你冇{np}。,NP,general,82,absence,明天你没有这个文件。,聽日你冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0195,现在你没有{np:NP}。,而家你冇{np}。,NP,general,82,absence,现在你没有这个文件。,而家你冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0196,等一下你没有{np:NP}。,等陣你冇{np}。,NP,general,82,absence,等一下你没有这个文件。,等陣你冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0197,下次你没有{np:NP}。,下次你冇{np}。,NP,general,82,absence,下次你没有这个文件。,下次你冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0198,我们没有{np:NP}。,我哋冇{np}。,NP,general,82,absence,我们没有这个文件。,我哋冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0199,今天我们没有{np:NP}。,今日我哋冇{np}。,NP,general,82,absence,今天我们没有这个文件。,今日我哋冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0200,明天我们没有{np:NP}。,聽日我哋冇{np}。,NP,general,82,absence,明天我们没有这个文件。,聽日我哋冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0201,现在我们没有{np:NP}。,而家我哋冇{np}。,NP,general,82,absence,现在我们没有这个文件。,而家我哋冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0202,等一下我们没有{np:NP}。,等陣我哋冇{np}。,NP,general,82,absence,等一下我们没有这个文件。,等陣我哋冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0203,下次我们没有{np:NP}。,下次我哋冇{np}。,NP,general,82,absence,下次我们没有这个文件。,下次我哋冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0204,今天{person:PERSON}没有{np:NP}。,今日{person}冇{np}。,"NP,PERSON",general,82,absence,今天他没有这个文件。,今日佢冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0205,明天{person:PERSON}没有{np:NP}。,聽日{person}冇{np}。,"NP,PERSON",general,82,absence,明天他没有这个文件。,聽日佢冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0206,现在{person:PERSON}没有{np:NP}。,而家{person}冇{np}。,"NP,PERSON",general,82,absence,现在他没有这个文件。,而家佢冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0207,等一下{person:PERSON}没有{np:NP}。,等陣{person}冇{np}。,"NP,PERSON",general,82,absence,等一下他没有这个文件。,等陣佢冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0208,下次{person:PERSON}没有{np:NP}。,下次{person}冇{np}。,"NP,PERSON",general,82,absence,下次他没有这个文件。,下次佢冇呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0209,今天我还没有{vp:VP}。,今日我仲未{vp}。,VP,general,82,not_yet,今天我还没有去机场。,今日我仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0210,明天我还没有{vp:VP}。,聽日我仲未{vp}。,VP,general,82,not_yet,明天我还没有去机场。,聽日我仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0211,现在我还没有{vp:VP}。,而家我仲未{vp}。,VP,general,82,not_yet,现在我还没有去机场。,而家我仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0212,你还没有{vp:VP}。,你仲未{vp}。,VP,general,82,not_yet,你还没有去机场。,你仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0213,今天你还没有{vp:VP}。,今日你仲未{vp}。,VP,general,82,not_yet,今天你还没有去机场。,今日你仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0214,明天你还没有{vp:VP}。,聽日你仲未{vp}。,VP,general,82,not_yet,明天你还没有去机场。,聽日你仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0215,现在你还没有{vp:VP}。,而家你仲未{vp}。,VP,general,82,not_yet,现在你还没有去机场。,而家你仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0216,我们还没有{vp:VP}。,我哋仲未{vp}。,VP,general,82,not_yet,我们还没有去机场。,我哋仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0217,今天我们还没有{vp:VP}。,今日我哋仲未{vp}。,VP,general,82,not_yet,今天我们还没有去机场。,今日我哋仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0218,明天我们还没有{vp:VP}。,聽日我哋仲未{vp}。,VP,general,82,not_yet,明天我们还没有去机场。,聽日我哋仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0219,现在我们还没有{vp:VP}。,而家我哋仲未{vp}。,VP,general,82,not_yet,现在我们还没有去机场。,而家我哋仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0220,今天{person:PERSON}还没有{vp:VP}。,今日{person}仲未{vp}。,"VP,PERSON",general,82,not_yet,今天他还没有去机场。,今日佢仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0221,明天{person:PERSON}还没有{vp:VP}。,聽日{person}仲未{vp}。,"VP,PERSON",general,82,not_yet,明天他还没有去机场。,聽日佢仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0222,现在{person:PERSON}还没有{vp:VP}。,而家{person}仲未{vp}。,"VP,PERSON",general,82,not_yet,现在他还没有去机场。,而家佢仲未去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0223,我已经{vp:VP}了。,我已經{vp|perfective}。,VP,general,82,completed,我已经去机场了。,我已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0224,今天我已经{vp:VP}了。,今日我已經{vp|perfective}。,VP,general,82,completed,今天我已经去机场了。,今日我已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0225,明天我已经{vp:VP}了。,聽日我已經{vp|perfective}。,VP,general,82,completed,明天我已经去机场了。,聽日我已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0226,现在我已经{vp:VP}了。,而家我已經{vp|perfective}。,VP,general,82,completed,现在我已经去机场了。,而家我已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0227,你已经{vp:VP}了。,你已經{vp|perfective}。,VP,general,82,completed,你已经去机场了。,你已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0228,今天你已经{vp:VP}了。,今日你已經{vp|perfective}。,VP,general,82,completed,今天你已经去机场了。,今日你已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0229,明天你已经{vp:VP}了。,聽日你已經{vp|perfective}。,VP,general,82,completed,明天你已经去机场了。,聽日你已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0230,现在你已经{vp:VP}了。,而家你已經{vp|perfective}。,VP,general,82,completed,现在你已经去机场了。,而家你已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0231,我们已经{vp:VP}了。,我哋已經{vp|perfective}。,VP,general,82,completed,我们已经去机场了。,我哋已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0232,今天我们已经{vp:VP}了。,今日我哋已經{vp|perfective}。,VP,general,82,completed,今天我们已经去机场了。,今日我哋已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0233,明天我们已经{vp:VP}了。,聽日我哋已經{vp|perfective}。,VP,general,82,completed,明天我们已经去机场了。,聽日我哋已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0234,现在我们已经{vp:VP}了。,而家我哋已經{vp|perfective}。,VP,general,82,completed,现在我们已经去机场了。,而家我哋已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0235,{person:PERSON}已经{vp:VP}了。,{person}已經{vp|perfective}。,"VP,PERSON",general,82,completed,他已经去机场了。,佢已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0236,今天{person:PERSON}已经{vp:VP}了。,今日{person}已經{vp|perfective}。,"VP,PERSON",general,82,completed,今天他已经去机场了。,今日佢已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0237,明天{person:PERSON}已经{vp:VP}了。,聽日{person}已經{vp|perfective}。,"VP,PERSON",general,82,completed,明天他已经去机场了。,聽日佢已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0238,现在{person:PERSON}已经{vp:VP}了。,而家{person}已經{vp|perfective}。,"VP,PERSON",general,82,completed,现在他已经去机场了。,而家佢已經去咗機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0239,我正在{vp:VP}。,我{vp|progressive}。,VP,general,82,progressive,我正在去机场。,我去緊機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0240,现在我正在{vp:VP}。,而家我{vp|progressive}。,VP,general,82,progressive,现在我正在去机场。,而家我去緊機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0241,你正在{vp:VP}。,你{vp|progressive}。,VP,general,82,progressive,你正在去机场。,你去緊機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0242,现在你正在{vp:VP}。,而家你{vp|progressive}。,VP,general,82,progressive,现在你正在去机场。,而家你去緊機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0243,我们正在{vp:VP}。,我哋{vp|progressive}。,VP,general,82,progressive,我们正在去机场。,我哋去緊機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0244,现在我们正在{vp:VP}。,而家我哋{vp|progressive}。,VP,general,82,progressive,现在我们正在去机场。,而家我哋去緊機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0245,{person:PERSON}正在{vp:VP}。,{person}{vp|progressive}。,"VP,PERSON",general,82,progressive,他正在去机场。,佢去緊機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0246,现在{person:PERSON}正在{vp:VP}。,而家{person}{vp|progressive}。,"VP,PERSON",general,82,progressive,现在他正在去机场。,而家佢去緊機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0247,我会{vp:VP}。,我會{vp}。,VP,general,82,future,我会去机场。,我會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0248,今天我会{vp:VP}。,今日我會{vp}。,VP,general,82,future,今天我会去机场。,今日我會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0249,明天我会{vp:VP}。,聽日我會{vp}。,VP,general,82,future,明天我会去机场。,聽日我會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0250,等一下我会{vp:VP}。,等陣我會{vp}。,VP,general,82,future,等一下我会去机场。,等陣我會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0251,下次我会{vp:VP}。,下次我會{vp}。,VP,general,82,future,下次我会去机场。,下次我會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0252,你会{vp:VP}。,你會{vp}。,VP,general,82,future,你会去机场。,你會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0253,今天你会{vp:VP}。,今日你會{vp}。,VP,general,82,future,今天你会去机场。,今日你會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0254,明天你会{vp:VP}。,聽日你會{vp}。,VP,general,82,future,明天你会去机场。,聽日你會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0255,等一下你会{vp:VP}。,等陣你會{vp}。,VP,general,82,future,等一下你会去机场。,等陣你會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0256,下次你会{vp:VP}。,下次你會{vp}。,VP,general,82,future,下次你会去机场。,下次你會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0257,我们会{vp:VP}。,我哋會{vp}。,VP,general,82,future,我们会去机场。,我哋會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0258,今天我们会{vp:VP}。,今日我哋會{vp}。,VP,general,82,future,今天我们会去机场。,今日我哋會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0259,明天我们会{vp:VP}。,聽日我哋會{vp}。,VP,general,82,future,明天我们会去机场。,聽日我哋會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0260,等一下我们会{vp:VP}。,等陣我哋會{vp}。,VP,general,82,future,等一下我们会去机场。,等陣我哋會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0261,下次我们会{vp:VP}。,下次我哋會{vp}。,VP,general,82,future,下次我们会去机场。,下次我哋會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0262,{person:PERSON}会{vp:VP}。,{person}會{vp}。,"VP,PERSON",general,82,future,他会去机场。,佢會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0263,今天{person:PERSON}会{vp:VP}。,今日{person}會{vp}。,"VP,PERSON",general,82,future,今天他会去机场。,今日佢會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0264,明天{person:PERSON}会{vp:VP}。,聽日{person}會{vp}。,"VP,PERSON",general,82,future,明天他会去机场。,聽日佢會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0265,等一下{person:PERSON}会{vp:VP}。,等陣{person}會{vp}。,"VP,PERSON",general,82,future,等一下他会去机场。,等陣佢會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0266,下次{person:PERSON}会{vp:VP}。,下次{person}會{vp}。,"VP,PERSON",general,82,future,下次他会去机场。,下次佢會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0267,我不会{vp:VP}。,我唔會{vp}。,VP,general,82,future_negative,我不会去机场。,我唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0268,今天我不会{vp:VP}。,今日我唔會{vp}。,VP,general,82,future_negative,今天我不会去机场。,今日我唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0269,明天我不会{vp:VP}。,聽日我唔會{vp}。,VP,general,82,future_negative,明天我不会去机场。,聽日我唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0270,等一下我不会{vp:VP}。,等陣我唔會{vp}。,VP,general,82,future_negative,等一下我不会去机场。,等陣我唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0271,下次我不会{vp:VP}。,下次我唔會{vp}。,VP,general,82,future_negative,下次我不会去机场。,下次我唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0272,你不会{vp:VP}。,你唔會{vp}。,VP,general,82,future_negative,你不会去机场。,你唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0273,今天你不会{vp:VP}。,今日你唔會{vp}。,VP,general,82,future_negative,今天你不会去机场。,今日你唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0274,明天你不会{vp:VP}。,聽日你唔會{vp}。,VP,general,82,future_negative,明天你不会去机场。,聽日你唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0275,等一下你不会{vp:VP}。,等陣你唔會{vp}。,VP,general,82,future_negative,等一下你不会去机场。,等陣你唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0276,下次你不会{vp:VP}。,下次你唔會{vp}。,VP,general,82,future_negative,下次你不会去机场。,下次你唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0277,我们不会{vp:VP}。,我哋唔會{vp}。,VP,general,82,future_negative,我们不会去机场。,我哋唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0278,今天我们不会{vp:VP}。,今日我哋唔會{vp}。,VP,general,82,future_negative,今天我们不会去机场。,今日我哋唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0279,明天我们不会{vp:VP}。,聽日我哋唔會{vp}。,VP,general,82,future_negative,明天我们不会去机场。,聽日我哋唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0280,等一下我们不会{vp:VP}。,等陣我哋唔會{vp}。,VP,general,82,future_negative,等一下我们不会去机场。,等陣我哋唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0281,下次我们不会{vp:VP}。,下次我哋唔會{vp}。,VP,general,82,future_negative,下次我们不会去机场。,下次我哋唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0282,{person:PERSON}不会{vp:VP}。,{person}唔會{vp}。,"VP,PERSON",general,82,future_negative,他不会去机场。,佢唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0283,今天{person:PERSON}不会{vp:VP}。,今日{person}唔會{vp}。,"VP,PERSON",general,82,future_negative,今天他不会去机场。,今日佢唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0284,明天{person:PERSON}不会{vp:VP}。,聽日{person}唔會{vp}。,"VP,PERSON",general,82,future_negative,明天他不会去机场。,聽日佢唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0285,等一下{person:PERSON}不会{vp:VP}。,等陣{person}唔會{vp}。,"VP,PERSON",general,82,future_negative,等一下他不会去机场。,等陣佢唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0286,下次{person:PERSON}不会{vp:VP}。,下次{person}唔會{vp}。,"VP,PERSON",general,82,future_negative,下次他不会去机场。,下次佢唔會去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0287,我可以{vp:VP}吗？,我可唔可以{vp}呀？,VP,general,82,permission,我可以去机场吗？,我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0288,今天我可以{vp:VP}吗？,今日我可唔可以{vp}呀？,VP,general,82,permission,今天我可以去机场吗？,今日我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0289,明天我可以{vp:VP}吗？,聽日我可唔可以{vp}呀？,VP,general,82,permission,明天我可以去机场吗？,聽日我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0290,现在我可以{vp:VP}吗？,而家我可唔可以{vp}呀？,VP,general,82,permission,现在我可以去机场吗？,而家我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0291,等一下我可以{vp:VP}吗？,等陣我可唔可以{vp}呀？,VP,general,82,permission,等一下我可以去机场吗？,等陣我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0292,下次我可以{vp:VP}吗？,下次我可唔可以{vp}呀？,VP,general,82,permission,下次我可以去机场吗？,下次我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0293,你可以{vp:VP}吗？,你可唔可以{vp}呀？,VP,general,82,permission,你可以去机场吗？,你可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0294,今天你可以{vp:VP}吗？,今日你可唔可以{vp}呀？,VP,general,82,permission,今天你可以去机场吗？,今日你可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0295,明天你可以{vp:VP}吗？,聽日你可唔可以{vp}呀？,VP,general,82,permission,明天你可以去机场吗？,聽日你可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0296,现在你可以{vp:VP}吗？,而家你可唔可以{vp}呀？,VP,general,82,permission,现在你可以去机场吗？,而家你可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0297,等一下你可以{vp:VP}吗？,等陣你可唔可以{vp}呀？,VP,general,82,permission,等一下你可以去机场吗？,等陣你可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0298,下次你可以{vp:VP}吗？,下次你可唔可以{vp}呀？,VP,general,82,permission,下次你可以去机场吗？,下次你可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0299,我们可以{vp:VP}吗？,我哋可唔可以{vp}呀？,VP,general,82,permission,我们可以去机场吗？,我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0300,今天我们可以{vp:VP}吗？,今日我哋可唔可以{vp}呀？,VP,general,82,permission,今天我们可以去机场吗？,今日我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0301,明天我们可以{vp:VP}吗？,聽日我哋可唔可以{vp}呀？,VP,general,82,permission,明天我们可以去机场吗？,聽日我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0302,现在我们可以{vp:VP}吗？,而家我哋可唔可以{vp}呀？,VP,general,82,permission,现在我们可以去机场吗？,而家我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0303,等一下我们可以{vp:VP}吗？,等陣我哋可唔可以{vp}呀？,VP,general,82,permission,等一下我们可以去机场吗？,等陣我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0304,下次我们可以{vp:VP}吗？,下次我哋可唔可以{vp}呀？,VP,general,82,permission,下次我们可以去机场吗？,下次我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0305,{person:PERSON}可以{vp:VP}吗？,{person}可唔可以{vp}呀？,"VP,PERSON",general,82,permission,他可以去机场吗？,佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0306,今天{person:PERSON}可以{vp:VP}吗？,今日{person}可唔可以{vp}呀？,"VP,PERSON",general,82,permission,今天他可以去机场吗？,今日佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0307,明天{person:PERSON}可以{vp:VP}吗？,聽日{person}可唔可以{vp}呀？,"VP,PERSON",general,82,permission,明天他可以去机场吗？,聽日佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0308,现在{person:PERSON}可以{vp:VP}吗？,而家{person}可唔可以{vp}呀？,"VP,PERSON",general,82,permission,现在他可以去机场吗？,而家佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0309,等一下{person:PERSON}可以{vp:VP}吗？,等陣{person}可唔可以{vp}呀？,"VP,PERSON",general,82,permission,等一下他可以去机场吗？,等陣佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0310,下次{person:PERSON}可以{vp:VP}吗？,下次{person}可唔可以{vp}呀？,"VP,PERSON",general,82,permission,下次他可以去机场吗？,下次佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0311,我能不能{vp:VP}？,我可唔可以{vp}呀？,VP,general,82,ability_question,我能不能去机场？,我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0312,今天我能不能{vp:VP}？,今日我可唔可以{vp}呀？,VP,general,82,ability_question,今天我能不能去机场？,今日我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0313,明天我能不能{vp:VP}？,聽日我可唔可以{vp}呀？,VP,general,82,ability_question,明天我能不能去机场？,聽日我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0314,现在我能不能{vp:VP}？,而家我可唔可以{vp}呀？,VP,general,82,ability_question,现在我能不能去机场？,而家我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0315,等一下我能不能{vp:VP}？,等陣我可唔可以{vp}呀？,VP,general,82,ability_question,等一下我能不能去机场？,等陣我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0316,下次我能不能{vp:VP}？,下次我可唔可以{vp}呀？,VP,general,82,ability_question,下次我能不能去机场？,下次我可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0317,今天你能不能{vp:VP}？,今日你可唔可以{vp}呀？,VP,general,82,ability_question,今天你能不能去机场？,今日你可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0318,明天你能不能{vp:VP}？,聽日你可唔可以{vp}呀？,VP,general,82,ability_question,明天你能不能去机场？,聽日你可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0319,现在你能不能{vp:VP}？,而家你可唔可以{vp}呀？,VP,general,82,ability_question,现在你能不能去机场？,而家你可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0320,等一下你能不能{vp:VP}？,等陣你可唔可以{vp}呀？,VP,general,82,ability_question,等一下你能不能去机场？,等陣你可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0321,下次你能不能{vp:VP}？,下次你可唔可以{vp}呀？,VP,general,82,ability_question,下次你能不能去机场？,下次你可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0322,我们能不能{vp:VP}？,我哋可唔可以{vp}呀？,VP,general,82,ability_question,我们能不能去机场？,我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0323,今天我们能不能{vp:VP}？,今日我哋可唔可以{vp}呀？,VP,general,82,ability_question,今天我们能不能去机场？,今日我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0324,明天我们能不能{vp:VP}？,聽日我哋可唔可以{vp}呀？,VP,general,82,ability_question,明天我们能不能去机场？,聽日我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0325,现在我们能不能{vp:VP}？,而家我哋可唔可以{vp}呀？,VP,general,82,ability_question,现在我们能不能去机场？,而家我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0326,等一下我们能不能{vp:VP}？,等陣我哋可唔可以{vp}呀？,VP,general,82,ability_question,等一下我们能不能去机场？,等陣我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0327,下次我们能不能{vp:VP}？,下次我哋可唔可以{vp}呀？,VP,general,82,ability_question,下次我们能不能去机场？,下次我哋可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0328,{person:PERSON}能不能{vp:VP}？,{person}可唔可以{vp}呀？,"VP,PERSON",general,82,ability_question,他能不能去机场？,佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0329,今天{person:PERSON}能不能{vp:VP}？,今日{person}可唔可以{vp}呀？,"VP,PERSON",general,82,ability_question,今天他能不能去机场？,今日佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0330,明天{person:PERSON}能不能{vp:VP}？,聽日{person}可唔可以{vp}呀？,"VP,PERSON",general,82,ability_question,明天他能不能去机场？,聽日佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0331,现在{person:PERSON}能不能{vp:VP}？,而家{person}可唔可以{vp}呀？,"VP,PERSON",general,82,ability_question,现在他能不能去机场？,而家佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0332,等一下{person:PERSON}能不能{vp:VP}？,等陣{person}可唔可以{vp}呀？,"VP,PERSON",general,82,ability_question,等一下他能不能去机场？,等陣佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0333,下次{person:PERSON}能不能{vp:VP}？,下次{person}可唔可以{vp}呀？,"VP,PERSON",general,82,ability_question,下次他能不能去机场？,下次佢可唔可以去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0334,我为什么{vp:VP}？,我點解{vp}呀？,VP,general,82,why,我为什么去机场？,我點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0335,今天我为什么{vp:VP}？,今日我點解{vp}呀？,VP,general,82,why,今天我为什么去机场？,今日我點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0336,明天我为什么{vp:VP}？,聽日我點解{vp}呀？,VP,general,82,why,明天我为什么去机场？,聽日我點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0337,现在我为什么{vp:VP}？,而家我點解{vp}呀？,VP,general,82,why,现在我为什么去机场？,而家我點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0338,等一下我为什么{vp:VP}？,等陣我點解{vp}呀？,VP,general,82,why,等一下我为什么去机场？,等陣我點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0339,下次我为什么{vp:VP}？,下次我點解{vp}呀？,VP,general,82,why,下次我为什么去机场？,下次我點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0340,今天你为什么{vp:VP}？,今日你點解{vp}呀？,VP,general,82,why,今天你为什么去机场？,今日你點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0341,明天你为什么{vp:VP}？,聽日你點解{vp}呀？,VP,general,82,why,明天你为什么去机场？,聽日你點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0342,现在你为什么{vp:VP}？,而家你點解{vp}呀？,VP,general,82,why,现在你为什么去机场？,而家你點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0343,等一下你为什么{vp:VP}？,等陣你點解{vp}呀？,VP,general,82,why,等一下你为什么去机场？,等陣你點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0344,下次你为什么{vp:VP}？,下次你點解{vp}呀？,VP,general,82,why,下次你为什么去机场？,下次你點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0345,我们为什么{vp:VP}？,我哋點解{vp}呀？,VP,general,82,why,我们为什么去机场？,我哋點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0346,今天我们为什么{vp:VP}？,今日我哋點解{vp}呀？,VP,general,82,why,今天我们为什么去机场？,今日我哋點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0347,明天我们为什么{vp:VP}？,聽日我哋點解{vp}呀？,VP,general,82,why,明天我们为什么去机场？,聽日我哋點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0348,现在我们为什么{vp:VP}？,而家我哋點解{vp}呀？,VP,general,82,why,现在我们为什么去机场？,而家我哋點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0349,等一下我们为什么{vp:VP}？,等陣我哋點解{vp}呀？,VP,general,82,why,等一下我们为什么去机场？,等陣我哋點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0350,下次我们为什么{vp:VP}？,下次我哋點解{vp}呀？,VP,general,82,why,下次我们为什么去机场？,下次我哋點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0351,{person:PERSON}为什么{vp:VP}？,{person}點解{vp}呀？,"VP,PERSON",general,82,why,他为什么去机场？,佢點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0352,今天{person:PERSON}为什么{vp:VP}？,今日{person}點解{vp}呀？,"VP,PERSON",general,82,why,今天他为什么去机场？,今日佢點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0353,明天{person:PERSON}为什么{vp:VP}？,聽日{person}點解{vp}呀？,"VP,PERSON",general,82,why,明天他为什么去机场？,聽日佢點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0354,现在{person:PERSON}为什么{vp:VP}？,而家{person}點解{vp}呀？,"VP,PERSON",general,82,why,现在他为什么去机场？,而家佢點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0355,等一下{person:PERSON}为什么{vp:VP}？,等陣{person}點解{vp}呀？,"VP,PERSON",general,82,why,等一下他为什么去机场？,等陣佢點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0356,下次{person:PERSON}为什么{vp:VP}？,下次{person}點解{vp}呀？,"VP,PERSON",general,82,why,下次他为什么去机场？,下次佢點解去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0357,我什么时候{vp:VP}？,我幾時{vp}呀？,VP,general,82,when,我什么时候去机场？,我幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0358,今天我什么时候{vp:VP}？,今日我幾時{vp}呀？,VP,general,82,when,今天我什么时候去机场？,今日我幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0359,明天我什么时候{vp:VP}？,聽日我幾時{vp}呀？,VP,general,82,when,明天我什么时候去机场？,聽日我幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0360,现在我什么时候{vp:VP}？,而家我幾時{vp}呀？,VP,general,82,when,现在我什么时候去机场？,而家我幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0361,等一下我什么时候{vp:VP}？,等陣我幾時{vp}呀？,VP,general,82,when,等一下我什么时候去机场？,等陣我幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0362,下次我什么时候{vp:VP}？,下次我幾時{vp}呀？,VP,general,82,when,下次我什么时候去机场？,下次我幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0363,今天你什么时候{vp:VP}？,今日你幾時{vp}呀？,VP,general,82,when,今天你什么时候去机场？,今日你幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0364,明天你什么时候{vp:VP}？,聽日你幾時{vp}呀？,VP,general,82,when,明天你什么时候去机场？,聽日你幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0365,现在你什么时候{vp:VP}？,而家你幾時{vp}呀？,VP,general,82,when,现在你什么时候去机场？,而家你幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0366,等一下你什么时候{vp:VP}？,等陣你幾時{vp}呀？,VP,general,82,when,等一下你什么时候去机场？,等陣你幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0367,下次你什么时候{vp:VP}？,下次你幾時{vp}呀？,VP,general,82,when,下次你什么时候去机场？,下次你幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0368,我们什么时候{vp:VP}？,我哋幾時{vp}呀？,VP,general,82,when,我们什么时候去机场？,我哋幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0369,今天我们什么时候{vp:VP}？,今日我哋幾時{vp}呀？,VP,general,82,when,今天我们什么时候去机场？,今日我哋幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0370,明天我们什么时候{vp:VP}？,聽日我哋幾時{vp}呀？,VP,general,82,when,明天我们什么时候去机场？,聽日我哋幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0371,现在我们什么时候{vp:VP}？,而家我哋幾時{vp}呀？,VP,general,82,when,现在我们什么时候去机场？,而家我哋幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0372,等一下我们什么时候{vp:VP}？,等陣我哋幾時{vp}呀？,VP,general,82,when,等一下我们什么时候去机场？,等陣我哋幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0373,下次我们什么时候{vp:VP}？,下次我哋幾時{vp}呀？,VP,general,82,when,下次我们什么时候去机场？,下次我哋幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0374,{person:PERSON}什么时候{vp:VP}？,{person}幾時{vp}呀？,"VP,PERSON",general,82,when,他什么时候去机场？,佢幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0375,今天{person:PERSON}什么时候{vp:VP}？,今日{person}幾時{vp}呀？,"VP,PERSON",general,82,when,今天他什么时候去机场？,今日佢幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0376,明天{person:PERSON}什么时候{vp:VP}？,聽日{person}幾時{vp}呀？,"VP,PERSON",general,82,when,明天他什么时候去机场？,聽日佢幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0377,现在{person:PERSON}什么时候{vp:VP}？,而家{person}幾時{vp}呀？,"VP,PERSON",general,82,when,现在他什么时候去机场？,而家佢幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0378,等一下{person:PERSON}什么时候{vp:VP}？,等陣{person}幾時{vp}呀？,"VP,PERSON",general,82,when,等一下他什么时候去机场？,等陣佢幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0379,下次{person:PERSON}什么时候{vp:VP}？,下次{person}幾時{vp}呀？,"VP,PERSON",general,82,when,下次他什么时候去机场？,下次佢幾時去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0380,我在哪里{vp:VP}？,我喺邊度{vp}呀？,VP,general,82,where_action,我在哪里去机场？,我喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0381,今天我在哪里{vp:VP}？,今日我喺邊度{vp}呀？,VP,general,82,where_action,今天我在哪里去机场？,今日我喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0382,明天我在哪里{vp:VP}？,聽日我喺邊度{vp}呀？,VP,general,82,where_action,明天我在哪里去机场？,聽日我喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0383,现在我在哪里{vp:VP}？,而家我喺邊度{vp}呀？,VP,general,82,where_action,现在我在哪里去机场？,而家我喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0384,等一下我在哪里{vp:VP}？,等陣我喺邊度{vp}呀？,VP,general,82,where_action,等一下我在哪里去机场？,等陣我喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0385,下次我在哪里{vp:VP}？,下次我喺邊度{vp}呀？,VP,general,82,where_action,下次我在哪里去机场？,下次我喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0386,你在哪里{vp:VP}？,你喺邊度{vp}呀？,VP,general,82,where_action,你在哪里去机场？,你喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0387,今天你在哪里{vp:VP}？,今日你喺邊度{vp}呀？,VP,general,82,where_action,今天你在哪里去机场？,今日你喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0388,明天你在哪里{vp:VP}？,聽日你喺邊度{vp}呀？,VP,general,82,where_action,明天你在哪里去机场？,聽日你喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0389,现在你在哪里{vp:VP}？,而家你喺邊度{vp}呀？,VP,general,82,where_action,现在你在哪里去机场？,而家你喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0390,等一下你在哪里{vp:VP}？,等陣你喺邊度{vp}呀？,VP,general,82,where_action,等一下你在哪里去机场？,等陣你喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0391,下次你在哪里{vp:VP}？,下次你喺邊度{vp}呀？,VP,general,82,where_action,下次你在哪里去机场？,下次你喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0392,我们在哪里{vp:VP}？,我哋喺邊度{vp}呀？,VP,general,82,where_action,我们在哪里去机场？,我哋喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0393,今天我们在哪里{vp:VP}？,今日我哋喺邊度{vp}呀？,VP,general,82,where_action,今天我们在哪里去机场？,今日我哋喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0394,明天我们在哪里{vp:VP}？,聽日我哋喺邊度{vp}呀？,VP,general,82,where_action,明天我们在哪里去机场？,聽日我哋喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0395,现在我们在哪里{vp:VP}？,而家我哋喺邊度{vp}呀？,VP,general,82,where_action,现在我们在哪里去机场？,而家我哋喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0396,等一下我们在哪里{vp:VP}？,等陣我哋喺邊度{vp}呀？,VP,general,82,where_action,等一下我们在哪里去机场？,等陣我哋喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0397,下次我们在哪里{vp:VP}？,下次我哋喺邊度{vp}呀？,VP,general,82,where_action,下次我们在哪里去机场？,下次我哋喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0398,{person:PERSON}在哪里{vp:VP}？,{person}喺邊度{vp}呀？,"VP,PERSON",general,82,where_action,他在哪里去机场？,佢喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0399,今天{person:PERSON}在哪里{vp:VP}？,今日{person}喺邊度{vp}呀？,"VP,PERSON",general,82,where_action,今天他在哪里去机场？,今日佢喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0400,明天{person:PERSON}在哪里{vp:VP}？,聽日{person}喺邊度{vp}呀？,"VP,PERSON",general,82,where_action,明天他在哪里去机场？,聽日佢喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0401,现在{person:PERSON}在哪里{vp:VP}？,而家{person}喺邊度{vp}呀？,"VP,PERSON",general,82,where_action,现在他在哪里去机场？,而家佢喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0402,等一下{person:PERSON}在哪里{vp:VP}？,等陣{person}喺邊度{vp}呀？,"VP,PERSON",general,82,where_action,等一下他在哪里去机场？,等陣佢喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0403,下次{person:PERSON}在哪里{vp:VP}？,下次{person}喺邊度{vp}呀？,"VP,PERSON",general,82,where_action,下次他在哪里去机场？,下次佢喺邊度去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0404,我怎么{vp:VP}？,我點樣{vp}呀？,VP,general,82,how,我怎么去机场？,我點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0405,今天我怎么{vp:VP}？,今日我點樣{vp}呀？,VP,general,82,how,今天我怎么去机场？,今日我點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0406,明天我怎么{vp:VP}？,聽日我點樣{vp}呀？,VP,general,82,how,明天我怎么去机场？,聽日我點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0407,现在我怎么{vp:VP}？,而家我點樣{vp}呀？,VP,general,82,how,现在我怎么去机场？,而家我點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0408,等一下我怎么{vp:VP}？,等陣我點樣{vp}呀？,VP,general,82,how,等一下我怎么去机场？,等陣我點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0409,下次我怎么{vp:VP}？,下次我點樣{vp}呀？,VP,general,82,how,下次我怎么去机场？,下次我點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0410,你怎么{vp:VP}？,你點樣{vp}呀？,VP,general,82,how,你怎么去机场？,你點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0411,今天你怎么{vp:VP}？,今日你點樣{vp}呀？,VP,general,82,how,今天你怎么去机场？,今日你點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0412,明天你怎么{vp:VP}？,聽日你點樣{vp}呀？,VP,general,82,how,明天你怎么去机场？,聽日你點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0413,现在你怎么{vp:VP}？,而家你點樣{vp}呀？,VP,general,82,how,现在你怎么去机场？,而家你點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0414,等一下你怎么{vp:VP}？,等陣你點樣{vp}呀？,VP,general,82,how,等一下你怎么去机场？,等陣你點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0415,下次你怎么{vp:VP}？,下次你點樣{vp}呀？,VP,general,82,how,下次你怎么去机场？,下次你點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0416,我们怎么{vp:VP}？,我哋點樣{vp}呀？,VP,general,82,how,我们怎么去机场？,我哋點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0417,今天我们怎么{vp:VP}？,今日我哋點樣{vp}呀？,VP,general,82,how,今天我们怎么去机场？,今日我哋點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0418,明天我们怎么{vp:VP}？,聽日我哋點樣{vp}呀？,VP,general,82,how,明天我们怎么去机场？,聽日我哋點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0419,现在我们怎么{vp:VP}？,而家我哋點樣{vp}呀？,VP,general,82,how,现在我们怎么去机场？,而家我哋點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0420,等一下我们怎么{vp:VP}？,等陣我哋點樣{vp}呀？,VP,general,82,how,等一下我们怎么去机场？,等陣我哋點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0421,下次我们怎么{vp:VP}？,下次我哋點樣{vp}呀？,VP,general,82,how,下次我们怎么去机场？,下次我哋點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0422,{person:PERSON}怎么{vp:VP}？,{person}點樣{vp}呀？,"VP,PERSON",general,82,how,他怎么去机场？,佢點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0423,今天{person:PERSON}怎么{vp:VP}？,今日{person}點樣{vp}呀？,"VP,PERSON",general,82,how,今天他怎么去机场？,今日佢點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0424,明天{person:PERSON}怎么{vp:VP}？,聽日{person}點樣{vp}呀？,"VP,PERSON",general,82,how,明天他怎么去机场？,聽日佢點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0425,现在{person:PERSON}怎么{vp:VP}？,而家{person}點樣{vp}呀？,"VP,PERSON",general,82,how,现在他怎么去机场？,而家佢點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0426,等一下{person:PERSON}怎么{vp:VP}？,等陣{person}點樣{vp}呀？,"VP,PERSON",general,82,how,等一下他怎么去机场？,等陣佢點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0427,下次{person:PERSON}怎么{vp:VP}？,下次{person}點樣{vp}呀？,"VP,PERSON",general,82,how,下次他怎么去机场？,下次佢點樣去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0428,今天我喜欢{np:NP}。,今日我鍾意{np}。,NP,general,82,like,今天我喜欢这个文件。,今日我鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0429,明天我喜欢{np:NP}。,聽日我鍾意{np}。,NP,general,82,like,明天我喜欢这个文件。,聽日我鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0430,现在我喜欢{np:NP}。,而家我鍾意{np}。,NP,general,82,like,现在我喜欢这个文件。,而家我鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0431,等一下我喜欢{np:NP}。,等陣我鍾意{np}。,NP,general,82,like,等一下我喜欢这个文件。,等陣我鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0432,下次我喜欢{np:NP}。,下次我鍾意{np}。,NP,general,82,like,下次我喜欢这个文件。,下次我鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0433,你喜欢{np:NP}。,你鍾意{np}。,NP,general,82,like,你喜欢这个文件。,你鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0434,今天你喜欢{np:NP}。,今日你鍾意{np}。,NP,general,82,like,今天你喜欢这个文件。,今日你鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0435,明天你喜欢{np:NP}。,聽日你鍾意{np}。,NP,general,82,like,明天你喜欢这个文件。,聽日你鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0436,现在你喜欢{np:NP}。,而家你鍾意{np}。,NP,general,82,like,现在你喜欢这个文件。,而家你鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0437,等一下你喜欢{np:NP}。,等陣你鍾意{np}。,NP,general,82,like,等一下你喜欢这个文件。,等陣你鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0438,下次你喜欢{np:NP}。,下次你鍾意{np}。,NP,general,82,like,下次你喜欢这个文件。,下次你鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0439,我们喜欢{np:NP}。,我哋鍾意{np}。,NP,general,82,like,我们喜欢这个文件。,我哋鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0440,今天我们喜欢{np:NP}。,今日我哋鍾意{np}。,NP,general,82,like,今天我们喜欢这个文件。,今日我哋鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0441,明天我们喜欢{np:NP}。,聽日我哋鍾意{np}。,NP,general,82,like,明天我们喜欢这个文件。,聽日我哋鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0442,现在我们喜欢{np:NP}。,而家我哋鍾意{np}。,NP,general,82,like,现在我们喜欢这个文件。,而家我哋鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0443,等一下我们喜欢{np:NP}。,等陣我哋鍾意{np}。,NP,general,82,like,等一下我们喜欢这个文件。,等陣我哋鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0444,下次我们喜欢{np:NP}。,下次我哋鍾意{np}。,NP,general,82,like,下次我们喜欢这个文件。,下次我哋鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0445,{person:PERSON}喜欢{np:NP}。,{person}鍾意{np}。,"NP,PERSON",general,82,like,他喜欢这个文件。,佢鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0446,今天{person:PERSON}喜欢{np:NP}。,今日{person}鍾意{np}。,"NP,PERSON",general,82,like,今天他喜欢这个文件。,今日佢鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0447,明天{person:PERSON}喜欢{np:NP}。,聽日{person}鍾意{np}。,"NP,PERSON",general,82,like,明天他喜欢这个文件。,聽日佢鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0448,现在{person:PERSON}喜欢{np:NP}。,而家{person}鍾意{np}。,"NP,PERSON",general,82,like,现在他喜欢这个文件。,而家佢鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0449,等一下{person:PERSON}喜欢{np:NP}。,等陣{person}鍾意{np}。,"NP,PERSON",general,82,like,等一下他喜欢这个文件。,等陣佢鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0450,下次{person:PERSON}喜欢{np:NP}。,下次{person}鍾意{np}。,"NP,PERSON",general,82,like,下次他喜欢这个文件。,下次佢鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0451,我不喜欢{np:NP}。,我唔鍾意{np}。,NP,general,82,dislike,我不喜欢这个文件。,我唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0452,今天我不喜欢{np:NP}。,今日我唔鍾意{np}。,NP,general,82,dislike,今天我不喜欢这个文件。,今日我唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0453,明天我不喜欢{np:NP}。,聽日我唔鍾意{np}。,NP,general,82,dislike,明天我不喜欢这个文件。,聽日我唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0454,现在我不喜欢{np:NP}。,而家我唔鍾意{np}。,NP,general,82,dislike,现在我不喜欢这个文件。,而家我唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0455,等一下我不喜欢{np:NP}。,等陣我唔鍾意{np}。,NP,general,82,dislike,等一下我不喜欢这个文件。,等陣我唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0456,下次我不喜欢{np:NP}。,下次我唔鍾意{np}。,NP,general,82,dislike,下次我不喜欢这个文件。,下次我唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0457,你不喜欢{np:NP}。,你唔鍾意{np}。,NP,general,82,dislike,你不喜欢这个文件。,你唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0458,今天你不喜欢{np:NP}。,今日你唔鍾意{np}。,NP,general,82,dislike,今天你不喜欢这个文件。,今日你唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0459,明天你不喜欢{np:NP}。,聽日你唔鍾意{np}。,NP,general,82,dislike,明天你不喜欢这个文件。,聽日你唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0460,现在你不喜欢{np:NP}。,而家你唔鍾意{np}。,NP,general,82,dislike,现在你不喜欢这个文件。,而家你唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0461,等一下你不喜欢{np:NP}。,等陣你唔鍾意{np}。,NP,general,82,dislike,等一下你不喜欢这个文件。,等陣你唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0462,下次你不喜欢{np:NP}。,下次你唔鍾意{np}。,NP,general,82,dislike,下次你不喜欢这个文件。,下次你唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0463,我们不喜欢{np:NP}。,我哋唔鍾意{np}。,NP,general,82,dislike,我们不喜欢这个文件。,我哋唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0464,今天我们不喜欢{np:NP}。,今日我哋唔鍾意{np}。,NP,general,82,dislike,今天我们不喜欢这个文件。,今日我哋唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0465,明天我们不喜欢{np:NP}。,聽日我哋唔鍾意{np}。,NP,general,82,dislike,明天我们不喜欢这个文件。,聽日我哋唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0466,现在我们不喜欢{np:NP}。,而家我哋唔鍾意{np}。,NP,general,82,dislike,现在我们不喜欢这个文件。,而家我哋唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0467,等一下我们不喜欢{np:NP}。,等陣我哋唔鍾意{np}。,NP,general,82,dislike,等一下我们不喜欢这个文件。,等陣我哋唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0468,下次我们不喜欢{np:NP}。,下次我哋唔鍾意{np}。,NP,general,82,dislike,下次我们不喜欢这个文件。,下次我哋唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0469,{person:PERSON}不喜欢{np:NP}。,{person}唔鍾意{np}。,"NP,PERSON",general,82,dislike,他不喜欢这个文件。,佢唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0470,今天{person:PERSON}不喜欢{np:NP}。,今日{person}唔鍾意{np}。,"NP,PERSON",general,82,dislike,今天他不喜欢这个文件。,今日佢唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0471,明天{person:PERSON}不喜欢{np:NP}。,聽日{person}唔鍾意{np}。,"NP,PERSON",general,82,dislike,明天他不喜欢这个文件。,聽日佢唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0472,现在{person:PERSON}不喜欢{np:NP}。,而家{person}唔鍾意{np}。,"NP,PERSON",general,82,dislike,现在他不喜欢这个文件。,而家佢唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0473,等一下{person:PERSON}不喜欢{np:NP}。,等陣{person}唔鍾意{np}。,"NP,PERSON",general,82,dislike,等一下他不喜欢这个文件。,等陣佢唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0474,下次{person:PERSON}不喜欢{np:NP}。,下次{person}唔鍾意{np}。,"NP,PERSON",general,82,dislike,下次他不喜欢这个文件。,下次佢唔鍾意呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0475,今天请给我{np:NP}。,今日唔該畀{np}我。,NP,general,82,give_request,今天请给我这个文件。,今日唔該畀呢份文件我。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0476,明天请给我{np:NP}。,聽日唔該畀{np}我。,NP,general,82,give_request,明天请给我这个文件。,聽日唔該畀呢份文件我。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0477,现在请给我{np:NP}。,而家唔該畀{np}我。,NP,general,82,give_request,现在请给我这个文件。,而家唔該畀呢份文件我。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0478,等一下请给我{np:NP}。,等陣唔該畀{np}我。,NP,general,82,give_request,等一下请给我这个文件。,等陣唔該畀呢份文件我。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0479,下次请给我{np:NP}。,下次唔該畀{np}我。,NP,general,82,give_request,下次请给我这个文件。,下次唔該畀呢份文件我。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0480,请给你{np:NP}。,唔該畀{np}你。,NP,general,82,give_request,请给你这个文件。,唔該畀呢份文件你。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0481,今天请给你{np:NP}。,今日唔該畀{np}你。,NP,general,82,give_request,今天请给你这个文件。,今日唔該畀呢份文件你。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0482,明天请给你{np:NP}。,聽日唔該畀{np}你。,NP,general,82,give_request,明天请给你这个文件。,聽日唔該畀呢份文件你。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0483,现在请给你{np:NP}。,而家唔該畀{np}你。,NP,general,82,give_request,现在请给你这个文件。,而家唔該畀呢份文件你。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0484,等一下请给你{np:NP}。,等陣唔該畀{np}你。,NP,general,82,give_request,等一下请给你这个文件。,等陣唔該畀呢份文件你。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0485,下次请给你{np:NP}。,下次唔該畀{np}你。,NP,general,82,give_request,下次请给你这个文件。,下次唔該畀呢份文件你。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0486,请给我们{np:NP}。,唔該畀{np}我哋。,NP,general,82,give_request,请给我们这个文件。,唔該畀呢份文件我哋。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0487,今天请给我们{np:NP}。,今日唔該畀{np}我哋。,NP,general,82,give_request,今天请给我们这个文件。,今日唔該畀呢份文件我哋。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0488,明天请给我们{np:NP}。,聽日唔該畀{np}我哋。,NP,general,82,give_request,明天请给我们这个文件。,聽日唔該畀呢份文件我哋。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0489,现在请给我们{np:NP}。,而家唔該畀{np}我哋。,NP,general,82,give_request,现在请给我们这个文件。,而家唔該畀呢份文件我哋。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0490,等一下请给我们{np:NP}。,等陣唔該畀{np}我哋。,NP,general,82,give_request,等一下请给我们这个文件。,等陣唔該畀呢份文件我哋。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0491,下次请给我们{np:NP}。,下次唔該畀{np}我哋。,NP,general,82,give_request,下次请给我们这个文件。,下次唔該畀呢份文件我哋。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0492,请给{person:PERSON}{np:NP}。,唔該畀{np}{person}。,"NP,PERSON",general,82,give_request,请给他这个文件。,唔該畀呢份文件佢。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0493,今天请给{person:PERSON}{np:NP}。,今日唔該畀{np}{person}。,"NP,PERSON",general,82,give_request,今天请给他这个文件。,今日唔該畀呢份文件佢。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0494,明天请给{person:PERSON}{np:NP}。,聽日唔該畀{np}{person}。,"NP,PERSON",general,82,give_request,明天请给他这个文件。,聽日唔該畀呢份文件佢。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0495,现在请给{person:PERSON}{np:NP}。,而家唔該畀{np}{person}。,"NP,PERSON",general,82,give_request,现在请给他这个文件。,而家唔該畀呢份文件佢。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0496,等一下请给{person:PERSON}{np:NP}。,等陣唔該畀{np}{person}。,"NP,PERSON",general,82,give_request,等一下请给他这个文件。,等陣唔該畀呢份文件佢。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0497,下次请给{person:PERSON}{np:NP}。,下次唔該畀{np}{person}。,"NP,PERSON",general,82,give_request,下次请给他这个文件。,下次唔該畀呢份文件佢。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0498,今天请帮我{vp:VP}。,今日唔該幫我{vp}。,VP,general,82,help_request,今天请帮我去机场。,今日唔該幫我去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0499,明天请帮我{vp:VP}。,聽日唔該幫我{vp}。,VP,general,82,help_request,明天请帮我去机场。,聽日唔該幫我去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0500,现在请帮我{vp:VP}。,而家唔該幫我{vp}。,VP,general,82,help_request,现在请帮我去机场。,而家唔該幫我去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0501,等一下请帮我{vp:VP}。,等陣唔該幫我{vp}。,VP,general,82,help_request,等一下请帮我去机场。,等陣唔該幫我去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0502,下次请帮我{vp:VP}。,下次唔該幫我{vp}。,VP,general,82,help_request,下次请帮我去机场。,下次唔該幫我去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0503,请帮你{vp:VP}。,唔該幫你{vp}。,VP,general,82,help_request,请帮你去机场。,唔該幫你去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0504,今天请帮你{vp:VP}。,今日唔該幫你{vp}。,VP,general,82,help_request,今天请帮你去机场。,今日唔該幫你去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0505,明天请帮你{vp:VP}。,聽日唔該幫你{vp}。,VP,general,82,help_request,明天请帮你去机场。,聽日唔該幫你去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0506,现在请帮你{vp:VP}。,而家唔該幫你{vp}。,VP,general,82,help_request,现在请帮你去机场。,而家唔該幫你去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0507,等一下请帮你{vp:VP}。,等陣唔該幫你{vp}。,VP,general,82,help_request,等一下请帮你去机场。,等陣唔該幫你去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0508,下次请帮你{vp:VP}。,下次唔該幫你{vp}。,VP,general,82,help_request,下次请帮你去机场。,下次唔該幫你去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0509,请帮我们{vp:VP}。,唔該幫我哋{vp}。,VP,general,82,help_request,请帮我们去机场。,唔該幫我哋去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0510,今天请帮我们{vp:VP}。,今日唔該幫我哋{vp}。,VP,general,82,help_request,今天请帮我们去机场。,今日唔該幫我哋去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0511,明天请帮我们{vp:VP}。,聽日唔該幫我哋{vp}。,VP,general,82,help_request,明天请帮我们去机场。,聽日唔該幫我哋去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0512,现在请帮我们{vp:VP}。,而家唔該幫我哋{vp}。,VP,general,82,help_request,现在请帮我们去机场。,而家唔該幫我哋去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0513,等一下请帮我们{vp:VP}。,等陣唔該幫我哋{vp}。,VP,general,82,help_request,等一下请帮我们去机场。,等陣唔該幫我哋去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0514,下次请帮我们{vp:VP}。,下次唔該幫我哋{vp}。,VP,general,82,help_request,下次请帮我们去机场。,下次唔該幫我哋去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0515,请帮{person:PERSON}{vp:VP}。,唔該幫{person}{vp}。,"VP,PERSON",general,82,help_request,请帮他去机场。,唔該幫佢去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0516,今天请帮{person:PERSON}{vp:VP}。,今日唔該幫{person}{vp}。,"VP,PERSON",general,82,help_request,今天请帮他去机场。,今日唔該幫佢去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0517,明天请帮{person:PERSON}{vp:VP}。,聽日唔該幫{person}{vp}。,"VP,PERSON",general,82,help_request,明天请帮他去机场。,聽日唔該幫佢去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0518,现在请帮{person:PERSON}{vp:VP}。,而家唔該幫{person}{vp}。,"VP,PERSON",general,82,help_request,现在请帮他去机场。,而家唔該幫佢去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0519,等一下请帮{person:PERSON}{vp:VP}。,等陣唔該幫{person}{vp}。,"VP,PERSON",general,82,help_request,等一下请帮他去机场。,等陣唔該幫佢去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0520,下次请帮{person:PERSON}{vp:VP}。,下次唔該幫{person}{vp}。,"VP,PERSON",general,82,help_request,下次请帮他去机场。,下次唔該幫佢去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0521,我找不到{np:NP}。,我搵唔到{np}。,NP,general,82,cannot_find,我找不到这个文件。,我搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0522,今天我找不到{np:NP}。,今日我搵唔到{np}。,NP,general,82,cannot_find,今天我找不到这个文件。,今日我搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0523,明天我找不到{np:NP}。,聽日我搵唔到{np}。,NP,general,82,cannot_find,明天我找不到这个文件。,聽日我搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0524,现在我找不到{np:NP}。,而家我搵唔到{np}。,NP,general,82,cannot_find,现在我找不到这个文件。,而家我搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0525,你找不到{np:NP}。,你搵唔到{np}。,NP,general,82,cannot_find,你找不到这个文件。,你搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0526,今天你找不到{np:NP}。,今日你搵唔到{np}。,NP,general,82,cannot_find,今天你找不到这个文件。,今日你搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0527,明天你找不到{np:NP}。,聽日你搵唔到{np}。,NP,general,82,cannot_find,明天你找不到这个文件。,聽日你搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0528,现在你找不到{np:NP}。,而家你搵唔到{np}。,NP,general,82,cannot_find,现在你找不到这个文件。,而家你搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0529,我们找不到{np:NP}。,我哋搵唔到{np}。,NP,general,82,cannot_find,我们找不到这个文件。,我哋搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0530,今天我们找不到{np:NP}。,今日我哋搵唔到{np}。,NP,general,82,cannot_find,今天我们找不到这个文件。,今日我哋搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0531,明天我们找不到{np:NP}。,聽日我哋搵唔到{np}。,NP,general,82,cannot_find,明天我们找不到这个文件。,聽日我哋搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0532,现在我们找不到{np:NP}。,而家我哋搵唔到{np}。,NP,general,82,cannot_find,现在我们找不到这个文件。,而家我哋搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0533,{person:PERSON}找不到{np:NP}。,{person}搵唔到{np}。,"NP,PERSON",general,82,cannot_find,他找不到这个文件。,佢搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0534,今天{person:PERSON}找不到{np:NP}。,今日{person}搵唔到{np}。,"NP,PERSON",general,82,cannot_find,今天他找不到这个文件。,今日佢搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0535,明天{person:PERSON}找不到{np:NP}。,聽日{person}搵唔到{np}。,"NP,PERSON",general,82,cannot_find,明天他找不到这个文件。,聽日佢搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0536,现在{person:PERSON}找不到{np:NP}。,而家{person}搵唔到{np}。,"NP,PERSON",general,82,cannot_find,现在他找不到这个文件。,而家佢搵唔到呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0537,我看不懂{np:NP}。,我睇唔明{np}。,NP,general,82,cannot_understand,我看不懂这个文件。,我睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0538,今天我看不懂{np:NP}。,今日我睇唔明{np}。,NP,general,82,cannot_understand,今天我看不懂这个文件。,今日我睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0539,明天我看不懂{np:NP}。,聽日我睇唔明{np}。,NP,general,82,cannot_understand,明天我看不懂这个文件。,聽日我睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0540,现在我看不懂{np:NP}。,而家我睇唔明{np}。,NP,general,82,cannot_understand,现在我看不懂这个文件。,而家我睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0541,你看不懂{np:NP}。,你睇唔明{np}。,NP,general,82,cannot_understand,你看不懂这个文件。,你睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0542,今天你看不懂{np:NP}。,今日你睇唔明{np}。,NP,general,82,cannot_understand,今天你看不懂这个文件。,今日你睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0543,明天你看不懂{np:NP}。,聽日你睇唔明{np}。,NP,general,82,cannot_understand,明天你看不懂这个文件。,聽日你睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0544,现在你看不懂{np:NP}。,而家你睇唔明{np}。,NP,general,82,cannot_understand,现在你看不懂这个文件。,而家你睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0545,我们看不懂{np:NP}。,我哋睇唔明{np}。,NP,general,82,cannot_understand,我们看不懂这个文件。,我哋睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0546,今天我们看不懂{np:NP}。,今日我哋睇唔明{np}。,NP,general,82,cannot_understand,今天我们看不懂这个文件。,今日我哋睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0547,明天我们看不懂{np:NP}。,聽日我哋睇唔明{np}。,NP,general,82,cannot_understand,明天我们看不懂这个文件。,聽日我哋睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0548,现在我们看不懂{np:NP}。,而家我哋睇唔明{np}。,NP,general,82,cannot_understand,现在我们看不懂这个文件。,而家我哋睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0549,{person:PERSON}看不懂{np:NP}。,{person}睇唔明{np}。,"NP,PERSON",general,82,cannot_understand,他看不懂这个文件。,佢睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0550,今天{person:PERSON}看不懂{np:NP}。,今日{person}睇唔明{np}。,"NP,PERSON",general,82,cannot_understand,今天他看不懂这个文件。,今日佢睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0551,明天{person:PERSON}看不懂{np:NP}。,聽日{person}睇唔明{np}。,"NP,PERSON",general,82,cannot_understand,明天他看不懂这个文件。,聽日佢睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0552,现在{person:PERSON}看不懂{np:NP}。,而家{person}睇唔明{np}。,"NP,PERSON",general,82,cannot_understand,现在他看不懂这个文件。,而家佢睇唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0553,我听不懂{np:NP}。,我聽唔明{np}。,NP,general,82,cannot_hear_understand,我听不懂这个文件。,我聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0554,今天我听不懂{np:NP}。,今日我聽唔明{np}。,NP,general,82,cannot_hear_understand,今天我听不懂这个文件。,今日我聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0555,明天我听不懂{np:NP}。,聽日我聽唔明{np}。,NP,general,82,cannot_hear_understand,明天我听不懂这个文件。,聽日我聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0556,现在我听不懂{np:NP}。,而家我聽唔明{np}。,NP,general,82,cannot_hear_understand,现在我听不懂这个文件。,而家我聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0557,你听不懂{np:NP}。,你聽唔明{np}。,NP,general,82,cannot_hear_understand,你听不懂这个文件。,你聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0558,今天你听不懂{np:NP}。,今日你聽唔明{np}。,NP,general,82,cannot_hear_understand,今天你听不懂这个文件。,今日你聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0559,明天你听不懂{np:NP}。,聽日你聽唔明{np}。,NP,general,82,cannot_hear_understand,明天你听不懂这个文件。,聽日你聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0560,现在你听不懂{np:NP}。,而家你聽唔明{np}。,NP,general,82,cannot_hear_understand,现在你听不懂这个文件。,而家你聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0561,我们听不懂{np:NP}。,我哋聽唔明{np}。,NP,general,82,cannot_hear_understand,我们听不懂这个文件。,我哋聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0562,今天我们听不懂{np:NP}。,今日我哋聽唔明{np}。,NP,general,82,cannot_hear_understand,今天我们听不懂这个文件。,今日我哋聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0563,明天我们听不懂{np:NP}。,聽日我哋聽唔明{np}。,NP,general,82,cannot_hear_understand,明天我们听不懂这个文件。,聽日我哋聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0564,现在我们听不懂{np:NP}。,而家我哋聽唔明{np}。,NP,general,82,cannot_hear_understand,现在我们听不懂这个文件。,而家我哋聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0565,{person:PERSON}听不懂{np:NP}。,{person}聽唔明{np}。,"NP,PERSON",general,82,cannot_hear_understand,他听不懂这个文件。,佢聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0566,今天{person:PERSON}听不懂{np:NP}。,今日{person}聽唔明{np}。,"NP,PERSON",general,82,cannot_hear_understand,今天他听不懂这个文件。,今日佢聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0567,明天{person:PERSON}听不懂{np:NP}。,聽日{person}聽唔明{np}。,"NP,PERSON",general,82,cannot_hear_understand,明天他听不懂这个文件。,聽日佢聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0568,现在{person:PERSON}听不懂{np:NP}。,而家{person}聽唔明{np}。,"NP,PERSON",general,82,cannot_hear_understand,现在他听不懂这个文件。,而家佢聽唔明呢份文件。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0569,我忘了{vp:VP}。,我唔記得{vp}。,VP,general,82,forgot,我忘了去机场。,我唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0570,今天我忘了{vp:VP}。,今日我唔記得{vp}。,VP,general,82,forgot,今天我忘了去机场。,今日我唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0571,明天我忘了{vp:VP}。,聽日我唔記得{vp}。,VP,general,82,forgot,明天我忘了去机场。,聽日我唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0572,现在我忘了{vp:VP}。,而家我唔記得{vp}。,VP,general,82,forgot,现在我忘了去机场。,而家我唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0573,你忘了{vp:VP}。,你唔記得{vp}。,VP,general,82,forgot,你忘了去机场。,你唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0574,今天你忘了{vp:VP}。,今日你唔記得{vp}。,VP,general,82,forgot,今天你忘了去机场。,今日你唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0575,明天你忘了{vp:VP}。,聽日你唔記得{vp}。,VP,general,82,forgot,明天你忘了去机场。,聽日你唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0576,现在你忘了{vp:VP}。,而家你唔記得{vp}。,VP,general,82,forgot,现在你忘了去机场。,而家你唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0577,我们忘了{vp:VP}。,我哋唔記得{vp}。,VP,general,82,forgot,我们忘了去机场。,我哋唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0578,今天我们忘了{vp:VP}。,今日我哋唔記得{vp}。,VP,general,82,forgot,今天我们忘了去机场。,今日我哋唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0579,明天我们忘了{vp:VP}。,聽日我哋唔記得{vp}。,VP,general,82,forgot,明天我们忘了去机场。,聽日我哋唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0580,现在我们忘了{vp:VP}。,而家我哋唔記得{vp}。,VP,general,82,forgot,现在我们忘了去机场。,而家我哋唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0581,{person:PERSON}忘了{vp:VP}。,{person}唔記得{vp}。,"VP,PERSON",general,82,forgot,他忘了去机场。,佢唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0582,今天{person:PERSON}忘了{vp:VP}。,今日{person}唔記得{vp}。,"VP,PERSON",general,82,forgot,今天他忘了去机场。,今日佢唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0583,明天{person:PERSON}忘了{vp:VP}。,聽日{person}唔記得{vp}。,"VP,PERSON",general,82,forgot,明天他忘了去机场。,聽日佢唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0584,现在{person:PERSON}忘了{vp:VP}。,而家{person}唔記得{vp}。,"VP,PERSON",general,82,forgot,现在他忘了去机场。,而家佢唔記得去機場。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0585,我记得{vp:VP}吗？,我記唔記得{vp}呀？,VP,general,82,remember_question,我记得去机场吗？,我記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0586,今天我记得{vp:VP}吗？,今日我記唔記得{vp}呀？,VP,general,82,remember_question,今天我记得去机场吗？,今日我記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0587,明天我记得{vp:VP}吗？,聽日我記唔記得{vp}呀？,VP,general,82,remember_question,明天我记得去机场吗？,聽日我記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0588,现在我记得{vp:VP}吗？,而家我記唔記得{vp}呀？,VP,general,82,remember_question,现在我记得去机场吗？,而家我記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0589,等一下我记得{vp:VP}吗？,等陣我記唔記得{vp}呀？,VP,general,82,remember_question,等一下我记得去机场吗？,等陣我記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0590,下次我记得{vp:VP}吗？,下次我記唔記得{vp}呀？,VP,general,82,remember_question,下次我记得去机场吗？,下次我記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0591,你记得{vp:VP}吗？,你記唔記得{vp}呀？,VP,general,82,remember_question,你记得去机场吗？,你記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0592,今天你记得{vp:VP}吗？,今日你記唔記得{vp}呀？,VP,general,82,remember_question,今天你记得去机场吗？,今日你記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0593,明天你记得{vp:VP}吗？,聽日你記唔記得{vp}呀？,VP,general,82,remember_question,明天你记得去机场吗？,聽日你記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0594,现在你记得{vp:VP}吗？,而家你記唔記得{vp}呀？,VP,general,82,remember_question,现在你记得去机场吗？,而家你記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0595,等一下你记得{vp:VP}吗？,等陣你記唔記得{vp}呀？,VP,general,82,remember_question,等一下你记得去机场吗？,等陣你記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0596,下次你记得{vp:VP}吗？,下次你記唔記得{vp}呀？,VP,general,82,remember_question,下次你记得去机场吗？,下次你記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0597,我们记得{vp:VP}吗？,我哋記唔記得{vp}呀？,VP,general,82,remember_question,我们记得去机场吗？,我哋記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0598,今天我们记得{vp:VP}吗？,今日我哋記唔記得{vp}呀？,VP,general,82,remember_question,今天我们记得去机场吗？,今日我哋記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0599,明天我们记得{vp:VP}吗？,聽日我哋記唔記得{vp}呀？,VP,general,82,remember_question,明天我们记得去机场吗？,聽日我哋記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0600,现在我们记得{vp:VP}吗？,而家我哋記唔記得{vp}呀？,VP,general,82,remember_question,现在我们记得去机场吗？,而家我哋記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0601,等一下我们记得{vp:VP}吗？,等陣我哋記唔記得{vp}呀？,VP,general,82,remember_question,等一下我们记得去机场吗？,等陣我哋記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0602,下次我们记得{vp:VP}吗？,下次我哋記唔記得{vp}呀？,VP,general,82,remember_question,下次我们记得去机场吗？,下次我哋記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0603,{person:PERSON}记得{vp:VP}吗？,{person}記唔記得{vp}呀？,"VP,PERSON",general,82,remember_question,他记得去机场吗？,佢記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0604,今天{person:PERSON}记得{vp:VP}吗？,今日{person}記唔記得{vp}呀？,"VP,PERSON",general,82,remember_question,今天他记得去机场吗？,今日佢記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0605,明天{person:PERSON}记得{vp:VP}吗？,聽日{person}記唔記得{vp}呀？,"VP,PERSON",general,82,remember_question,明天他记得去机场吗？,聽日佢記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0606,现在{person:PERSON}记得{vp:VP}吗？,而家{person}記唔記得{vp}呀？,"VP,PERSON",general,82,remember_question,现在他记得去机场吗？,而家佢記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0607,等一下{person:PERSON}记得{vp:VP}吗？,等陣{person}記唔記得{vp}呀？,"VP,PERSON",general,82,remember_question,等一下他记得去机场吗？,等陣佢記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0608,下次{person:PERSON}记得{vp:VP}吗？,下次{person}記唔記得{vp}呀？,"VP,PERSON",general,82,remember_question,下次他记得去机场吗？,下次佢記唔記得去機場呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0609,我觉得{np:NP}怎么样？,我覺得{np}點呀？,NP,general,82,opinion,我觉得这个文件怎么样？,我覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0610,今天我觉得{np:NP}怎么样？,今日我覺得{np}點呀？,NP,general,82,opinion,今天我觉得这个文件怎么样？,今日我覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0611,明天我觉得{np:NP}怎么样？,聽日我覺得{np}點呀？,NP,general,82,opinion,明天我觉得这个文件怎么样？,聽日我覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0612,现在我觉得{np:NP}怎么样？,而家我覺得{np}點呀？,NP,general,82,opinion,现在我觉得这个文件怎么样？,而家我覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0613,等一下我觉得{np:NP}怎么样？,等陣我覺得{np}點呀？,NP,general,82,opinion,等一下我觉得这个文件怎么样？,等陣我覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0614,下次我觉得{np:NP}怎么样？,下次我覺得{np}點呀？,NP,general,82,opinion,下次我觉得这个文件怎么样？,下次我覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0615,你觉得{np:NP}怎么样？,你覺得{np}點呀？,NP,general,82,opinion,你觉得这个文件怎么样？,你覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0616,今天你觉得{np:NP}怎么样？,今日你覺得{np}點呀？,NP,general,82,opinion,今天你觉得这个文件怎么样？,今日你覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0617,明天你觉得{np:NP}怎么样？,聽日你覺得{np}點呀？,NP,general,82,opinion,明天你觉得这个文件怎么样？,聽日你覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0618,现在你觉得{np:NP}怎么样？,而家你覺得{np}點呀？,NP,general,82,opinion,现在你觉得这个文件怎么样？,而家你覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0619,等一下你觉得{np:NP}怎么样？,等陣你覺得{np}點呀？,NP,general,82,opinion,等一下你觉得这个文件怎么样？,等陣你覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0620,下次你觉得{np:NP}怎么样？,下次你覺得{np}點呀？,NP,general,82,opinion,下次你觉得这个文件怎么样？,下次你覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0621,我们觉得{np:NP}怎么样？,我哋覺得{np}點呀？,NP,general,82,opinion,我们觉得这个文件怎么样？,我哋覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0622,今天我们觉得{np:NP}怎么样？,今日我哋覺得{np}點呀？,NP,general,82,opinion,今天我们觉得这个文件怎么样？,今日我哋覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0623,明天我们觉得{np:NP}怎么样？,聽日我哋覺得{np}點呀？,NP,general,82,opinion,明天我们觉得这个文件怎么样？,聽日我哋覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0624,现在我们觉得{np:NP}怎么样？,而家我哋覺得{np}點呀？,NP,general,82,opinion,现在我们觉得这个文件怎么样？,而家我哋覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0625,等一下我们觉得{np:NP}怎么样？,等陣我哋覺得{np}點呀？,NP,general,82,opinion,等一下我们觉得这个文件怎么样？,等陣我哋覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0626,下次我们觉得{np:NP}怎么样？,下次我哋覺得{np}點呀？,NP,general,82,opinion,下次我们觉得这个文件怎么样？,下次我哋覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0627,{person:PERSON}觉得{np:NP}怎么样？,{person}覺得{np}點呀？,"NP,PERSON",general,82,opinion,他觉得这个文件怎么样？,佢覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0628,今天{person:PERSON}觉得{np:NP}怎么样？,今日{person}覺得{np}點呀？,"NP,PERSON",general,82,opinion,今天他觉得这个文件怎么样？,今日佢覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0629,明天{person:PERSON}觉得{np:NP}怎么样？,聽日{person}覺得{np}點呀？,"NP,PERSON",general,82,opinion,明天他觉得这个文件怎么样？,聽日佢覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0630,现在{person:PERSON}觉得{np:NP}怎么样？,而家{person}覺得{np}點呀？,"NP,PERSON",general,82,opinion,现在他觉得这个文件怎么样？,而家佢覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0631,等一下{person:PERSON}觉得{np:NP}怎么样？,等陣{person}覺得{np}點呀？,"NP,PERSON",general,82,opinion,等一下他觉得这个文件怎么样？,等陣佢覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0632,下次{person:PERSON}觉得{np:NP}怎么样？,下次{person}覺得{np}點呀？,"NP,PERSON",general,82,opinion,下次他觉得这个文件怎么样？,下次佢覺得呢份文件點呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0633,我对{np:NP}有兴趣。,我對{np}有興趣。,NP,general,82,interest,我对这个文件有兴趣。,我對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0634,今天我对{np:NP}有兴趣。,今日我對{np}有興趣。,NP,general,82,interest,今天我对这个文件有兴趣。,今日我對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0635,明天我对{np:NP}有兴趣。,聽日我對{np}有興趣。,NP,general,82,interest,明天我对这个文件有兴趣。,聽日我對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0636,现在我对{np:NP}有兴趣。,而家我對{np}有興趣。,NP,general,82,interest,现在我对这个文件有兴趣。,而家我對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0637,等一下我对{np:NP}有兴趣。,等陣我對{np}有興趣。,NP,general,82,interest,等一下我对这个文件有兴趣。,等陣我對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0638,下次我对{np:NP}有兴趣。,下次我對{np}有興趣。,NP,general,82,interest,下次我对这个文件有兴趣。,下次我對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0639,你对{np:NP}有兴趣。,你對{np}有興趣。,NP,general,82,interest,你对这个文件有兴趣。,你對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0640,今天你对{np:NP}有兴趣。,今日你對{np}有興趣。,NP,general,82,interest,今天你对这个文件有兴趣。,今日你對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0641,明天你对{np:NP}有兴趣。,聽日你對{np}有興趣。,NP,general,82,interest,明天你对这个文件有兴趣。,聽日你對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0642,现在你对{np:NP}有兴趣。,而家你對{np}有興趣。,NP,general,82,interest,现在你对这个文件有兴趣。,而家你對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0643,等一下你对{np:NP}有兴趣。,等陣你對{np}有興趣。,NP,general,82,interest,等一下你对这个文件有兴趣。,等陣你對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0644,下次你对{np:NP}有兴趣。,下次你對{np}有興趣。,NP,general,82,interest,下次你对这个文件有兴趣。,下次你對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0645,我们对{np:NP}有兴趣。,我哋對{np}有興趣。,NP,general,82,interest,我们对这个文件有兴趣。,我哋對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0646,今天我们对{np:NP}有兴趣。,今日我哋對{np}有興趣。,NP,general,82,interest,今天我们对这个文件有兴趣。,今日我哋對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0647,明天我们对{np:NP}有兴趣。,聽日我哋對{np}有興趣。,NP,general,82,interest,明天我们对这个文件有兴趣。,聽日我哋對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0648,现在我们对{np:NP}有兴趣。,而家我哋對{np}有興趣。,NP,general,82,interest,现在我们对这个文件有兴趣。,而家我哋對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0649,等一下我们对{np:NP}有兴趣。,等陣我哋對{np}有興趣。,NP,general,82,interest,等一下我们对这个文件有兴趣。,等陣我哋對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0650,下次我们对{np:NP}有兴趣。,下次我哋對{np}有興趣。,NP,general,82,interest,下次我们对这个文件有兴趣。,下次我哋對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0651,{person:PERSON}对{np:NP}有兴趣。,{person}對{np}有興趣。,"NP,PERSON",general,82,interest,他对这个文件有兴趣。,佢對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0652,今天{person:PERSON}对{np:NP}有兴趣。,今日{person}對{np}有興趣。,"NP,PERSON",general,82,interest,今天他对这个文件有兴趣。,今日佢對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0653,明天{person:PERSON}对{np:NP}有兴趣。,聽日{person}對{np}有興趣。,"NP,PERSON",general,82,interest,明天他对这个文件有兴趣。,聽日佢對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0654,现在{person:PERSON}对{np:NP}有兴趣。,而家{person}對{np}有興趣。,"NP,PERSON",general,82,interest,现在他对这个文件有兴趣。,而家佢對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0655,等一下{person:PERSON}对{np:NP}有兴趣。,等陣{person}對{np}有興趣。,"NP,PERSON",general,82,interest,等一下他对这个文件有兴趣。,等陣佢對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0656,下次{person:PERSON}对{np:NP}有兴趣。,下次{person}對{np}有興趣。,"NP,PERSON",general,82,interest,下次他对这个文件有兴趣。,下次佢對呢份文件有興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0657,我对{np:NP}没有兴趣。,我對{np}冇興趣。,NP,general,82,no_interest,我对这个文件没有兴趣。,我對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0658,今天我对{np:NP}没有兴趣。,今日我對{np}冇興趣。,NP,general,82,no_interest,今天我对这个文件没有兴趣。,今日我對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0659,明天我对{np:NP}没有兴趣。,聽日我對{np}冇興趣。,NP,general,82,no_interest,明天我对这个文件没有兴趣。,聽日我對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0660,现在我对{np:NP}没有兴趣。,而家我對{np}冇興趣。,NP,general,82,no_interest,现在我对这个文件没有兴趣。,而家我對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0661,等一下我对{np:NP}没有兴趣。,等陣我對{np}冇興趣。,NP,general,82,no_interest,等一下我对这个文件没有兴趣。,等陣我對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0662,下次我对{np:NP}没有兴趣。,下次我對{np}冇興趣。,NP,general,82,no_interest,下次我对这个文件没有兴趣。,下次我對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0663,你对{np:NP}没有兴趣。,你對{np}冇興趣。,NP,general,82,no_interest,你对这个文件没有兴趣。,你對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0664,今天你对{np:NP}没有兴趣。,今日你對{np}冇興趣。,NP,general,82,no_interest,今天你对这个文件没有兴趣。,今日你對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0665,明天你对{np:NP}没有兴趣。,聽日你對{np}冇興趣。,NP,general,82,no_interest,明天你对这个文件没有兴趣。,聽日你對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0666,现在你对{np:NP}没有兴趣。,而家你對{np}冇興趣。,NP,general,82,no_interest,现在你对这个文件没有兴趣。,而家你對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0667,等一下你对{np:NP}没有兴趣。,等陣你對{np}冇興趣。,NP,general,82,no_interest,等一下你对这个文件没有兴趣。,等陣你對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0668,下次你对{np:NP}没有兴趣。,下次你對{np}冇興趣。,NP,general,82,no_interest,下次你对这个文件没有兴趣。,下次你對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0669,我们对{np:NP}没有兴趣。,我哋對{np}冇興趣。,NP,general,82,no_interest,我们对这个文件没有兴趣。,我哋對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0670,今天我们对{np:NP}没有兴趣。,今日我哋對{np}冇興趣。,NP,general,82,no_interest,今天我们对这个文件没有兴趣。,今日我哋對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0671,明天我们对{np:NP}没有兴趣。,聽日我哋對{np}冇興趣。,NP,general,82,no_interest,明天我们对这个文件没有兴趣。,聽日我哋對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0672,现在我们对{np:NP}没有兴趣。,而家我哋對{np}冇興趣。,NP,general,82,no_interest,现在我们对这个文件没有兴趣。,而家我哋對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0673,等一下我们对{np:NP}没有兴趣。,等陣我哋對{np}冇興趣。,NP,general,82,no_interest,等一下我们对这个文件没有兴趣。,等陣我哋對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0674,下次我们对{np:NP}没有兴趣。,下次我哋對{np}冇興趣。,NP,general,82,no_interest,下次我们对这个文件没有兴趣。,下次我哋對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0675,{person:PERSON}对{np:NP}没有兴趣。,{person}對{np}冇興趣。,"NP,PERSON",general,82,no_interest,他对这个文件没有兴趣。,佢對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0676,今天{person:PERSON}对{np:NP}没有兴趣。,今日{person}對{np}冇興趣。,"NP,PERSON",general,82,no_interest,今天他对这个文件没有兴趣。,今日佢對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0677,明天{person:PERSON}对{np:NP}没有兴趣。,聽日{person}對{np}冇興趣。,"NP,PERSON",general,82,no_interest,明天他对这个文件没有兴趣。,聽日佢對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0678,现在{person:PERSON}对{np:NP}没有兴趣。,而家{person}對{np}冇興趣。,"NP,PERSON",general,82,no_interest,现在他对这个文件没有兴趣。,而家佢對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0679,等一下{person:PERSON}对{np:NP}没有兴趣。,等陣{person}對{np}冇興趣。,"NP,PERSON",general,82,no_interest,等一下他对这个文件没有兴趣。,等陣佢對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0680,下次{person:PERSON}对{np:NP}没有兴趣。,下次{person}對{np}冇興趣。,"NP,PERSON",general,82,no_interest,下次他对这个文件没有兴趣。,下次佢對呢份文件冇興趣。,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0681,我把{np:NP}放在哪里了？,我將{np}放咗喺邊度呀？,NP,general,82,placed_where,我把这个文件放在哪里了？,我將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0682,今天我把{np:NP}放在哪里了？,今日我將{np}放咗喺邊度呀？,NP,general,82,placed_where,今天我把这个文件放在哪里了？,今日我將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0683,明天我把{np:NP}放在哪里了？,聽日我將{np}放咗喺邊度呀？,NP,general,82,placed_where,明天我把这个文件放在哪里了？,聽日我將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0684,现在我把{np:NP}放在哪里了？,而家我將{np}放咗喺邊度呀？,NP,general,82,placed_where,现在我把这个文件放在哪里了？,而家我將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0685,等一下我把{np:NP}放在哪里了？,等陣我將{np}放咗喺邊度呀？,NP,general,82,placed_where,等一下我把这个文件放在哪里了？,等陣我將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0686,下次我把{np:NP}放在哪里了？,下次我將{np}放咗喺邊度呀？,NP,general,82,placed_where,下次我把这个文件放在哪里了？,下次我將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0687,你把{np:NP}放在哪里了？,你將{np}放咗喺邊度呀？,NP,general,82,placed_where,你把这个文件放在哪里了？,你將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0688,今天你把{np:NP}放在哪里了？,今日你將{np}放咗喺邊度呀？,NP,general,82,placed_where,今天你把这个文件放在哪里了？,今日你將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0689,明天你把{np:NP}放在哪里了？,聽日你將{np}放咗喺邊度呀？,NP,general,82,placed_where,明天你把这个文件放在哪里了？,聽日你將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0690,现在你把{np:NP}放在哪里了？,而家你將{np}放咗喺邊度呀？,NP,general,82,placed_where,现在你把这个文件放在哪里了？,而家你將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0691,等一下你把{np:NP}放在哪里了？,等陣你將{np}放咗喺邊度呀？,NP,general,82,placed_where,等一下你把这个文件放在哪里了？,等陣你將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0692,下次你把{np:NP}放在哪里了？,下次你將{np}放咗喺邊度呀？,NP,general,82,placed_where,下次你把这个文件放在哪里了？,下次你將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0693,我们把{np:NP}放在哪里了？,我哋將{np}放咗喺邊度呀？,NP,general,82,placed_where,我们把这个文件放在哪里了？,我哋將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0694,今天我们把{np:NP}放在哪里了？,今日我哋將{np}放咗喺邊度呀？,NP,general,82,placed_where,今天我们把这个文件放在哪里了？,今日我哋將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0695,明天我们把{np:NP}放在哪里了？,聽日我哋將{np}放咗喺邊度呀？,NP,general,82,placed_where,明天我们把这个文件放在哪里了？,聽日我哋將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0696,现在我们把{np:NP}放在哪里了？,而家我哋將{np}放咗喺邊度呀？,NP,general,82,placed_where,现在我们把这个文件放在哪里了？,而家我哋將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0697,等一下我们把{np:NP}放在哪里了？,等陣我哋將{np}放咗喺邊度呀？,NP,general,82,placed_where,等一下我们把这个文件放在哪里了？,等陣我哋將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0698,下次我们把{np:NP}放在哪里了？,下次我哋將{np}放咗喺邊度呀？,NP,general,82,placed_where,下次我们把这个文件放在哪里了？,下次我哋將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0699,{person:PERSON}把{np:NP}放在哪里了？,{person}將{np}放咗喺邊度呀？,"NP,PERSON",general,82,placed_where,他把这个文件放在哪里了？,佢將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0700,今天{person:PERSON}把{np:NP}放在哪里了？,今日{person}將{np}放咗喺邊度呀？,"NP,PERSON",general,82,placed_where,今天他把这个文件放在哪里了？,今日佢將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0701,明天{person:PERSON}把{np:NP}放在哪里了？,聽日{person}將{np}放咗喺邊度呀？,"NP,PERSON",general,82,placed_where,明天他把这个文件放在哪里了？,聽日佢將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0702,现在{person:PERSON}把{np:NP}放在哪里了？,而家{person}將{np}放咗喺邊度呀？,"NP,PERSON",general,82,placed_where,现在他把这个文件放在哪里了？,而家佢將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0703,等一下{person:PERSON}把{np:NP}放在哪里了？,等陣{person}將{np}放咗喺邊度呀？,"NP,PERSON",general,82,placed_where,等一下他把这个文件放在哪里了？,等陣佢將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0704,下次{person:PERSON}把{np:NP}放在哪里了？,下次{person}將{np}放咗喺邊度呀？,"NP,PERSON",general,82,placed_where,下次他把这个文件放在哪里了？,下次佢將呢份文件放咗喺邊度呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0705,我可以把{np:NP}带走吗？,我可唔可以將{np}拎走呀？,NP,general,82,take_away,我可以把这个文件带走吗？,我可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0706,今天我可以把{np:NP}带走吗？,今日我可唔可以將{np}拎走呀？,NP,general,82,take_away,今天我可以把这个文件带走吗？,今日我可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0707,明天我可以把{np:NP}带走吗？,聽日我可唔可以將{np}拎走呀？,NP,general,82,take_away,明天我可以把这个文件带走吗？,聽日我可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0708,现在我可以把{np:NP}带走吗？,而家我可唔可以將{np}拎走呀？,NP,general,82,take_away,现在我可以把这个文件带走吗？,而家我可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0709,等一下我可以把{np:NP}带走吗？,等陣我可唔可以將{np}拎走呀？,NP,general,82,take_away,等一下我可以把这个文件带走吗？,等陣我可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0710,下次我可以把{np:NP}带走吗？,下次我可唔可以將{np}拎走呀？,NP,general,82,take_away,下次我可以把这个文件带走吗？,下次我可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0711,你可以把{np:NP}带走吗？,你可唔可以將{np}拎走呀？,NP,general,82,take_away,你可以把这个文件带走吗？,你可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0712,今天你可以把{np:NP}带走吗？,今日你可唔可以將{np}拎走呀？,NP,general,82,take_away,今天你可以把这个文件带走吗？,今日你可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0713,明天你可以把{np:NP}带走吗？,聽日你可唔可以將{np}拎走呀？,NP,general,82,take_away,明天你可以把这个文件带走吗？,聽日你可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0714,现在你可以把{np:NP}带走吗？,而家你可唔可以將{np}拎走呀？,NP,general,82,take_away,现在你可以把这个文件带走吗？,而家你可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0715,等一下你可以把{np:NP}带走吗？,等陣你可唔可以將{np}拎走呀？,NP,general,82,take_away,等一下你可以把这个文件带走吗？,等陣你可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0716,下次你可以把{np:NP}带走吗？,下次你可唔可以將{np}拎走呀？,NP,general,82,take_away,下次你可以把这个文件带走吗？,下次你可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0717,我们可以把{np:NP}带走吗？,我哋可唔可以將{np}拎走呀？,NP,general,82,take_away,我们可以把这个文件带走吗？,我哋可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0718,今天我们可以把{np:NP}带走吗？,今日我哋可唔可以將{np}拎走呀？,NP,general,82,take_away,今天我们可以把这个文件带走吗？,今日我哋可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0719,明天我们可以把{np:NP}带走吗？,聽日我哋可唔可以將{np}拎走呀？,NP,general,82,take_away,明天我们可以把这个文件带走吗？,聽日我哋可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0720,现在我们可以把{np:NP}带走吗？,而家我哋可唔可以將{np}拎走呀？,NP,general,82,take_away,现在我们可以把这个文件带走吗？,而家我哋可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0721,等一下我们可以把{np:NP}带走吗？,等陣我哋可唔可以將{np}拎走呀？,NP,general,82,take_away,等一下我们可以把这个文件带走吗？,等陣我哋可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0722,下次我们可以把{np:NP}带走吗？,下次我哋可唔可以將{np}拎走呀？,NP,general,82,take_away,下次我们可以把这个文件带走吗？,下次我哋可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0723,{person:PERSON}可以把{np:NP}带走吗？,{person}可唔可以將{np}拎走呀？,"NP,PERSON",general,82,take_away,他可以把这个文件带走吗？,佢可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0724,今天{person:PERSON}可以把{np:NP}带走吗？,今日{person}可唔可以將{np}拎走呀？,"NP,PERSON",general,82,take_away,今天他可以把这个文件带走吗？,今日佢可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0725,明天{person:PERSON}可以把{np:NP}带走吗？,聽日{person}可唔可以將{np}拎走呀？,"NP,PERSON",general,82,take_away,明天他可以把这个文件带走吗？,聽日佢可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0726,现在{person:PERSON}可以把{np:NP}带走吗？,而家{person}可唔可以將{np}拎走呀？,"NP,PERSON",general,82,take_away,现在他可以把这个文件带走吗？,而家佢可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0727,等一下{person:PERSON}可以把{np:NP}带走吗？,等陣{person}可唔可以將{np}拎走呀？,"NP,PERSON",general,82,take_away,等一下他可以把这个文件带走吗？,等陣佢可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0728,下次{person:PERSON}可以把{np:NP}带走吗？,下次{person}可唔可以將{np}拎走呀？,"NP,PERSON",general,82,take_away,下次他可以把这个文件带走吗？,下次佢可唔可以將呢份文件拎走呀？,systematically generated compositional template,generated_candidate,controlled_generation_v1.0
+TPL-0729,请问，我要{number:NUMBER}{item:ITEM}。,唔該問聲，我要{number}{item}。,"NUMBER,ITEM",shopping,85,quantity_purchase,请问，我要两个充电器。,唔該問聲，我要兩個充電器。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0730,我想问一下，我要{number:NUMBER}{item:ITEM}。,我想問下，我要{number}{item}。,"NUMBER,ITEM",shopping,85,quantity_purchase,我想问一下，我要两个充电器。,我想問下，我要兩個充電器。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0731,麻烦问一下，我要{number:NUMBER}{item:ITEM}。,唔該問下，我要{number}{item}。,"NUMBER,ITEM",shopping,85,quantity_purchase,麻烦问一下，我要两个充电器。,唔該問下，我要兩個充電器。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0732,有没有{color:ADJ}的{item:ITEM}？,有冇{color}嘅{item}呀？,"ADJ,ITEM",shopping,85,color_item,有没有黑色的充电器？,有冇黑色嘅充電器呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0733,请问，有没有{color:ADJ}的{item:ITEM}？,唔該問聲，有冇{color}嘅{item}呀？,"ADJ,ITEM",shopping,85,color_item,请问，有没有黑色的充电器？,唔該問聲，有冇黑色嘅充電器呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0734,我想问一下，有没有{color:ADJ}的{item:ITEM}？,我想問下，有冇{color}嘅{item}呀？,"ADJ,ITEM",shopping,85,color_item,我想问一下，有没有黑色的充电器？,我想問下，有冇黑色嘅充電器呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0735,麻烦问一下，有没有{color:ADJ}的{item:ITEM}？,唔該問下，有冇{color}嘅{item}呀？,"ADJ,ITEM",shopping,85,color_item,麻烦问一下，有没有黑色的充电器？,唔該問下，有冇黑色嘅充電器呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0736,{item:ITEM}多少钱？,{item}幾多錢呀？,ITEM,shopping,85,price,充电器多少钱？,充電器幾多錢呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0737,请问，{item:ITEM}多少钱？,唔該問聲，{item}幾多錢呀？,ITEM,shopping,85,price,请问，充电器多少钱？,唔該問聲，充電器幾多錢呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0738,我想问一下，{item:ITEM}多少钱？,我想問下，{item}幾多錢呀？,ITEM,shopping,85,price,我想问一下，充电器多少钱？,我想問下，充電器幾多錢呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0739,麻烦问一下，{item:ITEM}多少钱？,唔該問下，{item}幾多錢呀？,ITEM,shopping,85,price,麻烦问一下，充电器多少钱？,唔該問下，充電器幾多錢呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0740,我可以试一下{item:ITEM}吗？,我可唔可以試下{item}呀？,ITEM,shopping,85,try_item,我可以试一下充电器吗？,我可唔可以試下充電器呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0741,请问，我可以试一下{item:ITEM}吗？,唔該問聲，我可唔可以試下{item}呀？,ITEM,shopping,85,try_item,请问，我可以试一下充电器吗？,唔該問聲，我可唔可以試下充電器呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0742,我想问一下，我可以试一下{item:ITEM}吗？,我想問下，我可唔可以試下{item}呀？,ITEM,shopping,85,try_item,我想问一下，我可以试一下充电器吗？,我想問下，我可唔可以試下充電器呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0743,麻烦问一下，我可以试一下{item:ITEM}吗？,唔該問下，我可唔可以試下{item}呀？,ITEM,shopping,85,try_item,麻烦问一下，我可以试一下充电器吗？,唔該問下，我可唔可以試下充電器呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0744,请问，我要去{place:PLACE}。,唔該問聲，我要去{place}。,PLACE,transport,85,destination,请问，我要去机场。,唔該問聲，我要去機場。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0745,我想问一下，我要去{place:PLACE}。,我想問下，我要去{place}。,PLACE,transport,85,destination,我想问一下，我要去机场。,我想問下，我要去機場。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0746,麻烦问一下，我要去{place:PLACE}。,唔該問下，我要去{place}。,PLACE,transport,85,destination,麻烦问一下，我要去机场。,唔該問下，我要去機場。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0747,从这里到{place:PLACE}要多久？,由呢度去{place}要幾耐呀？,PLACE,transport,85,duration,从这里到机场要多久？,由呢度去機場要幾耐呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0748,请问，从这里到{place:PLACE}要多久？,唔該問聲，由呢度去{place}要幾耐呀？,PLACE,transport,85,duration,请问，从这里到机场要多久？,唔該問聲，由呢度去機場要幾耐呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0749,我想问一下，从这里到{place:PLACE}要多久？,我想問下，由呢度去{place}要幾耐呀？,PLACE,transport,85,duration,我想问一下，从这里到机场要多久？,我想問下，由呢度去機場要幾耐呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0750,麻烦问一下，从这里到{place:PLACE}要多久？,唔該問下，由呢度去{place}要幾耐呀？,PLACE,transport,85,duration,麻烦问一下，从这里到机场要多久？,唔該問下，由呢度去機場要幾耐呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0751,这班车到{place:PLACE}吗？,呢班車去唔去{place}呀？,PLACE,transport,85,route,这班车到机场吗？,呢班車去唔去機場呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0752,请问，这班车到{place:PLACE}吗？,唔該問聲，呢班車去唔去{place}呀？,PLACE,transport,85,route,请问，这班车到机场吗？,唔該問聲，呢班車去唔去機場呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0753,我想问一下，这班车到{place:PLACE}吗？,我想問下，呢班車去唔去{place}呀？,PLACE,transport,85,route,我想问一下，这班车到机场吗？,我想問下，呢班車去唔去機場呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0754,麻烦问一下，这班车到{place:PLACE}吗？,唔該問下，呢班車去唔去{place}呀？,PLACE,transport,85,route,麻烦问一下，这班车到机场吗？,唔該問下，呢班車去唔去機場呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0755,请在{place:PLACE}停车。,唔該喺{place}停車。,PLACE,transport,85,stop,请在机场停车。,唔該喺機場停車。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0756,请问，请在{place:PLACE}停车。,唔該問聲，唔該喺{place}停車。,PLACE,transport,85,stop,请问，请在机场停车。,唔該問聲，唔該喺機場停車。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0757,我想问一下，请在{place:PLACE}停车。,我想問下，唔該喺{place}停車。,PLACE,transport,85,stop,我想问一下，请在机场停车。,我想問下，唔該喺機場停車。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0758,麻烦问一下，请在{place:PLACE}停车。,唔該問下，唔該喺{place}停車。,PLACE,transport,85,stop,麻烦问一下，请在机场停车。,唔該問下，唔該喺機場停車。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0759,我要一份{food:ITEM}。,我要一份{food}。,ITEM,dining,85,order,我要一份炒饭。,我要一份炒飯。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0760,请问，我要一份{food:ITEM}。,唔該問聲，我要一份{food}。,ITEM,dining,85,order,请问，我要一份炒饭。,唔該問聲，我要一份炒飯。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0761,我想问一下，我要一份{food:ITEM}。,我想問下，我要一份{food}。,ITEM,dining,85,order,我想问一下，我要一份炒饭。,我想問下，我要一份炒飯。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0762,麻烦问一下，我要一份{food:ITEM}。,唔該問下，我要一份{food}。,ITEM,dining,85,order,麻烦问一下，我要一份炒饭。,唔該問下，我要一份炒飯。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0763,请不要放{ingredient:ITEM}。,唔該唔好落{ingredient}。,ITEM,dining,85,ingredient,请不要放花生。,唔該唔好落花生。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0764,请问，请不要放{ingredient:ITEM}。,唔該問聲，唔該唔好落{ingredient}。,ITEM,dining,85,ingredient,请问，请不要放花生。,唔該問聲，唔該唔好落花生。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0765,我想问一下，请不要放{ingredient:ITEM}。,我想問下，唔該唔好落{ingredient}。,ITEM,dining,85,ingredient,我想问一下，请不要放花生。,我想問下，唔該唔好落花生。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0766,麻烦问一下，请不要放{ingredient:ITEM}。,唔該問下，唔該唔好落{ingredient}。,ITEM,dining,85,ingredient,麻烦问一下，请不要放花生。,唔該問下，唔該唔好落花生。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0767,我对{ingredient:ITEM}过敏。,我對{ingredient}敏感。,ITEM,dining,85,allergy,我对花生过敏。,我對花生敏感。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0768,请问，我对{ingredient:ITEM}过敏。,唔該問聲，我對{ingredient}敏感。,ITEM,dining,85,allergy,请问，我对花生过敏。,唔該問聲，我對花生敏感。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0769,我想问一下，我对{ingredient:ITEM}过敏。,我想問下，我對{ingredient}敏感。,ITEM,dining,85,allergy,我想问一下，我对花生过敏。,我想問下，我對花生敏感。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0770,麻烦问一下，我对{ingredient:ITEM}过敏。,唔該問下，我對{ingredient}敏感。,ITEM,dining,85,allergy,麻烦问一下，我对花生过敏。,唔該問下，我對花生敏感。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0771,我点的{food:ITEM}还没来。,我嗌嘅{food}仲未嚟。,ITEM,dining,85,order_status,我点的炒饭还没来。,我嗌嘅炒飯仲未嚟。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0772,请问，我点的{food:ITEM}还没来。,唔該問聲，我嗌嘅{food}仲未嚟。,ITEM,dining,85,order_status,请问，我点的炒饭还没来。,唔該問聲，我嗌嘅炒飯仲未嚟。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0773,我想问一下，我点的{food:ITEM}还没来。,我想問下，我嗌嘅{food}仲未嚟。,ITEM,dining,85,order_status,我想问一下，我点的炒饭还没来。,我想問下，我嗌嘅炒飯仲未嚟。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0774,麻烦问一下，我点的{food:ITEM}还没来。,唔該問下，我嗌嘅{food}仲未嚟。,ITEM,dining,85,order_status,麻烦问一下，我点的炒饭还没来。,唔該問下，我嗌嘅炒飯仲未嚟。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0775,请把{document:NP}发给我。,唔該將{document}send畀我。,NP,work,85,send_document,请把报告发给我。,唔該將報告send畀我。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0776,请问，请把{document:NP}发给我。,唔該問聲，唔該將{document}send畀我。,NP,work,85,send_document,请问，请把报告发给我。,唔該問聲，唔該將報告send畀我。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0777,我想问一下，请把{document:NP}发给我。,我想問下，唔該將{document}send畀我。,NP,work,85,send_document,我想问一下，请把报告发给我。,我想問下，唔該將報告send畀我。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0778,麻烦问一下，请把{document:NP}发给我。,唔該問下，唔該將{document}send畀我。,NP,work,85,send_document,麻烦问一下，请把报告发给我。,唔該問下，唔該將報告send畀我。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0779,{document:NP}什么时候完成？,{document}幾時完成呀？,NP,work,85,deadline,报告什么时候完成？,報告幾時完成呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0780,请问，{document:NP}什么时候完成？,唔該問聲，{document}幾時完成呀？,NP,work,85,deadline,请问，报告什么时候完成？,唔該問聲，報告幾時完成呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0781,我想问一下，{document:NP}什么时候完成？,我想問下，{document}幾時完成呀？,NP,work,85,deadline,我想问一下，报告什么时候完成？,我想問下，報告幾時完成呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0782,麻烦问一下，{document:NP}什么时候完成？,唔該問下，{document}幾時完成呀？,NP,work,85,deadline,麻烦问一下，报告什么时候完成？,唔該問下，報告幾時完成呀？,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0783,我需要修改{document:NP}。,我需要改{document}。,NP,work,85,modify_document,我需要修改报告。,我需要改報告。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0784,请问，我需要修改{document:NP}。,唔該問聲，我需要改{document}。,NP,work,85,modify_document,请问，我需要修改报告。,唔該問聲，我需要改報告。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0785,我想问一下，我需要修改{document:NP}。,我想問下，我需要改{document}。,NP,work,85,modify_document,我想问一下，我需要修改报告。,我想問下，我需要改報告。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0786,麻烦问一下，我需要修改{document:NP}。,唔該問下，我需要改{document}。,NP,work,85,modify_document,麻烦问一下，我需要修改报告。,唔該問下，我需要改報告。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0787,请在{time:TIME}之前{vp:VP}。,唔該喺{time}之前{vp}。,"TIME,VP",work,85,deadline_request,请在明天下午之前完成报告。,唔該喺聽日下午之前完成報告。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0788,请问，请在{time:TIME}之前{vp:VP}。,唔該問聲，唔該喺{time}之前{vp}。,"TIME,VP",work,85,deadline_request,请问，请在明天下午之前完成报告。,唔該問聲，唔該喺聽日下午之前完成報告。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0789,我想问一下，请在{time:TIME}之前{vp:VP}。,我想問下，唔該喺{time}之前{vp}。,"TIME,VP",work,85,deadline_request,我想问一下，请在明天下午之前完成报告。,我想問下，唔該喺聽日下午之前完成報告。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0790,麻烦问一下，请在{time:TIME}之前{vp:VP}。,唔該問下，唔該喺{time}之前{vp}。,"TIME,VP",work,85,deadline_request,麻烦问一下，请在明天下午之前完成报告。,唔該問下，唔該喺聽日下午之前完成報告。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0791,请问，我{body:NP}痛。,唔該問聲，我{body}痛。,NP,medical,85,pain,请问，我头痛。,唔該問聲，我頭痛。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0792,我想问一下，我{body:NP}痛。,我想問下，我{body}痛。,NP,medical,85,pain,我想问一下，我头痛。,我想問下，我頭痛。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0793,麻烦问一下，我{body:NP}痛。,唔該問下，我{body}痛。,NP,medical,85,pain,麻烦问一下，我头痛。,唔該問下，我頭痛。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0794,我有{symptom:NP}。,我有{symptom}。,NP,medical,85,symptom,我有头晕。,我有頭暈。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0795,请问，我有{symptom:NP}。,唔該問聲，我有{symptom}。,NP,medical,85,symptom,请问，我有头晕。,唔該問聲，我有頭暈。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0796,我想问一下，我有{symptom:NP}。,我想問下，我有{symptom}。,NP,medical,85,symptom,我想问一下，我有头晕。,我想問下，我有頭暈。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0797,麻烦问一下，我有{symptom:NP}。,唔該問下，我有{symptom}。,NP,medical,85,symptom,麻烦问一下，我有头晕。,唔該問下，我有頭暈。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0798,这个症状持续了{duration:TIME}。,呢個症狀持續咗{duration}。,TIME,medical,85,duration,这个症状持续了两天。,呢個症狀持續咗兩日。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0799,请问，这个症状持续了{duration:TIME}。,唔該問聲，呢個症狀持續咗{duration}。,TIME,medical,85,duration,请问，这个症状持续了两天。,唔該問聲，呢個症狀持續咗兩日。,scene template variant,generated_candidate,controlled_generation_v1.0
+TPL-0800,我想问一下，这个症状持续了{duration:TIME}。,我想問下，呢個症狀持續咗{duration}。,TIME,medical,85,duration,我想问一下，这个症状持续了两天。,我想問下，呢個症狀持續咗兩日。,scene template variant,generated_candidate,controlled_generation_v1.0

@@ -1,0 +1,113 @@
+﻿dataset,id,source,source_traditional,target,reason,review_status,provenance
+phrases,PHR-1527,我要一份云吞面。,我要一份雲吞麪。,我要一份雲吞麵。,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),generated_candidate,controlled_generation_v1.0
+phrases,PHR-1612,我要一份面包。,我要一份麪包。,我要一份麵包。,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),generated_candidate,controlled_generation_v1.0
+phrases,PHR-2573,我想买背包。,我想買揹包。,我想買背包。,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),generated_candidate,controlled_generation_v1.0
+phrases,PHR-2575,我想换一个背包。,我想換一個揹包。,我想換一個背包。,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),generated_candidate,controlled_generation_v1.0
+phrases,PHR-3646,我要去服务台。,我要去服務枱。,我要去服務台。,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),generated_candidate,controlled_generation_v1.0
+phrases,PHR-4082,我需要床单。,我需要牀單。,我需要床單。,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),generated_candidate,controlled_generation_v1.0
+lexicon,LEX-0379,说明,説明,説明,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0384,小说,小説,小説,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0385,因为,因為,因為,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0387,学说,學説,學説,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0389,听说,聽説,聽説,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0396,说不定,説不定,説不定,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0400,尽可能,儘可能,盡可能,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0417,家喻户晓,家喻户曉,家喻户曉,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0454,一群,一羣,一群,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0502,它们,它們,牠們,same_lexeme_after_bidirectional_normalization:explicit_same_lexeme_marker,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0596,明净,明淨,明凈,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0607,说服,説服,説服,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0608,卫生,衞生,衞生,same_lexeme_after_bidirectional_normalization:s2hk(source)==target,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0618,诉说,訴説,訴説,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0625,大豆,大豆,大荳,same_lexeme_after_bidirectional_normalization:explicit_same_lexeme_marker,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0634,为期,為期,為期,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0635,饭团,飯糰,飯團,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0638,为止,為止,為止,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0653,大众,大眾,大眾,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0666,据说,據説,據説,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0668,再说,再説,再説,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0669,为何,為何,為何,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0686,游说,遊説,游説,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0703,演说,演説,演説,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0712,传说,傳説,傳説,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0713,解说,解説,解説,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0723,虽说,雖説,雖説,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0724,说法,説法,説法,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0725,说谎,説謊,説謊,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0756,直升机,直升機,直昇機,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0757,升降机,升降機,昇降機,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0793,人造卫星,人造衞星,人造衞星,same_lexeme_after_bidirectional_normalization:s2hk(source)==target,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0826,上台,上台,上枱,same_lexeme_after_bidirectional_normalization:explicit_same_lexeme_marker,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0837,表面,表面,錶面,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0948,鉴别,鑑別,鑒別,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0964,四周,四周,四週,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0970,周围,周圍,週圍,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0975,牙签,牙籤,牙簽,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-0978,尽早,儘早,盡早,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1025,回归,迴歸,回歸,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1026,回荡,迴盪,回蕩,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1045,叹息,嘆息,歎息,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1051,彩排,彩排,綵排,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1071,订阅,訂閲,訂閲,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1084,烧毁,燒燬,燒毀,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1099,排泄,排泄,排洩,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1120,并存,並存,併存,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1128,制订,制訂,製訂,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1132,保卫,保衞,保衞,same_lexeme_after_bidirectional_normalization:s2hk(source)==target,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1135,曲线,曲線,曲綫,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1155,休闲,休閒,休閑,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1168,警卫,警衞,警衞,same_lexeme_after_bidirectional_normalization:s2hk(source)==target,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1217,锐利,鋭利,鋭利,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1227,床铺,牀鋪,床鋪,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1233,韭菜,韭菜,韮菜,same_lexeme_after_bidirectional_normalization:explicit_same_lexeme_marker,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1236,火焰,火焰,火燄,same_lexeme_after_bidirectional_normalization:explicit_same_lexeme_marker,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1241,佣金,佣金,傭金,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1246,提升,提升,提昇,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1250,敏锐,敏鋭,敏鋭,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1260,准许,准許,準許,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1261,参阅,參閲,參閲,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1284,卫星,衞星,衞星,same_lexeme_after_bidirectional_normalization:s2hk(source)==target,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1311,尽管,儘管,盡管,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1315,湿度,濕度,濕度,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1340,白痴,白痴,白痴,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1348,感叹,感嘆,感歎,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1370,标签,標籤,標簽,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1381,阅读,閲讀,閲讀,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1451,捍卫,捍衞,捍衞,same_lexeme_after_bidirectional_normalization:s2hk(source)==target,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1458,泄露,泄露,洩露,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1462,自卫,自衞,自衞,same_lexeme_after_bidirectional_normalization:s2hk(source)==target,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1464,防卫,防衞,防衞,same_lexeme_after_bidirectional_normalization:s2hk(source)==target,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1468,叹气,嘆氣,歎氣,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1470,吸烟,吸煙,吸煙,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1515,字汇,字彙,字匯,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1533,效力,效力,効力,same_lexeme_after_bidirectional_normalization:explicit_same_lexeme_marker,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1554,饥饿,飢餓,饑餓,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1588,冲浪,衝浪,沖浪,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1589,冲破,衝破,沖破,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1597,制定,制定,製定,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1601,勋绩,勳績,勛績,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1659,尖锐,尖鋭,尖鋭,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1660,屋檐,屋檐,屋簷,same_lexeme_after_bidirectional_normalization:s2tw(source)==target,auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1663,岩石,岩石,巖石,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1667,干净,乾淨,乾凈,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1668,年鉴,年鑑,年鑒,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1701,扎实,紮實,扎實,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1708,拐杖,枴杖,枴杖,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1740,树干,樹幹,樹榦,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1748,毁谤,毀謗,譭謗,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1760,洁净,潔淨,潔凈,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1798,称赞,稱讚,稱贊,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1838,蕴藏,藴藏,藴藏,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1867,赞扬,讚揚,贊揚,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1868,赞美,讚美,贊美,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1870,赞颂,讚頌,贊頌,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1889,酝酿,醖釀,醖釀,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1892,鉴定,鑑定,鑒定,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1893,鉴赏,鑑賞,鑒賞,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1894,铲除,剷除,鏟除,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1896,锻炼,鍛鍊,鍛煉,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+lexicon,LEX-1915,饥荒,饑荒,飢荒,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),auto_sourced_candidate,CC-Canto 2017-02-02 + CEDICT headword filter; CC BY-SA 3.0
+rules,RUL-0183,陈述句 + 呢,陳述句 + 呢,陈述句 + 呢,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),generated_candidate,controlled_generation_v1.0
+tests,TST-0972,我要一份面包。,我要一份麪包。,我要一份麵包。,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),review_pending,generated_from_frame_021
+tests,TST-1293,我想换一个背包。,我想換一個揹包。,我想換一個背包。,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),review_pending,generated_from_frame_047
+tests,TST-1649,我要去服务台。,我要去服務枱。,我要去服務台。,same_lexeme_after_bidirectional_normalization:t2s(source)==t2s(target),review_pending,generated_from_frame_061

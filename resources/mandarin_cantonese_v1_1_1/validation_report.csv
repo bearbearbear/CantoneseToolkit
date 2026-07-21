@@ -1,0 +1,17 @@
+﻿check,passed,detail
+phrases_unique_ids,True,6846
+phrases_no_same_lexeme_passthrough,True,0 hits
+phrases_no_normalized_duplicates,True,0 groups
+lexicon_unique_ids,True,214
+lexicon_no_same_lexeme_passthrough,True,0 hits
+lexicon_no_normalized_duplicates,True,0 groups
+templates_unique_ids,True,799
+templates_no_same_lexeme_passthrough,True,0 hits
+templates_no_normalized_duplicates,True,0 groups
+rules_unique_ids,True,183
+rules_no_same_lexeme_passthrough,True,0 hits
+rules_no_normalized_duplicates,True,0 groups
+tests_unique_ids,True,3263
+tests_no_same_lexeme_passthrough,True,0 hits
+runtime_counts_match,True,"{'phrases': 6846, 'lexicon': 214, 'templates': 799, 'rules': 183, 'tests': 3263, 'translation_units': 8042}"
+lexicon_expected_count,True,214

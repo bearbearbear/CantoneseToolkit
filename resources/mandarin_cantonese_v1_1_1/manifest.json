@@ -1,0 +1,134 @@
+{
+  "version": "1.1.1",
+  "build_date": "2026-07-20",
+  "counts": {
+    "phrases": 6846,
+    "lexicon": 214,
+    "templates": 799,
+    "rules": 183,
+    "tests": 3263,
+    "translation_units": 8042
+  },
+  "files": [
+    {
+      "name": "ATTRIBUTION.md",
+      "bytes": 1779,
+      "sha256": "35b09927a53034838d4651ce6788f1bb6cdc55fb8e8420f6d71f992630270ed4"
+    },
+    {
+      "name": "BUILD_POLICY.md",
+      "bytes": 731,
+      "sha256": "749434e96acaf4a79644ac1b4fdb0f23ee9eb59edc632e83b8a9df3e48dffc4b"
+    },
+    {
+      "name": "README.md",
+      "bytes": 669,
+      "sha256": "8c7dbc0e6b2cf399a2ae731d3b920206a104a016f91614a104e7bf389f89c76a"
+    },
+    {
+      "name": "lexicon.csv",
+      "bytes": 16346,
+      "sha256": "0e4d29f5e9ff086009d419719cfd212d114669ba6967ce8755eb128baf2bee09"
+    },
+    {
+      "name": "lexicon.jsonl",
+      "bytes": 48145,
+      "sha256": "849e805981362c7f7869903ff3cc51e9ffa232f45340f351c45786d7b789a2ee"
+    },
+    {
+      "name": "mandarin_cantonese_translation_data_v1_1_1.xlsx",
+      "bytes": 671052,
+      "sha256": "b7b98c4720589770fc16e4886bfeebf632077fd62b21391ef36b452e43679f79"
+    },
+    {
+      "name": "metadata.json",
+      "bytes": 1332,
+      "sha256": "c6dec817b61a1a8792d5231f04e036b54f64278e3399e0b8e266367cd996cba4"
+    },
+    {
+      "name": "phrases.csv",
+      "bytes": 1405396,
+      "sha256": "c492c1b800f258282ea9f45d383b1091918e6d88a817dd5c7087141eca81a640"
+    },
+    {
+      "name": "phrases.jsonl",
+      "bytes": 2575959,
+      "sha256": "a39b12a033aaa6ff4ec0e8df056d89ab72b98a1d167e829c4e03e63d8b12f2b0"
+    },
+    {
+      "name": "removed_in_v1_1_1.csv",
+      "bytes": 21700,
+      "sha256": "6063a3ccd37daa6c5e754d6b7bbf7a72329395fbd4090edd90be911de6d574e5"
+    },
+    {
+      "name": "removed_passthrough_audit.csv",
+      "bytes": 302931,
+      "sha256": "e3ce7dc9d64e8e6ac78648ef0efbde6d022860ab382542f502f44185338a3bf3"
+    },
+    {
+      "name": "removed_passthrough_audit.jsonl",
+      "bytes": 560895,
+      "sha256": "8a59ad195609d0b56e0c5f21a250cd3dc9edbea7ca5bff027d7dca6bb11f5b79"
+    },
+    {
+      "name": "requirements.txt",
+      "bytes": 35,
+      "sha256": "386421ecfa997e41ac7c293f5767dc09c70cf46b81138005763f317f4b7556cf"
+    },
+    {
+      "name": "rules.csv",
+      "bytes": 26831,
+      "sha256": "573ec1aabb1d1bb7bdd971ca781714b375523a8e1a91cbf5f69c8616df9ca556"
+    },
+    {
+      "name": "rules.jsonl",
+      "bytes": 63479,
+      "sha256": "1de35d03940e828c0ba780e3da2166eeff68f404280f355c7d2cb2166d6cf63b"
+    },
+    {
+      "name": "runtime-core-v1.1.1.json",
+      "bytes": 2860768,
+      "sha256": "9cc01d8b88b1c5afd519d79819e21401d483b024e8d2e35b667da2b846f67884"
+    },
+    {
+      "name": "same_lexeme_policy.py",
+      "bytes": 1114,
+      "sha256": "737975fef214c23c2d2c63ea12ec5245cec5f5a8fa5da18cc654d655a16d484b"
+    },
+    {
+      "name": "sources.csv",
+      "bytes": 754,
+      "sha256": "5251b5508b4212698514001ecd0b0d57906c3ec021ea68d310ca7a1177677afc"
+    },
+    {
+      "name": "templates.csv",
+      "bytes": 197197,
+      "sha256": "e33670ab526ae2caae7e5f20abc702a7289b2812082265cedd03ee1f60799315"
+    },
+    {
+      "name": "templates.jsonl",
+      "bytes": 357321,
+      "sha256": "4dbec2659c2069289cea5f29bd184381f06c17218640731f152104b42ef9fce1"
+    },
+    {
+      "name": "tests.csv",
+      "bytes": 418669,
+      "sha256": "2771ad932a6caa00139e0af3e7856c1b69c78df6e2fee3aecfe8f70070d92509"
+    },
+    {
+      "name": "tests.jsonl",
+      "bytes": 894971,
+      "sha256": "03b21a1df70080752a285799d49d18cabccba4bc01c6443679f8ecc6fc60fa17"
+    },
+    {
+      "name": "validation_report.csv",
+      "bytes": 769,
+      "sha256": "c93822c1d942ff47fde8e96867522bc4fba9add632d32b3fb5a4b427859533ce"
+    },
+    {
+      "name": "validation_report.json",
+      "bytes": 2250,
+      "sha256": "08af889302e83e34f09e5bdfcd701700ab6e3784ba88eaa20aa9089be42b2908"
+    }
+  ]
+}
