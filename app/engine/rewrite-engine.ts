@@ -41,6 +41,30 @@ const customRules: StringRule[] = [
   { id: "RUL-0067", pattern: /我先([^，。！？]+)/g, replacement: "我$1先" },
 ];
 
+// Plain (literal string) rule sources of length >= 2, gathered from both the
+// built-in customRules and the data-driven direct rules. Used by the translator
+// to decide when a longer rewrite rule should win over a shorter lexicon entry
+// (true longest-match), preventing e.g. 不是→唔係 from shadowing 是不是→係咪.
+export function getPlainRuleSources(rules: RewriteRule[]): string[] {
+  const sources = new Set<string>();
+
+  for (const rule of customRules) {
+    if (typeof rule.pattern === "string" && Array.from(rule.pattern).length >= 2) {
+      sources.add(rule.pattern);
+    }
+  }
+  for (const rule of rules) {
+    if (
+      isDirectPattern(rule.source_pattern) &&
+      Array.from(rule.source_pattern).length >= 2
+    ) {
+      sources.add(rule.source_pattern);
+    }
+  }
+
+  return [...sources];
+}
+
 export function applyRewriteRules(text: string, rules: RewriteRule[]) {
   const features: MatchedFeature[] = [];
   let next = text;

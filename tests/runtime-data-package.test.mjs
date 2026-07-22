@@ -19,7 +19,7 @@ test("latest runtime data package passes manifest and validation checks", () => 
   assert.equal(manifest.version, "1.2.0");
   assert.equal(runtimeCore.version, manifest.version);
   assert.equal(validationReport.passed, true);
-  assert.equal(manifest.counts.translation_units, 1038);
+  assert.equal(manifest.counts.translation_units, 1288);
 
   assert.equal(runtimeCore.phrases.length, manifest.counts.phrases);
   assert.equal(runtimeCore.lexicon.length, manifest.counts.lexicon);

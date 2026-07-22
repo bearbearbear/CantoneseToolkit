@@ -14,7 +14,8 @@ export function postProcess(
     .replace(/點行/g, "點行")
     .replace(/東西/g, "嘢")
     .replace(/但是/g, "但係")
-    .replace(/的/g, "嘅")
+    // Possessive/attributive 的 -> 嘅, but keep 的士 (taxi) intact.
+    .replace(/的(?!士)/g, "嘅")
     .replace(/([？?])$/g, "？")
     .replace(/([。!！])$/g, (mark) => (mark === "！" || mark === "!" ? "！" : "。"))
     .replace(/呀呀/g, "呀")

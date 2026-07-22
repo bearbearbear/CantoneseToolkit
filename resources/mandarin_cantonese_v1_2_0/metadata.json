@@ -5,13 +5,13 @@
   "architecture": "fixed phrases + typed templates + slot values + rewrite rules + lexicon",
   "counts": {
     "phrases": 369,
-    "lexicon": 214,
+    "lexicon": 464,
     "templates": 272,
     "rules": 183,
     "slot_types": 60,
     "slot_values": 1019,
     "tests": 3263,
-    "translation_units": 1038,
+    "translation_units": 1288,
     "old_generated_phrases_removed": 6477,
     "old_generated_templates_replaced": 709,
     "controlled_frame_capacity": 16515

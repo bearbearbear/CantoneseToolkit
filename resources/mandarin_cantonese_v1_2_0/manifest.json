@@ -3,13 +3,13 @@
   "build_date": "2026-07-21",
   "counts": {
     "phrases": 369,
-    "lexicon": 214,
+    "lexicon": 464,
     "templates": 272,
     "rules": 183,
     "slot_types": 60,
     "slot_values": 1019,
     "tests": 3263,
-    "translation_units": 1038,
+    "translation_units": 1288,
     "old_generated_phrases_removed": 6477,
     "old_generated_templates_replaced": 709,
     "controlled_frame_capacity": 16515
@@ -48,13 +48,13 @@
     },
     {
       "name": "lexicon.csv",
-      "bytes": 16348,
-      "sha256": "b267ddbc6d409cf5a08e38c9eeb615195b159abb1f1ff3778a8c6e977906e078"
+      "bytes": 42891,
+      "sha256": "efe4c59e571b377369032b3080e36853a82fe9422cbedd62890a6c32af88a993"
     },
     {
       "name": "lexicon.jsonl",
-      "bytes": 48148,
-      "sha256": "c01d46c3564c692ad6c836e6764d8254043a8ff3059c636b720cf1a79fa69c03"
+      "bytes": 111940,
+      "sha256": "676c8baf79542076882aaad7dba2698a2a5bc51cc7c9713bd4d524bd0c2c356d"
     },
     {
       "name": "mandarin_cantonese_translation_data_v1_2_0.xlsx",
@@ -64,7 +64,7 @@
     {
       "name": "metadata.json",
       "bytes": 1207,
-      "sha256": "036eebe859ccb8e8f520f086b12635f4d016b00d94526217e6955a1a6d8cc79a"
+      "sha256": "f243c3572fccb1bb4b1fe2a0f02c0423a3388f4aa3b48dc7f6e23cd1c154f560"
     },
     {
       "name": "phrase_migration.csv",
@@ -93,8 +93,8 @@
     },
     {
       "name": "runtime-core-v1.2.0.json",
-      "bytes": 713856,
-      "sha256": "05e90f20068785ef108c74a7b8327d2965d3bb8cf455761c7bfee4076872ba4e"
+      "bytes": 772398,
+      "sha256": "c15e37213f0145edca08eaf20852088010e3771a4d3a9b79129a00c4abac8db6"
     },
     {
       "name": "schema.json",
@@ -138,13 +138,13 @@
     },
     {
       "name": "tests.csv",
-      "bytes": 428332,
-      "sha256": "c06d03252ad4f44bbf531035968254a1761766f7f9b64a865916d6a3bfb30dc2"
+      "bytes": 431622,
+      "sha256": "b8d97a43752d967ff80b1ab2833f7e21bd3190ed1a76ec93857ed3d2570494dd"
     },
     {
       "name": "tests.jsonl",
-      "bytes": 904661,
-      "sha256": "d9a5b81229f1f0035541fa566d1c20cb0555183d700c3852ba0f3af086bdc7d2"
+      "bytes": 950336,
+      "sha256": "08efbf5f2bbb0e6b111eedc33d16c09b7c2d56d26e513875d0bd98d9e06da3f8"
     },
     {
       "name": "validation_report.csv",
@@ -154,7 +154,7 @@
     {
       "name": "validation_report.json",
       "bytes": 1793,
-      "sha256": "7a4179962949dc93fff49b02c673389afc17e33bdd59242592bf43cfbdfb8290"
+      "sha256": "caf0cc9735a5c5ded81299a9122bf2080700f70c5bddd2b50688668ad43bb38a"
     }
   ]
 }

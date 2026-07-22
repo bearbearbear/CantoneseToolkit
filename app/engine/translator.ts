@@ -21,7 +21,7 @@ import type {
   TranslationResult,
 } from "./schema";
 import { compileTemplates, matchTemplate } from "./template-matcher";
-import { applyRewriteRules } from "./rewrite-engine";
+import { applyRewriteRules, getPlainRuleSources } from "./rewrite-engine";
 import { generateCandidates } from "./candidate-generator";
 import { scoreCandidate } from "./scorer";
 
@@ -54,6 +54,7 @@ function buildTranslatorRuntime(core: RuntimeCore) {
     core,
     trie: createTrie(entries),
     templates: compileTemplates(core.templates),
+    plainRuleSources: getPlainRuleSources(core.rules),
   };
 }
 
@@ -185,16 +186,148 @@ function translateSlot(
   }).text.replace(/[。！？]$/, "");
 }
 
+// Lexicon `condition` values the engine can actually evaluate. Entries carrying
+// any other (declared-but-unimplemented) condition are sense-split senses that
+// must NOT win unconditionally, so they are left for the rewrite rules to
+// resolve into the default sense.
+const IMPLEMENTED_CONDITIONS = new Set(["learned_skill"]);
+const PROTECT_OPEN = "\uE000";
+const PROTECT_CLOSE = "\uE001";
+const PROTECT_PATTERN = /\uE000(\d+)\uE001/g;
+
+// A lexicon match is "confident" — and therefore protected from rewrite rules
+// breaking it apart — when it is a multi-character LEXICON entry (phrases are
+// excluded: they carry sentence-final particles and full-sentence phrases are
+// already handled by the exact-match short-circuit) whose condition, if any,
+// the engine can actually evaluate. Single-char and unimplemented-condition
+// matches fall through to the rules.
+function isConfidentMatch(segment: {
+  source: string;
+  entry: { id: string; condition?: string } | null;
+}): boolean {
+  if (!segment.entry) {
+    return false;
+  }
+  if (!segment.entry.id.startsWith("LEX-")) {
+    return false;
+  }
+  if (Array.from(segment.source).length < 2) {
+    return false;
+  }
+  const condition = segment.entry.condition;
+  return !condition || IMPLEMENTED_CONDITIONS.has(condition);
+}
+
+// True when a plain rewrite rule covers the [start, end) span with a match that
+// is longer than it (so the longer rule should win — true longest-match) or is
+// exactly co-extensive with it (preserving the original rules-first behavior
+// when a rule and a lexicon entry share the same source). This keeps entries
+// like 不是→唔係 from shadowing longer rules such as 是不是→係咪.
+function coveredByStrongerRule(
+  chars: string[],
+  start: number,
+  end: number,
+  ruleSources: string[],
+): boolean {
+  const spanLen = end - start;
+
+  for (const source of ruleSources) {
+    const ruleChars = Array.from(source);
+    const ruleLen = ruleChars.length;
+    if (ruleLen < spanLen) {
+      continue;
+    }
+
+    for (let pos = 0; pos + ruleLen <= chars.length; pos += 1) {
+      if (pos >= end || pos + ruleLen <= start) {
+        continue; // no overlap with the span
+      }
+      let matches = true;
+      for (let offset = 0; offset < ruleLen; offset += 1) {
+        if (chars[pos + offset] !== ruleChars[offset]) {
+          matches = false;
+          break;
+        }
+      }
+      if (!matches) {
+        continue;
+      }
+      if (ruleLen > spanLen) {
+        return true;
+      }
+      if (pos === start) {
+        return true; // same span, same length -> rule wins as before
+      }
+    }
+  }
+
+  return false;
+}
+
 function ruleAndLexiconCandidate(
   runtime: TranslatorRuntime,
   text: string,
   scene: string,
 ) {
   const cleaned = cleanInputText(text);
-  const rewritten = applyRewriteRules(cleaned, runtime.core.rules);
-  const segments = tokenizeByTrie(rewritten.text, runtime.trie, scene);
-  const target = segmentsToText(segments);
-  const features = [...rewritten.features, ...segmentFeatures(segments)];
+
+  // 1. Locate curated phrase/lexicon matches on the Mandarin text and mask the
+  //    confident, multi-character ones with sentinels so the rewrite rules
+  //    cannot fracture them (e.g. 在→喺 breaking 现在→而家, 的→嘅 breaking
+  //    出租车→的士). Everything else keeps its Mandarin source.
+  const cleanedChars = Array.from(cleaned);
+  const initialSegments = tokenizeByTrie(cleaned, runtime.trie, scene);
+  const protectedEntries: Array<{ target: string; feature: MatchedFeature }> = [];
+  let masked = "";
+  let position = 0;
+
+  for (const segment of initialSegments) {
+    const segmentLength = Array.from(segment.source).length;
+    const start = position;
+    const end = position + segmentLength;
+    position = end;
+
+    if (
+      isConfidentMatch(segment) &&
+      segment.entry &&
+      !coveredByStrongerRule(cleanedChars, start, end, runtime.plainRuleSources)
+    ) {
+      masked += `${PROTECT_OPEN}${protectedEntries.length}${PROTECT_CLOSE}`;
+      protectedEntries.push({
+        target: segment.target,
+        feature: {
+          id: segment.entry.id,
+          kind: "lexicon",
+          source: segment.source,
+          target: segment.target,
+        },
+      });
+    } else {
+      masked += segment.source;
+    }
+  }
+
+  // 2. Apply rewrite rules over the masked text (sentinels are inert to them).
+  const rewritten = applyRewriteRules(masked, runtime.core.rules);
+
+  // 3. Re-tokenize the rewritten text so single-character and any remaining
+  //    lexicon entries still apply (this mirrors the original pipeline, which
+  //    ran the trie after the rules). Sentinels pass through as unmatched.
+  const finalSegments = tokenizeByTrie(rewritten.text, runtime.trie, scene);
+  const trieFeatures = segmentFeatures(finalSegments);
+
+  // 4. Restore protected lexicon/phrase targets.
+  const restoredFeatures: MatchedFeature[] = [];
+  const target = segmentsToText(finalSegments).replace(
+    PROTECT_PATTERN,
+    (_match, index) => {
+      const entry = protectedEntries[Number(index)];
+      restoredFeatures.push(entry.feature);
+      return entry.target;
+    },
+  );
+
+  const features = [...rewritten.features, ...trieFeatures, ...restoredFeatures];
   const warnings = features.length === 0 ? ["未命中明确词条或规则。"] : [];
 
   return { target, matchedFeatures: features, warnings };
