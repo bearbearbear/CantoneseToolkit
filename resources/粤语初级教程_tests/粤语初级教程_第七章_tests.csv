@@ -1,0 +1,9 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-C07-001,走到码头那边，还有往机场的巴士服务。,出到碼頭嗰便，仲有機場巴士搭𠻹。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第7章 交通，PDF第86页；OCR相邻对译抽取,draft
+BOOK-C07-002,再拨一个电话给他。,打個電話畀佢𠻹。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第7章 交通，PDF第86页；OCR相邻对译抽取,draft
+BOOK-C07-003,我不知道他在这儿。,我唔知佢喺度㖭。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第7章 交通，PDF第86页；OCR相邻对译抽取,draft
+BOOK-C07-004,坐车的在这儿排队。,搭車嘅喺呢度排隊。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第7章 交通，PDF第88页；OCR相邻对译抽取,draft
+BOOK-C07-005,小的七十块钱。,細嘅七十文。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第7章 交通，PDF第88页；OCR相邻对译抽取,draft
+BOOK-C07-006,他坐的是十路汽车。,佢搭嘅係十號車。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第7章 交通，PDF第88页；OCR相邻对译抽取,draft
+BOOK-C07-007,他讲的我听不明白。,佢講嘅我聽唔明。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第7章 交通，PDF第88页；OCR相邻对译抽取,draft
+BOOK-C07-008,你想着点儿替我问他好。,你幫我問候佢先至好。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第7章 交通，PDF第89页；OCR相邻对译抽取,draft

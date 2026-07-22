@@ -1,0 +1,9 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-P2C06-001,你知道麦兜什么时候出生的吗？,你知唔知麥兜幾時出世㗎？,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第6章 麦兜，PDF第172页；OCR相邻对译抽取,draft
+BOOK-P2C06-002,粉红色？挺讨人喜欢的。肯定是智商一流了。,粉紅色？好得意噃。梗係IQ爆棚嗰停嘞。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第6章 麦兜，PDF第172页；OCR相邻对译抽取,draft
+BOOK-P2C06-003,傻呵呵的，可没有害人之心。,諗法死蠢，但係冇害人之心。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第6章 麦兜，PDF第172页；OCR相邻对译抽取,draft
+BOOK-P2C06-004,对，你听到了笑不出来，但会有感触。,係呀，你聽到笑唔出，但會有感觸。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第6章 麦兜，PDF第172页；OCR相邻对译抽取,draft
+BOOK-P2C06-005,喜爱的卡通人物。,中意嘅卡通人物。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第6章 麦兜，PDF第173页；OCR相邻对译抽取,draft
+BOOK-P2C06-006,说是以美国英雄漫画为蓝本。,話係學足美國英雄漫畫㗎。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第6章 麦兜，PDF第174页；OCR相邻对译抽取,draft
+BOOK-P2C06-007,那就有了生存空间。,噉就有生存空間啦。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第6章 麦兜，PDF第174页；OCR相邻对译抽取,draft
+BOOK-P2C06-008,什至远至美加还是有市场的。,甚至遠至美加都仲係有市場嘅。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第6章 麦兜，PDF第174页；OCR相邻对译抽取,draft

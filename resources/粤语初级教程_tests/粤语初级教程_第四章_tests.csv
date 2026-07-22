@@ -1,0 +1,15 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-C04-001,我下午一点半到你那里，行不行？,我下晝點半到你嗰度，得唔得？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第45页；OCR相邻对译抽取,draft
+BOOK-C04-002,傍晚下了班来接你。,挨晚放咗工嚟接你。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第45页；OCR相邻对译抽取,draft
+BOOK-C04-003,我现在很忙，这件事往后再谈。,我而家好忙，呢件事遲啲先傾。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第45页；OCR相邻对译抽取,draft
+BOOK-C04-004,今天太忙，改天吧。,今日太忙，第二日好唔好？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第46页；OCR相邻对译抽取,draft
+BOOK-C04-005,没有别的活干？,有冇第二啲嘢做？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第46页；OCR相邻对译抽取,draft
+BOOK-C04-006,明天不行，那就后天吧。,聽日唔得，就後日先啦。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第46页；OCR相邻对译抽取,draft
+BOOK-C04-007,这个月吧。,呢個月先啦。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第47页；OCR相邻对译抽取,draft
+BOOK-C04-008,等我打完电话先。,等我打個電話畀佢先。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第47页；OCR相邻对译抽取,draft
+BOOK-C04-009,我的名字是这样写的。,．我嘅名係噉寫嘅。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第51页；OCR相邻对译抽取,draft
+BOOK-C04-010,不贵，才十块钱。,唔貴，十文啫。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第51页；OCR相邻对译抽取,draft
+BOOK-C04-011,你记错时间了。,你記錯時間嘞。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第52页；OCR相邻对译抽取,draft
+BOOK-C04-012,他什么时候离开的？,佢幾時行開咗㗎？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第52页；OCR相邻对译抽取,draft
+BOOK-C04-013,十一月六号係礼拜几呀？,你哋邊個喺下個禮拜日得閒呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第54页；OCR相邻对译抽取,draft
+BOOK-C04-014,下个星期五係几号呀？,十一月二十號係唔係禮拜日呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第4章 约会，PDF第54页；OCR相邻对译抽取,draft

@@ -55,7 +55,28 @@ function buildTranslatorRuntime(core: RuntimeCore) {
     trie: createTrie(entries),
     templates: compileTemplates(core.templates),
     plainRuleSources: getPlainRuleSources(core.rules),
+    ambiguousLexiconSources: getAmbiguousLexiconSources(core.lexicon),
   };
+}
+
+// Sources that map to more than one lexicon entry (sense-split senses, e.g.
+// 不要→唔好 / 不要→唔要). We cannot tell which sense applies without the
+// unimplemented conditions, so these are NOT sentinel-protected: they fall
+// through to the rewrite rules, which resolve them into the default sense.
+function getAmbiguousLexiconSources(
+  lexicon: RuntimeCore["lexicon"],
+): Set<string> {
+  const counts = new Map<string, number>();
+  for (const entry of lexicon) {
+    counts.set(entry.source, (counts.get(entry.source) ?? 0) + 1);
+  }
+  const ambiguous = new Set<string>();
+  for (const [source, count] of counts) {
+    if (count > 1) {
+      ambiguous.add(source);
+    }
+  }
+  return ambiguous;
 }
 
 function translateWithRuntime(
@@ -186,25 +207,29 @@ function translateSlot(
   }).text.replace(/[。！？]$/, "");
 }
 
+const PROTECT_OPEN = "\uE000";
+const PROTECT_CLOSE = "\uE001";
+const PROTECT_PATTERN = /\uE000(\d+)\uE001/g;
+
 // Lexicon `condition` values the engine can actually evaluate. Entries carrying
 // any other (declared-but-unimplemented) condition are sense-split senses that
 // must NOT win unconditionally, so they are left for the rewrite rules to
 // resolve into the default sense.
 const IMPLEMENTED_CONDITIONS = new Set(["learned_skill"]);
-const PROTECT_OPEN = "\uE000";
-const PROTECT_CLOSE = "\uE001";
-const PROTECT_PATTERN = /\uE000(\d+)\uE001/g;
 
 // A lexicon match is "confident" — and therefore protected from rewrite rules
 // breaking it apart — when it is a multi-character LEXICON entry (phrases are
 // excluded: they carry sentence-final particles and full-sentence phrases are
 // already handled by the exact-match short-circuit) whose condition, if any,
-// the engine can actually evaluate. Single-char and unimplemented-condition
-// matches fall through to the rules.
-function isConfidentMatch(segment: {
-  source: string;
-  entry: { id: string; condition?: string } | null;
-}): boolean {
+// the engine can evaluate, and whose source is not sense-ambiguous. Single-char
+// / unimplemented-condition / ambiguous matches fall through to the rules.
+function isConfidentMatch(
+  segment: {
+    source: string;
+    entry: { id: string; condition?: string } | null;
+  },
+  ambiguousSources: Set<string>,
+): boolean {
   if (!segment.entry) {
     return false;
   }
@@ -215,7 +240,15 @@ function isConfidentMatch(segment: {
     return false;
   }
   const condition = segment.entry.condition;
-  return !condition || IMPLEMENTED_CONDITIONS.has(condition);
+  // Trie already evaluated implemented conditions; protect those hits.
+  if (condition) {
+    return IMPLEMENTED_CONDITIONS.has(condition);
+  }
+  // Unconditional but sense-ambiguous sources fall through to rules.
+  if (ambiguousSources.has(segment.source)) {
+    return false;
+  }
+  return true;
 }
 
 // True when a plain rewrite rule covers the [start, end) span with a match that
@@ -288,7 +321,7 @@ function ruleAndLexiconCandidate(
     position = end;
 
     if (
-      isConfidentMatch(segment) &&
+      isConfidentMatch(segment, runtime.ambiguousLexiconSources) &&
       segment.entry &&
       !coveredByStrongerRule(cleanedChars, start, end, runtime.plainRuleSources)
     ) {

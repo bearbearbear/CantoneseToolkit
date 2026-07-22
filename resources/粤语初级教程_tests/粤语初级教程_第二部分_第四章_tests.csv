@@ -1,0 +1,16 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-P2C04-001,对不起，你那件事没法解决。,唔好意思，你嗰件事冇得傾。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第151页；OCR相邻对译抽取,draft
+BOOK-P2C04-002,你说今年的苹果iPhone能炒起来吗？,你話今年嘅蘋果iPhone炒唔炒得起吖嗱？,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第152页；OCR相邻对译抽取,draft
+BOOK-P2C04-003,需求大，有一定的二手炒卖市场。,需求大，有一定嘅二手炒賣市場。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第152页；OCR相邻对译抽取,draft
+BOOK-P2C04-004,当然有，内地的需求当然受影响了。,梗係有啦，內地嘅需求梗受影響啦。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第152页；OCR相邻对译抽取,draft
+BOOK-P2C04-005,不过，港版机比内地机便宜九百块钱哪。,不過，港版機平內地機成九百蚊噃。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第152页；OCR相邻对译抽取,draft
+BOOK-P2C04-006,而且销路不明朗。,而且銷路唔明朗。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第152页；OCR相邻对译抽取,draft
+BOOK-P2C04-007,听说有部玫瑰金挺厉害的。,聽講有隻玫瑰金幾犀利㗎。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第152页；OCR相邻对译抽取,draft
+BOOK-P2C04-008,根去买一隻好的手錶，到哪儿买好呀？,想去買番隻靚錶，去邊度買好呀？,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第153页；OCR相邻对译抽取,draft
+BOOK-P2C04-009,不过你得注意别让人家宰。,不過你要注意唔好畀人劏噃。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第153页；OCR相邻对译抽取,draft
+BOOK-P2C04-010,我就害怕给人宰。,我就怕呢樣。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第153页；OCR相邻对译抽取,draft
+BOOK-P2C04-011,“优”呀“正”呀标签的专门店。,“優”呀“正”呀標籤嘅專門店。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第154页；OCR相邻对译抽取,draft
+BOOK-P2C04-012,那是，我会特别小心的了。,係噃，我會打醒精神㗎嘞。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第154页；OCR相邻对译抽取,draft
+BOOK-P2C04-013,别贪图便宜买水货。,唔好貪平買水貨。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第154页；OCR相邻对译抽取,draft
+BOOK-P2C04-014,怎么才算是买到了行货？,點為之買行貨呢？,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第154页；OCR相邻对译抽取,draft
+BOOK-P2C04-015,品牌手錶都有公价，记得向商店索取产地来源证明啊。,品牌手錶都有公價，記得向店舖攞出世紙呀。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第4章 香港购物，PDF第154页；OCR相邻对译抽取,draft

@@ -1,0 +1,18 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-P2C08-001,那里不远，走不了十分钟就到。,嗰度近近哋，行個零字就到。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第190页；OCR相邻对译抽取,draft
+BOOK-P2C08-002,我们那天差点儿迟到了。,我們嗰日差唔多遲到咁滯。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第191页；OCR相邻对译抽取,draft
+BOOK-P2C08-003,还是比较喜欢爬山。,都係中意行山多啲。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第192页；OCR相邻对译抽取,draft
+BOOK-P2C08-004,那不是“欺山莫欺水”吗？,咪係“欺山莫欺水”吖嘛。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第192页；OCR相邻对译抽取,draft
+BOOK-P2C08-005,但脚力一点儿不能少。,但係少啲腳骨力都唔得㗎。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第192页；OCR相邻对译抽取,draft
+BOOK-P2C08-006,全港听说有三百五十多座山。,全港聽講有三百五十幾座山噃。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第192页；OCR相邻对译抽取,draft
+BOOK-P2C08-007,说说你爬山的光荣历史来听听。,講講你行山嘅威水史嚟聽吓。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第192页；OCR相邻对译抽取,draft
+BOOK-P2C08-008,差不多有一千公尺。全都去过。,差唔多成千公尺咁滯。都行過。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第193页；OCR相邻对译抽取,draft
+BOOK-P2C08-009,大帽山，就是大雾山，是吧？,大帽山，即係大霧山咪呀？,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第193页；OCR相邻对译抽取,draft
+BOOK-P2C08-010,我们曾经在深夜驾车上去观雪。,我哋試過夜晚黑開車上去睇雪。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第193页；OCR相邻对译抽取,draft
+BOOK-P2C08-011,你选定了没有？去大屿山、南丫岛还是长洲？,我呢，喜歡獅子山。光看，還沒有上過。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第193页；OCR相邻对译抽取,draft
+BOOK-P2C08-012,我最怕人多。,我至怕多人㗎嘞。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第193页；OCR相邻对译抽取,draft
+BOOK-P2C08-013,这个时节去，能看什么？,呢個時節去，可以睇啲乜？,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第194页；OCR相邻对译抽取,draft
+BOOK-P2C08-014,现在已经五月底了，太平清蘸已经完了。,而家都五月底咯，太平清蘸完咗咯。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第194页；OCR相邻对译抽取,draft
+BOOK-P2C08-015,不然的话，大家看飘色巡游，会挤得水泄不通。,唔係呀，啲人睇飄色巡遊，逼到冚一冚。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第194页；OCR相邻对译抽取,draft
+BOOK-P2C08-016,对，对了，抢包山。,呀，係噃，搶包山噃。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第194页；OCR相邻对译抽取,draft
+BOOK-P2C08-017,好呀。这条船一定要坐坐。,好嘢。呢條船實要坐吓。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第8章 郊游与海滩，PDF第194页；OCR相邻对译抽取,draft

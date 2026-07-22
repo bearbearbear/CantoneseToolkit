@@ -1,0 +1,15 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-P2C03-001,我应该给你，还是给他？,③我應該畀你，定係畀佢？,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第141页；OCR相邻对译抽取,draft
+BOOK-P2C03-002,走得累极了，找个地方歇歇腿吧。,行到瘤到死，搵地方唞吓隻腳嘍喂。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第142页；OCR相邻对译抽取,draft
+BOOK-P2C03-003,真巧，前面就有一家茶餐厅。,好嘢，前面有間茶餐廳。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第142页；OCR相邻对译抽取,draft
+BOOK-P2C03-004,你喝什么？我先来一杯冻柠檬茶。,你飲啲乜？我先嚟杯凍檸茶。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第142页；OCR相邻对译抽取,draft
+BOOK-P2C03-005,感觉有点儿饿了，劳驾来一个菠萝包夹黄油，来四个吧。,有少少餓𠻹，唔該嚟個菠蘿油，嚟四個啦。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第142页；OCR相邻对译抽取,draft
+BOOK-P2C03-006,三个够了。我不吃，怕油腻。,三個好喇。我唔食，怕肥。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第142页；OCR相邻对译抽取,draft
+BOOK-P2C03-007,劳驾结账，我请客。,內：唔該埋單，我請。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第142页；OCR相邻对译抽取,draft
+BOOK-P2C03-008,时间不多，就在这儿吃算了。,時間唔多，就喺呢度食罷啦。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第143页；OCR相邻对译抽取,draft
+BOOK-P2C03-009,那儿刚好有四个人坐的卡座。,啱好嗰度有四個人嘅卡位。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第143页；OCR相邻对译抽取,draft
+BOOK-P2C03-010,大家吃什么，快点儿要。,大家食乜，快啲叫。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第143页；OCR相邻对译抽取,draft
+BOOK-P2C03-011,四客乾炒牛肉河粉，再来一小锅生菜鱼片粥。,四個乾炒牛河，再嚟一窩生菜魚片粥。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第143页；OCR相邻对译抽取,draft
+BOOK-P2C03-012,这儿的乾炒牛肉河粉行不行啊？,呢度啲乾炒牛河掂唔掂㗎？,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第143页；OCR相邻对译抽取,draft
+BOOK-P2C03-013,蘸着芥末吃，没治了。,點啲芥辣一流。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第143页；OCR相邻对译抽取,draft
+BOOK-P2C03-014,所以我说呀，味道确实属于集体回忆。,所以話呢，味道屬於集體回憶嚟㗎。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第3章 茶餐厅，PDF第143页；OCR相邻对译抽取,draft

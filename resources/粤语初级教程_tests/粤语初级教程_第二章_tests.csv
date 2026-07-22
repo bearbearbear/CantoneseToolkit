@@ -1,0 +1,25 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-C02-001,家里挺好吧？,屋企人幾好嗎？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第18页；OCR相邻对译抽取并复核,active
+BOOK-C02-002,近来忙些什么？,近排忙啲乜嘢呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第18页；OCR相邻对译抽取并复核,active
+BOOK-C02-003,祝你事业有成。——彼此彼此。,祝你事業有成。——大家噉話。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第18页；OCR相邻对译抽取并复核,active
+BOOK-C02-004,好，就这样吧。,好，就噉啦。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第19页；OCR相邻对译抽取并复核,active
+BOOK-C02-005,自行车修好了。,單車整好咗嘞。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第20页；OCR相邻对译抽取并复核,active
+BOOK-C02-006,三点了，该走了。,三點鐘嘞，好走嘞。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第20页；OCR相邻对译抽取并复核,active
+BOOK-C02-007,现在好多了。,而家好咗好多。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第20页；OCR相邻对译抽取并复核,active
+BOOK-C02-008,认识了一些人。,識咗啲人。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第21页；OCR相邻对译抽取并复核,active
+BOOK-C02-009,写了一些信。,寫咗啲信。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第21页；OCR相邻对译抽取并复核,active
+BOOK-C02-010,最近我们忙了一点儿。,呢排我哋忙啲。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第21页；OCR相邻对译抽取并复核,active
+BOOK-C02-011,最近东西贵了一点儿。,呢排啲嘢貴咗啲。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第21页；OCR相邻对译抽取并复核,active
+BOOK-C02-012,他比我瘦。,佢瘦過我。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第21页；OCR相邻对译抽取并复核,active
+BOOK-C02-013,他现在比以前瘦。,佢而家瘦過以前。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第21页；OCR相邻对译抽取并复核,active
+BOOK-C02-014,麻烦你帮我做点事情。,唔該你幫我做啲嘢吖！,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第22页；OCR相邻对译抽取并复核,active
+BOOK-C02-015,习惯不习惯？,慣唔慣呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第24页；OCR相邻对译抽取并复核,active
+BOOK-C02-016,你去不去？,你去唔去呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第24页；OCR相邻对译抽取并复核,active
+BOOK-C02-017,你认不认识他？,你識唔識佢呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第24页；OCR相邻对译抽取并复核,active
+BOOK-C02-018,你吃什么？,你食乜嘢呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第25页；OCR相邻对译抽取并复核,active
+BOOK-C02-019,你叫什么名字？,你叫乜嘢名呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第25页；OCR相邻对译抽取并复核,active
+BOOK-C02-020,你怎么来的？,你點樣嚟㗎？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第25页；OCR相邻对译抽取并复核,active
+BOOK-C02-021,你是哪里人？,你係邊度人呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第25页；OCR相邻对译抽取并复核,active
+BOOK-C02-022,他到哪儿去了？,佢去咗邊度呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第25页；OCR相邻对译抽取并复核,active
+BOOK-C02-023,你什么时候来？,你幾時嚟呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第25页；OCR相邻对译抽取并复核,active
+BOOK-C02-024,你什么时候见他？,你幾時見佢呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第2章 问候，PDF第25页；OCR相邻对译抽取并复核,active

@@ -1,0 +1,15 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-C08-001,近来返潮，抽湿机整天都开着。,呢排回南，成日開住抽濕機。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第97页；OCR相邻对译抽取,draft
+BOOK-C08-002,这阵子刮风下雨，穿上风衣吧。,呢排翻風落雨，着番件風褸啦。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第97页；OCR相邻对译抽取,draft
+BOOK-C08-003,他说完我就说不是这样的。,佢講完我就話唔係噉。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第98页；OCR相邻对译抽取,draft
+BOOK-C08-004,星期六上午要上班。,禮拜六朝早要返工。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第99页；OCR相邻对译抽取,draft
+BOOK-C08-005,今天好像挺热的。,今日好似好熱噉。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第99页；OCR相邻对译抽取,draft
+BOOK-C08-006,他好像忙得不可开交似的。,佢好似好唔得閒噉。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第99页；OCR相邻对译抽取,draft
+BOOK-C08-007,公共汽车里好像挤满了人。,架巴士好似有好多人噉。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第99页；OCR相邻对译抽取,draft
+BOOK-C08-008,还是你去好。,都係你去好啲。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第100页；OCR相邻对译抽取,draft
+BOOK-C08-009,还是早上去好。,都係朝頭早去好啲。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第100页；OCR相邻对译抽取,draft
+BOOK-C08-010,还是用信用咭付款好。,都係轆咭好啲。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第100页；OCR相邻对译抽取,draft
+BOOK-C08-011,还是坐地铁好。,都係搭地鐵好啲。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第100页；OCR相邻对译抽取,draft
+BOOK-C08-012,还是先打个电话好。,都係打個電話先好啲。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第100页；OCR相邻对译抽取,draft
+BOOK-C08-013,天气不好，可得带上雨伞。,天時唔好，帶番把遮。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第101页；OCR相邻对译抽取,draft
+BOOK-C08-014,不用上班嘛。,唔使返工吖嘛。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第8章 天气，PDF第103页；OCR相邻对译抽取,draft

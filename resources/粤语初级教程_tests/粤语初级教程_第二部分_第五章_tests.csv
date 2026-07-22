@@ -1,0 +1,13 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-P2C05-001,酱那儿卖的蛋糕块儿大又好吃。,臭嗰度賣嘅蛋糕大件兼夾好食。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第160页；OCR相邻对译抽取,draft
+BOOK-P2C05-002,他演艺高超，你不能不服。,佢演藝高超，唔到你唔服。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第161页；OCR相邻对译抽取,draft
+BOOK-P2C05-003,维多利亚城的？,維多利亞城呢吓？,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第162页；OCR相邻对译抽取,draft
+BOOK-P2C05-004,即建立了维多利亚城。,就建立咗維多利亞城。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第162页；OCR相邻对译抽取,draft
+BOOK-P2C05-005,那个地段。出了湾仔就等于出了城。,嗰個地段。出咗灣仔就等於出咗城。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第162页；OCR相邻对译抽取,draft
+BOOK-P2C05-006,存在了，只剩下维港这个名字。,存在嘞，得番維港呢個名。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第162页；OCR相邻对译抽取,draft
+BOOK-P2C05-007,稀奇古怪，这该怎么说？,古靈精怪，點講呢？,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第163页；OCR相邻对译抽取,draft
+BOOK-P2C05-008,重庆人跑来盖的？,乜重慶人嚟起㗎？,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第164页；OCR相邻对译抽取,draft
+BOOK-P2C05-009,黄金地段盖起来为纪念抗战胜利的。,黃金地段起嚟紀念抗戰勝利嘅。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第164页；OCR相邻对译抽取,draft
+BOOK-P2C05-010,不同文化的人，真是有其特色。,唔同文化嘅人，又係幾特別嘅喎。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第164页；OCR相邻对译抽取,draft
+BOOK-P2C05-011,感觉到的是包容、认同和商机。,感覺到嘅係包容、認同、商機。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第164页；OCR相邻对译抽取,draft
+BOOK-P2C05-012,香港人很现实，有钱大家赚好了。,香港人好實際，有錢大家搵吖嘛。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第5章 香港街区，PDF第164页；OCR相邻对译抽取,draft

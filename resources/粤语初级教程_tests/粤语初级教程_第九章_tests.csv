@@ -1,0 +1,8 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-C09-001,这里不设立吸烟区，请你不要吸烟。,呢度唔設吸煙區，唔該你唔好食煙。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第9章 饮食，PDF第108页；OCR相邻对译抽取,draft
+BOOK-C09-002,早上饮茶看报纸，我已非常习惯。,我慣晒朝早飲茶，睇報紙。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第9章 饮食，PDF第108页；OCR相邻对译抽取,draft
+BOOK-C09-003,晚上在家做饭，喝汤是少不了的。,晚黑食住家飯，飲湯唔少得。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第9章 饮食，PDF第108页；OCR相邻对译抽取,draft
+BOOK-C09-004,麻烦你替我问候他一声吧。,唔該你同我問候佢一聲啦。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第9章 饮食，PDF第109页；OCR相邻对译抽取,draft
+BOOK-C09-005,要不然我就不在这儿了。,唔係我就唔喺度㗎嘞。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第9章 饮食，PDF第110页；OCR相邻对译抽取,draft
+BOOK-C09-006,要不然我就不等你了。,唔係我就唔等你㗎嘞。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第9章 饮食，PDF第110页；OCR相邻对译抽取,draft
+BOOK-C09-007,那你可以有更多时间支配了吗。,噉，你又可以有多啲時間嘅啫。,dining,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第9章 饮食，PDF第112页；OCR相邻对译抽取,draft

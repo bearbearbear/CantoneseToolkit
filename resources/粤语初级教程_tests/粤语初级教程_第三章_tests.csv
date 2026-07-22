@@ -1,0 +1,17 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-C03-001,他不在，你打他的手机吧。,佢唔喺度，你打佢手機啦。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第31页；OCR相邻对译抽取并复核,active
+BOOK-C03-002,你有他的手机号码吗？,你有冇佢嘅手機冧巴呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第31页；OCR相邻对译抽取并复核,active
+BOOK-C03-003,糟了，我手机快没电了。,𡃇，我手機就嚟冇電。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第31页；OCR相邻对译抽取并复核,active
+BOOK-C03-004,你早点儿来就好了！,你早啲嚟就好嘞！,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第32页；OCR相邻对译抽取并复核,active
+BOOK-C03-005,你等一等他好吗？,你等等佢好嗎？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第32页；OCR相邻对译抽取并复核,active
+BOOK-C03-006,你去吧，要不然我去。,你去啦，一係我去嘞。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第32页；OCR相邻对译抽取并复核,active
+BOOK-C03-007,那，要么我去吧！,噉，一係我去嘞！,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第32页；OCR相邻对译抽取并复核,active
+BOOK-C03-008,王先生给我打了个电话。,王先生打咗個電話畀我。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第33页；OCR相邻对译抽取并复核,active
+BOOK-C03-009,你等了多久？,你等咗幾耐呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第34页；OCR相邻对译抽取并复核,active
+BOOK-C03-010,来了多少人？,嚟咗幾多個人呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第34页；OCR相邻对译抽取并复核,active
+BOOK-C03-011,他是姓王的。,佢係姓王嘅。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第34页；OCR相邻对译抽取并复核,active
+BOOK-C03-012,刚才找你的是谁？,啱啱揾你嘅係邊個呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第34页；OCR相邻对译抽取并复核,active
+BOOK-C03-013,你找哪一个？,你揾邊一個呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第34页；OCR相邻对译抽取并复核,active
+BOOK-C03-014,我刚刚给他电话。,我啱啱畀電話佢。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第37页；OCR相邻对译抽取并复核,active
+BOOK-C03-015,给我点钱。,畀啲錢我。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第37页；OCR相邻对译抽取并复核,active
+BOOK-C03-016,把他的名片给我。,畀佢嘅咭片我。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第3章 打电话，PDF第37页；OCR相邻对译抽取并复核,active

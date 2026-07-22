@@ -16,6 +16,8 @@ export function postProcess(
     .replace(/但是/g, "但係")
     // Possessive/attributive 的 -> 嘅, but keep 的士 (taxi) intact.
     .replace(/的(?!士)/g, "嘅")
+    // 嘅啲 is unnatural after possessive absorption (的人们→嘅啲人).
+    .replace(/嘅啲/g, "啲")
     .replace(/([？?])$/g, "？")
     .replace(/([。!！])$/g, (mark) => (mark === "！" || mark === "!" ? "！" : "。"))
     .replace(/呀呀/g, "呀")

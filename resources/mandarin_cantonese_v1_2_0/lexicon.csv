@@ -171,7 +171,6 @@ LEX-0245,累,攰,adj,general,100,,,,draft_curated,curated_v0.1
 LEX-0247,有空,得閒,adj,general,100,,,,draft_curated,curated_v0.1
 LEX-0248,没空,唔得閒,adj,general,100,,,,draft_curated,curated_v0.1
 LEX-0252,晚,晏,adj,time,95,late_in_day,,,draft_curated,curated_v0.1
-LEX-0255,小,細,adj,general,100,size,,,draft_curated,curated_v0.1
 LEX-0256,便宜,平,adj,shopping,100,,,,draft_curated,curated_v0.1
 LEX-0258,冷,凍,adj,general,100,temperature,,,draft_curated,curated_v0.1
 LEX-0260,吵,嘈,adj,general,100,,,,draft_curated,curated_v0.1
@@ -463,3 +462,18 @@ LEX-0579,猕猴桃,奇異果,noun,general,100,,,curated_daily,draft_curated,cura
 LEX-0580,卷心菜,椰菜,noun,general,100,,,curated_daily,draft_curated,curated_phase2_daily_v1
 LEX-0581,花菜,椰菜花,noun,general,100,,,curated_daily,draft_curated,curated_phase2_daily_v1
 LEX-0582,中午,晏晝,noun,general,100,,,curated_daily,draft_curated,curated_phase2_daily_v1
+LEX-0583,手机号码,手機冧巴,noun,social,100,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0584,名片,咭片,noun,social,100,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0585,小孩儿,細路,noun,social,100,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0586,人们,啲人,noun,general,95,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0587,习惯,慣,verb,general,100,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0588,名字,名,noun,social,95,,,textbook_p1 ask-name,draft_curated,book_gap_p1
+LEX-0589,块钱,文,noun,shopping,95,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0590,糟了,𡃇,interjection,general,100,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0591,不在,唔喺度,verb,general,100,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0592,吸烟,食煙,verb,general,100,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0593,怎样,點樣,adv,general,100,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0594,快没电,就嚟冇電,verb,general,100,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0595,没电,冇電,verb,general,100,,,textbook_p1,draft_curated,book_gap_p1
+LEX-0596,这是,呢個係,phrase,general,100,,,textbook_p1 这是谁,draft_curated,book_gap_p1
+LEX-0597,快没电了,就嚟冇電,verb,general,105,,,textbook_p1 avoid trailing 咗,draft_curated,book_gap_p1

@@ -1,0 +1,17 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-P2C02-001,会他在学校有几个要好的朋友。,佢喺學校都有幾個朋友仔。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第130页；OCR相邻对译抽取,draft
+BOOK-P2C02-002,听说他是什么大学的所谓教授。,彎聽講佢係乜乜大學嘅乜乜教授。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第130页；OCR相邻对译抽取,draft
+BOOK-P2C02-003,营我等了二十分钟他们还没到。,我等咗四個字佢哋仲未到。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第131页；OCR相邻对译抽取,draft
+BOOK-P2C02-004,让你先挑，你挑完我才挑。,嚐畀你揀先，你揀完我至揀。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第131页；OCR相邻对译抽取,draft
+BOOK-P2C02-005,恭喜你们乔迁之喜。,恭喜你哋喬遷之喜。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第132页；OCR相邻对译抽取,draft
+BOOK-P2C02-006,进来，进来，欢迎欢迎。,入嚟，入嚟，歡迎歡迎。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第132页；OCR相邻对译抽取,draft
+BOOK-P2C02-007,我们等了好久才等到这个合算的价钱。,我哋等咗好耐先等到呢個筍價。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第132页；OCR相邻对译抽取,draft
+BOOK-P2C02-008,旧一点儿，可是生活很方便。,舊啲，但係生活好方便。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第132页；OCR相邻对译抽取,draft
+BOOK-P2C02-009,对了，这儿很好找，走十来分钟就是地铁站。,係噃，呢度好好搵，行兩三個字就係地鐵站。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第132页；OCR相邻对译抽取,draft
+BOOK-P2C02-010,好久不见，近况如何？,好耐冇見，近排點呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第133页；OCR相邻对译抽取,draft
+BOOK-P2C02-011,还是在那家公司上班吗？,仲喺嗰間公司做呀？,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第133页；OCR相邻对译抽取,draft
+BOOK-P2C02-012,对了，潮流兴创业。,係噃，潮流興創業。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第133页；OCR相邻对译抽取,draft
+BOOK-P2C02-013,在办公室里干一辈子，我可一点儿没兴趣。,喺辦公室做死一世，都唔啱我嘅。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第133页；OCR相邻对译抽取,draft
+BOOK-P2C02-014,风险也很大，你知道的。,風險亦好大個噃。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第134页；OCR相邻对译抽取,draft
+BOOK-P2C02-015,我知道，创业是要充分准备，并且要付出代价的。,我知，創業係要做功課，要交學費嘅。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第134页；OCR相邻对译抽取,draft
+BOOK-P2C02-016,你们成功。,你哋成功。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第2章 喜庆祝贺，PDF第134页；OCR相邻对译抽取,draft

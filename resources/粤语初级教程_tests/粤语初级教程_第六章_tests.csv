@@ -1,0 +1,13 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-C06-001,碰上大甩卖，就使劲买。,撞啱大減價，就去掃貨。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第72页；OCR相邻对译抽取,draft
+BOOK-C06-002,合适的买，不合适的也买。,係又買，唔係又買。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第73页；OCR相邻对译抽取,draft
+BOOK-C06-003,这件上衣要整整三百块呀。,呢件衫成三百幾文㗎。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第73页；OCR相邻对译抽取,draft
+BOOK-C06-004,四千块那么贵，不去喽。,文咁貴，唔去嘞。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第74页；OCR相邻对译抽取,draft
+BOOK-C06-005,我等了他整整一天。,我等咗佢成日。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第74页；OCR相邻对译抽取,draft
+BOOK-C06-006,一起去看看他喽！,一齊去睇下佢吖！,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第74页；OCR相邻对译抽取,draft
+BOOK-C06-007,他也认识李小姐。,佢都識李小姐。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第75页；OCR相邻对译抽取,draft
+BOOK-C06-008,他们都回来了。,佢哋都返嚟嘞。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第75页；OCR相邻对译抽取,draft
+BOOK-C06-009,他们都胖了些。,佢哋都肥咗啲。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第75页；OCR相邻对译抽取,draft
+BOOK-C06-010,他们都住在湾仔。,佢哋都住喺灣仔。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第75页；OCR相邻对译抽取,draft
+BOOK-C06-011,就是不太熟。,不過唔係幾熟（sug。）。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第76页；OCR相邻对译抽取,draft
+BOOK-C06-012,就是不想一个人去。,不過唔想一個人去。,shopping,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第6章 购物，PDF第76页；OCR相邻对译抽取,draft

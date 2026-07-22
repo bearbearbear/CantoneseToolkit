@@ -1,0 +1,16 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-P2C07-001,别人的意见他乾脆不听。,總第啲人嘅意見，佢直情唔聽。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第180页；OCR相邻对译抽取,draft
+BOOK-P2C07-002,听到这样的消息，心里很不安。,聽到瞰嘅消息，心都離埋。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第181页；OCR相邻对译抽取,draft
+BOOK-P2C07-003,他久不久也会打个电话过来。,息佢耐唔耐都有打電話過嚟嘅。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第181页；OCR相邻对译抽取,draft
+BOOK-P2C07-004,小孩儿玩儿得高兴极了，都不愿意离开。,啲細佬哥玩得真係開心，都唔肯走。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第182页；OCR相邻对译抽取,draft
+BOOK-P2C07-005,看过的鱼活生生地从自己身边游过。,見過啲魚生生猛猛噉喺自己身邊游過。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第182页；OCR相邻对译抽取,draft
+BOOK-P2C07-006,我现在不敢再坐过山车了，生怕把自己嚇个半死。,我而家都唔敢坐過山車嘞，嚇自己一餐死啫。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第182页；OCR相邻对译抽取,draft
+BOOK-P2C07-007,弟弟下来了还想重新排队再坐一次。,細佬落咗嚟仲想排過隊坐第二輪。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第183页；OCR相邻对译抽取,draft
+BOOK-P2C07-008,是的，对小孩儿对家长都有好处。,係呃，對細路對大人都有得着。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第183页；OCR相邻对译抽取,draft
+BOOK-P2C07-009,上太平山，光看，毫无动感。,上太平山得個睇字，冇釐動感。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第183页；OCR相邻对译抽取,draft
+BOOK-P2C07-010,我说的是湾仔的旋转餐厅。,我話灣仔嘅旋轉餐廳呀。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第183页；OCR相邻对译抽取,draft
+BOOK-P2C07-011,是九龙南，可以看见狮子山。,係九龍南，望到獅子山㗎。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第184页；OCR相邻对译抽取,draft
+BOOK-P2C07-012,东面，筲箕湾。南面看不了什么嘛。,東面，筲箕灣。南面睇唔到嘅喎。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第184页；OCR相邻对译抽取,draft
+BOOK-P2C07-013,哦，原来你说的动感就是这样。,哦，原來你講嘅動感就係噉嘅。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第184页；OCR相邻对译抽取,draft
+BOOK-P2C07-014,晚上来看夜景可是一流。,晚黑嚟睇夜景肯定一流。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第184页；OCR相邻对译抽取,draft
+BOOK-P2C07-015,赤柱，正滩沙粒较粗，哽脚。,淺水灣，香港最具代表性嘅沙灘。,general,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第7章 主题乐园，PDF第187页；OCR相邻对译抽取,draft

@@ -1,0 +1,15 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-P2C01-001,两个小孩儿真把我困住了，哪儿也不想去，只好留港过年了。,褦住兩個細路，邊度都唔想去，留港過年啦。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第122页；OCR相邻对译抽取,draft
+BOOK-P2C01-002,别犯愁，留港过年一样可以玩儿得开心。,冇所謂啦，留港過年一樣可以玩得開心。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第122页；OCR相邻对译抽取,draft
+BOOK-P2C01-003,对了，年初一晚上尖沙咀有花车进演。,年初一晚尖沙咀有花車匯演噃。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第122页；OCR相邻对译抽取,draft
+BOOK-P2C01-004,小孩儿兴奋得很，下午五点就要去占位子。,啲細路緊張到死，下晝五點鐘就要去霸位。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第122页；OCR相邻对译抽取,draft
+BOOK-P2C01-005,那天晚上他们简直不用睡。,煙花，佢哋嗰晚直情唔使瞓。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第122页；OCR相邻对译抽取,draft
+BOOK-P2C01-006,那也是，烟花年年放，年年花式不同。,噉又係嘅，煙花年年放，年年新花款。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第122页；OCR相邻对译抽取,draft
+BOOK-P2C01-007,年初三赤口，让小孩儿好好儿睡一天吧。,年初三赤口噃，畀啲細路瞓番一日嘞。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第122页；OCR相邻对译抽取,draft
+BOOK-P2C01-008,在这里预祝你新年快乐。,喺度預先同你拜個早年嘞。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第123页；OCR相邻对译抽取,draft
+BOOK-P2C01-009,我们是去日本北海道滑雪。,我哋係去日本北海道滑雪。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第123页；OCR相邻对译抽取,draft
+BOOK-P2C01-010,棒极了！正如你所说的，钱是挣来花的。,正！學你話齋，啲錢係搵嚟使㗎。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第123页；OCR相邻对译抽取,draft
+BOOK-P2C01-011,二来是出去避年，老婆那边的七大姑八大姨烦死人。,二嚟係出去避年，老婆嗰邊嘅姨媽姑爹煩到死。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第124页；OCR相邻对译抽取,draft
+BOOK-P2C01-012,没办法，结了婚你就控制不了的了。,冇計啦，結咗婚就唔到你㗎喇。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第124页；OCR相邻对译抽取,draft
+BOOK-P2C01-013,你知道的，我老公老爱待在家里。,你知啦，我老公好黐家㗎。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第124页；OCR相邻对译抽取,draft
+BOOK-P2C01-014,今年是我们第三年留港过年了。,今年係我哋第三年留港過年。,social,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第二部分第1章 农历新年，PDF第124页；OCR相邻对译抽取,draft

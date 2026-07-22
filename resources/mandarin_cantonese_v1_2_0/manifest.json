@@ -3,13 +3,13 @@
   "build_date": "2026-07-21",
   "counts": {
     "phrases": 369,
-    "lexicon": 464,
+    "lexicon": 478,
     "templates": 272,
     "rules": 183,
     "slot_types": 60,
     "slot_values": 1019,
     "tests": 3263,
-    "translation_units": 1288,
+    "translation_units": 1302,
     "old_generated_phrases_removed": 6477,
     "old_generated_templates_replaced": 709,
     "controlled_frame_capacity": 16515
@@ -48,13 +48,13 @@
     },
     {
       "name": "lexicon.csv",
-      "bytes": 42891,
-      "sha256": "efe4c59e571b377369032b3080e36853a82fe9422cbedd62890a6c32af88a993"
+      "bytes": 44110,
+      "sha256": "72745cee3dc41fc2d4e8a18fd7de38cc4f0137f422dfdf59526f8c5c9262f1ce"
     },
     {
       "name": "lexicon.jsonl",
-      "bytes": 111940,
-      "sha256": "676c8baf79542076882aaad7dba2698a2a5bc51cc7c9713bd4d524bd0c2c356d"
+      "bytes": 115245,
+      "sha256": "2c3b86265f1f58a08176b395ed5f80d7936ed1b3245a5d1497e4a8fa7c13fd59"
     },
     {
       "name": "mandarin_cantonese_translation_data_v1_2_0.xlsx",
@@ -64,7 +64,7 @@
     {
       "name": "metadata.json",
       "bytes": 1207,
-      "sha256": "f243c3572fccb1bb4b1fe2a0f02c0423a3388f4aa3b48dc7f6e23cd1c154f560"
+      "sha256": "ac0944702251ae824b893122b8518d050c60224012f79a0b4ebca4371a24f26b"
     },
     {
       "name": "phrase_migration.csv",
@@ -93,8 +93,8 @@
     },
     {
       "name": "runtime-core-v1.2.0.json",
-      "bytes": 772398,
-      "sha256": "c15e37213f0145edca08eaf20852088010e3771a4d3a9b79129a00c4abac8db6"
+      "bytes": 775409,
+      "sha256": "7b01c954560a76c44f4e9e621db3fa1c8539cc5614b721163b3f1c178fd80854"
     },
     {
       "name": "schema.json",
@@ -154,7 +154,7 @@
     {
       "name": "validation_report.json",
       "bytes": 1793,
-      "sha256": "caf0cc9735a5c5ded81299a9122bf2080700f70c5bddd2b50688668ad43bb38a"
+      "sha256": "a0a05afcfae80a9dec7e4881fdb69570ca1999cf2a82aefa9a0dade2b45b6bce"
     }
   ]
 }

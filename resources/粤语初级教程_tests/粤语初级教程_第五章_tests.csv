@@ -1,0 +1,17 @@
+id,source,expected_target,scene,test_type,intent,required_features,forbidden_features,notes,status
+BOOK-C05-001,今天的公共汽车乱了套了。,今日啲巴士離晒譜。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第59页；OCR相邻对译抽取,draft
+BOOK-C05-002,等了半小时竟然一辆也没来。,等咗半粒鐘都冇架嚟。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第59页；OCR相邻对译抽取,draft
+BOOK-C05-003,这叫：你急他不急。,你急佢唔急吖嘛。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第59页；OCR相邻对译抽取,draft
+BOOK-C05-004,不来就不来，一来就一辆接一辆地来。,唔嚟就唔嚟，一嚟就打孖嚟。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第60页；OCR相邻对译抽取,draft
+BOOK-C05-005,嘿，真是拿它没辙。,哈，真係冇佢符！,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第60页；OCR相邻对译抽取,draft
+BOOK-C05-006,怎样才能找到他？,點至搵到佢呀？,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第60页；OCR相邻对译抽取,draft
+BOOK-C05-007,怎样称呼他好？,點叫佢好呢？,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第60页；OCR相邻对译抽取,draft
+BOOK-C05-008,他刚刚走了。,佢啱啱走咗。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第61页；OCR相邻对译抽取,draft
+BOOK-C05-009,使有人找他。,就有人嚟搵佢。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第61页；OCR相邻对译抽取,draft
+BOOK-C05-010,干什么，打字还是打电话？,做乜嘢，打字定係打電話？,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第62页；OCR相邻对译抽取,draft
+BOOK-C05-011,好让别人进来！,畀人哋入嚟。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第63页；OCR相邻对译抽取,draft
+BOOK-C05-012,好让别人出去！,畀人哋出去。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第63页；OCR相邻对译抽取,draft
+BOOK-C05-013,往外走是码头。,行出啲係碼頭。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第63页；OCR相邻对译抽取,draft
+BOOK-C05-014,门口人挺多，往里走走吧！,門口人多，行入啲喇！,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第63页；OCR相邻对译抽取,draft
+BOOK-C05-015,快下车了，往外站站吧！,快落車喇，企出啲喇！,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第63页；OCR相邻对译抽取,draft
+BOOK-C05-016,今期周刊封面好靓。,啲浪好勁，我好驚。,transport,exact_phrase,textbook_bilingual_pair,,,《粤语初级教程》第一部分第5章 问路，PDF第66页；OCR相邻对译抽取,draft

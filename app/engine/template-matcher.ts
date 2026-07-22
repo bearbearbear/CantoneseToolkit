@@ -16,21 +16,51 @@ export function compileTemplates(templates: TemplateEntry[]) {
   return templates
     .map((entry) => {
       const slotNames: string[] = [];
-      const pattern = entry.source_pattern.replace(
-        /\{([a-zA-Z0-9_]+)(?::[A-Z]+)?\}/g,
-        (_match, name: string) => {
+      const slotTypes: string[] = [];
+
+      // Record slots as placeholders, escape literals, then insert typed slot
+      // regexes (unescaped). ADJ is short; the slot immediately before ADJ is
+      // greedy so e.g. 以前瘦 does not split as 以|前瘦 (TPL-0058).
+      const withPlaceholders = entry.source_pattern.replace(
+        /\{([a-zA-Z0-9_]+)(?::([A-Za-z0-9_]+))?\}/g,
+        (_match, name: string, type: string | undefined) => {
           slotNames.push(name);
-          return "(.+?)";
+          slotTypes.push((type || "").toUpperCase());
+          return `\u0000SLOT${slotNames.length - 1}\u0000`;
         },
       );
 
+      let pattern = escapeRegexLiterals(withPlaceholders);
+      for (let index = 0; index < slotNames.length; index += 1) {
+        const nextType = slotTypes[index + 1] || "";
+        pattern = pattern.replace(
+          `\u0000SLOT${index}\u0000`,
+          slotRegexForType(slotTypes[index], nextType),
+        );
+      }
+
       return {
         entry,
-        regex: new RegExp(`^${escapeRegexExceptSlots(pattern)}$`),
+        regex: new RegExp(`^${pattern}$`),
         slotNames,
       };
     })
     .sort((left, right) => right.entry.priority - left.entry.priority);
+}
+
+function slotRegexForType(type: string, nextType: string) {
+  if (type === "ADJ") {
+    return "([\u3400-\u9fff]{1,4})";
+  }
+  if (nextType === "ADJ") {
+    return "(.+)";
+  }
+  return "(.+?)";
+}
+
+function escapeRegexLiterals(pattern: string) {
+  // Escape regex metacharacters but leave slot placeholders intact.
+  return pattern.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
 }
 
 export function matchTemplate(
@@ -72,12 +102,6 @@ export function matchTemplate(
   }
 
   return null;
-}
-
-function escapeRegexExceptSlots(pattern: string) {
-  return pattern
-    .replace(/[|\\{}()[\]^$+*?.]/g, "\\$&")
-    .replace(/\\\(\\.\\\+\\\?\\\)/g, "(.+?)");
 }
 
 function parseTransformPipeline(raw: string | undefined): TransformStep[] {
